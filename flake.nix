@@ -17,7 +17,7 @@
       modules = [
         ./configuration.nix
 	inputs.home-manager.nixosModules.default
-	inputs.nixos-hardware.nixosModules.framework-13-7040-amd
+	# inputs.nixos-hardware.nixosModules.framework-13-7040-amd
       ];
     };
   };
