@@ -12,7 +12,11 @@
     ];
 
   # Enable experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -95,8 +99,12 @@
 
   programs.git.enable = true;
 
-  programs.hyprland.enable = true;
-  programs.hyprland.withUWSM = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
 
   programs.regreet.enable = true;
 
@@ -109,7 +117,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    kitty
     neovim
     wget
   ];
