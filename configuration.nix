@@ -61,6 +61,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+    authKeyFile = "/run/secrets/tailscale_key";
+    extraUpFlags = [ "--accept-dns" "--accept-routes" ];
+  };
+
   # Set zsh as the default user shell
   users.defaultUserShell = pkgs.zsh;
 
