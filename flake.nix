@@ -17,6 +17,8 @@
       url = "github:shezdy/hyprsplit";
       inputs.hyprland.follows = "hyprland";
     };
+
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs:
@@ -26,6 +28,7 @@
       modules = [
         ./configuration.nix
 	inputs.home-manager.nixosModules.default
+	inputs.stylix.nixosModules.stylix
 	# inputs.nixos-hardware.nixosModules.framework-13-7040-amd
       ];
     };

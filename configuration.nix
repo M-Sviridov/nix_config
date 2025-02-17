@@ -18,6 +18,33 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
+  stylix = { 
+    enable = true;
+    image = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/city-horizon.jpg";
+      sha256 = "sha256-TWPC7opJ1F0AUNJ6yBwUTrFBrHy7GquDJiqS47p/zVQ=";
+    };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    fonts = {
+      serif = config.stylix.fonts.sansSerif;
+
+      sansSerif = {
+        package = pkgs.noto-fonts;
+	name = "Noto Sans";
+      };
+
+      monospace = {
+        package = pkgs.noto-fonts;
+	name = "Maple Mono NF";
+      };
+
+      emoji = {
+        package = pkgs.noto-fonts;
+	name = "Noto Sans Emoji";
+      };
+    };
+  };
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -81,6 +108,7 @@
     initialPassword = "password";
     isNormalUser = true;
     packages = with pkgs; [
+      nautilus
       tree
       wezterm
     ];
@@ -117,12 +145,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    fw-ectool
     neovim
     wget
   ];
 
   # Set required environment session variables
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  fonts.packages = with pkgs; [
+    maple-mono-NF
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

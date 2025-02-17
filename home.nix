@@ -6,6 +6,11 @@
   home.username = "msviridov";
   home.homeDirectory = "/home/msviridov";
 
+  stylix.targets = {
+    firefox.enable = false;
+    hyprland.enable = false;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -35,8 +40,11 @@
         kb_layout = "us";
 	kb_options = [ "ctrl:nocaps" ];
 	follow_mouse = 1;
-	sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-	touchpad.natural_scroll = true;
+	sensitivity = 0.1; # -1.0 - 1.0, 0 means no modification.
+	touchpad = {
+	  natural_scroll = true;
+	  scroll_factor = 0.3;
+	};
 	repeat_delay = 200;
 	repeat_rate = 50;
       };
