@@ -175,11 +175,12 @@
 
   programs.regreet.enable = true;
 
-  programs.zsh = { 
+  programs.starship = {
     enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
+    presets = [ "pure-preset" ];
   };
+
+  programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
