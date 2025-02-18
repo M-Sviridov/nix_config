@@ -6,6 +6,17 @@
   home.username = "msviridov";
   home.homeDirectory = "/home/msviridov";
 
+	programs.home-manager.enable = true;
+
+  # imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
+  #
+  # programs.hyprpanel = {
+  #   enable = true;
+  #   systemd.enable = true;
+  #   hyprland.enable = true;
+  #   overlay.enable = true;
+  # };
+
   stylix.targets = {
     firefox.enable = false;
     hyprland.enable = false;
@@ -20,7 +31,7 @@
 
     settings = {
       monitor = [
-	",preferred,auto,auto"
+	",preferred,auto,1"
       ];
 
       exec-once = [
@@ -229,6 +240,7 @@
     pkgs.bitwarden-desktop
     pkgs.brightnessctl
     pkgs.chezmoi
+    # pkgs.hyprpanel
     pkgs.playerctl
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

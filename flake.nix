@@ -1,36 +1,37 @@
 {
+
   description = "NixOS Loki Config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland?submodules=1";
-
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprsplit = {
       url = "github:shezdy/hyprsplit";
       inputs.hyprland.follows = "hyprland";
     };
-
-    stylix.url = "github:danth/stylix";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
-  {
-    nixosConfigurations.loki = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./configuration.nix
-	inputs.home-manager.nixosModules.default
-	inputs.stylix.nixosModules.stylix
-	# inputs.nixos-hardware.nixosModules.framework-13-7040-amd
-      ];
+  outputs = {nixpkgs, ...} @ inputs: let
+    system = "x86_64-linux";
+    host = "loki";
+    profile = "framework-13-amd-7040";
+    username = "msviridov";
+  in {
+    nixosConfigurations = {
+      loki = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/framework-13-amd-7040];
+      };
     };
   };
 }
