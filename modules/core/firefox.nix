@@ -16,7 +16,7 @@
       };
       ExtensionSettings = {
         "*".installation_mode = "blocked";
-        "ublock0@raymondhill.net" = {
+        "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           installation_mode = "force_installed";
         };
@@ -29,9 +29,13 @@
           installation_mode = "force_installed";
         };
         "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}/latest.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/stylus/latest.xpi";
           installation_mode = "force_installed";
         };
+	"{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
+	  install_urg = "https://addons.mozilla.org/firefox/downloads/latest/vimium/latest.xpi";
+	  installation_mode = "force_installed";
+	};
       };
       Homepage = {
         URL = "https://todo.lan.msviridov.com";
