@@ -36,6 +36,10 @@
 	  install_urg = "https://addons.mozilla.org/firefox/downloads/latest/vimium/latest.xpi";
 	  installation_mode = "force_installed";
 	};
+	"firefox@tampermonkey.net" = {
+	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi";
+	  installation_mode = "force_installed";
+        };
       };
       Homepage = {
         URL = "https://todo.lan.msviridov.com";
