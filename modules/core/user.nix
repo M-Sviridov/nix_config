@@ -28,6 +28,7 @@
         stateVersion = "24.11";
       };
       programs = {
+        bat.enable = true;
         btop.enable = true;
         home-manager.enable = true;
       };
