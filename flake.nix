@@ -3,6 +3,7 @@
   description = "NixOS Loki Config";
 
   inputs = {
+    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
