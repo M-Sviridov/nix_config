@@ -4,8 +4,7 @@
     ./git.nix
     ./hyprland
     ./nvf
-    ./starship.nix
+    ./shell
     ./wezterm
-    ./zsh.nix
   ];
 }
