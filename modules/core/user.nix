@@ -6,20 +6,33 @@
   profile,
   ...
 }: {
-  imports = [inputs.home-manager.nixosModules.home-manager];
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    inputs.catppuccin.nixosModules.catppuccin
+  ];
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
     backupFileExtension = "backup";
     extraSpecialArgs = {inherit inputs username host profile;};
     users.${username} = {
-      imports = [./../home];
+      imports = [
+        ./../home
+        inputs.catppuccin.homeManagerModules.catppuccin
+      ];
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
         stateVersion = "24.11";
       };
-      programs.home-manager.enable = true;
+      programs = {
+        btop.enable = true;
+        home-manager.enable = true;
+        neovim.enable = true;
+      };
+      gtk = {
+        enable = true;
+      };
     };
   };
   users.mutableUsers = true;
