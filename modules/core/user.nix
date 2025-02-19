@@ -9,6 +9,7 @@
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.home-manager
+    inputs.nvf.nixosModules.default
   ];
   home-manager = {
     useUserPackages = true;
@@ -19,7 +20,7 @@
       imports = [
         ./../home
         inputs.catppuccin.homeManagerModules.catppuccin
-        inputs.nixvim.homeManagerModules.nixvim
+        inputs.nvf.homeManagerModules.default
       ];
       home = {
         username = "${username}";
@@ -45,4 +46,3 @@
   };
   nix.settings.allowed-users = ["${username}"];
 }
-

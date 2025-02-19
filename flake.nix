@@ -14,6 +14,10 @@
       inputs.hyprland.follows = "hyprland";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
