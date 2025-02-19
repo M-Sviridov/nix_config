@@ -9,7 +9,6 @@
     fw-ectool
     killall
     mpv
-    neovim
     nvme-cli
     playerctl
     ripgrep
