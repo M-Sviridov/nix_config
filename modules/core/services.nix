@@ -4,7 +4,7 @@
 
   # Services to start
   services = {
-    openssh.enable = true;
+    # openssh.enable = true;
 
     pipewire = {
       enable = true;
