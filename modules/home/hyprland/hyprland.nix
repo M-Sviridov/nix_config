@@ -10,16 +10,12 @@
     xdg-desktop-portal-gtk
   ];
 
-  hyprcursor = {
-    enable = true;
-    size = 24;
-  };
-
   qt = {
     enable = true;
     platformTheme.name = "kvantum";
     style.name = "kvantum";
   };
+
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = [inputs.hyprsplit.packages."${pkgs.stdenv.hostPlatform.system}".hyprsplit];
