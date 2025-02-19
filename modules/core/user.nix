@@ -7,8 +7,8 @@
   ...
 }: {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
     inputs.catppuccin.nixosModules.catppuccin
+    inputs.home-manager.nixosModules.home-manager
   ];
   home-manager = {
     useUserPackages = true;
@@ -19,6 +19,7 @@
       imports = [
         ./../home
         inputs.catppuccin.homeManagerModules.catppuccin
+        inputs.nixvim.homeManagerModules.nixvim
       ];
       home = {
         username = "${username}";
@@ -28,7 +29,6 @@
       programs = {
         btop.enable = true;
         home-manager.enable = true;
-        neovim.enable = true;
       };
       gtk = {
         enable = true;
