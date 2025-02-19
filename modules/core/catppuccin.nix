@@ -1,5 +1,9 @@
-{ inputs, ... }:
+{ ... }:
 
 {
-  inputs.catppuccin.enable = true;
+  catppuccin = {
+    enable = true;
+    accent = "mauve";
+    flavor = "mocha";
+  };
 }
