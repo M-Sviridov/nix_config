@@ -1,10 +1,20 @@
-{pkgs, inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     hyprpolkitagent
     swww
     wl-clipboard
     xdg-desktop-portal-gtk
   ];
+
+  hyprcursor = {
+    enable = true;
+    size = 24;
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "kvantum";

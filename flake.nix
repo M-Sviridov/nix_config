@@ -1,5 +1,4 @@
 {
-
   description = "NixOS Loki Config";
 
   inputs = {
@@ -18,6 +17,7 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

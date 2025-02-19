@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
@@ -13,6 +17,8 @@
     nvme-cli
     playerctl
     ripgrep
+    rose-pine-cursor
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     tree
     unrar
     unzip
