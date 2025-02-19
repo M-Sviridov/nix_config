@@ -7,8 +7,8 @@
   ];
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
-    # style = "kvantum";
+    platformTheme.name = "kvantum";
+    style.name = "kvantum";
   };
   wayland.windowManager.hyprland = {
     enable = true;
