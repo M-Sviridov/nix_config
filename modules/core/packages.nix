@@ -15,7 +15,8 @@
     tree
     unrar
     unzip
+    vivid
     wget
+    zoxide
   ];
 }
-
