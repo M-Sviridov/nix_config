@@ -1,6 +1,7 @@
 {...}: {
   imports = [
-		./boot.nix
+		./catppuccin.nix
+                ./boot.nix
 		./firefox.nix
 		./fonts.nix
 		./hyprland.nix
