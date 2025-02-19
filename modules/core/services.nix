@@ -6,6 +6,8 @@
   services = {
     # openssh.enable = true;
 
+    gvfs.enable = true;
+
     pipewire = {
       enable = true;
       alsa.enable = true;

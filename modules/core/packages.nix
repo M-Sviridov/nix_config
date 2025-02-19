@@ -7,6 +7,7 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    cifs-utils
     dig
     duf
     eza
