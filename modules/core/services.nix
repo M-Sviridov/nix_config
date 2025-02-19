@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  # Enable RealtimeKit for audio purposes
+  security.rtkit.enable = true;
+
   # Services to start
   services = {
     openssh.enable = true;
