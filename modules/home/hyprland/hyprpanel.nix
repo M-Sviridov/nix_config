@@ -1,4 +1,4 @@
-{...}: {
+{username, ...}: {
   programs.hyprpanel = {
     enable = true;
     overlay.enable = true;
@@ -10,7 +10,7 @@
         "*" = {
           left = ["dashboard" "workspaces"];
           middle = ["media"];
-          right = ["bluetooth" "network" "systray" "volume" "battery" "clock" "notifications"];
+          right = ["network" "bluetooth" "systray" "volume" "battery" "clock" "notifications"];
         };
       };
     };
@@ -72,22 +72,42 @@
             border.size = "0.13em";
             buttons.radius = "0.4em";
             card_radius = "0.4em";
+
+            menu = {
+              battery.scaling = 90;
+              bluetooth.scaling = 90;
+              clock.scaling = 90;
+              dashboard.confirmation_scaling = 90;
+              dashboard.scaling = 90;
+              media.scaling = 90;
+              network.scaling = 90;
+              notifications.scaling = 90;
+              power.scaling = 90;
+              volume.scaling = 90;
+            };
+
+            popover.scaling = 90;
           };
 
           outer_spacing = "0.3em";
+          scaling = 95;
           transparent = true;
         };
 
         font = {
           name = "Noto Sans";
-          size = "1.2rem";
+          size = "1.0rem";
           weight = 600;
         };
+
+        notification.scaling = 90;
+        osd.scaling = 95;
+        tooltip.scaling = 90;
       };
 
       wallpaper = {
         enable = true;
-        image = "/home/msviridov/Downloads/wp11912480-3539545141.png";
+        image = "/home/${username}/Pictures/wallpapers/catppuccin/cat_ef_ign_unsplash46.png";
       };
     };
   };
