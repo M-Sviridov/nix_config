@@ -4,6 +4,7 @@
     ./git.nix
     ./hyprland
     ./nvf
+    ./services.nix
     ./shell
     ./wezterm
   ];
