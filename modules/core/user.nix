@@ -8,6 +8,7 @@
 }: {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
+    inputs.fw-fanctrl.nixosModules.default
     inputs.home-manager.nixosModules.home-manager
     inputs.nvf.nixosModules.default
   ];

@@ -8,6 +8,7 @@
     ../../hosts/${host}/hardware.nix
     ../../modules/core
     ../../modules/drivers
+    ./fw-fanctrl.nix
   ];
   # Enable GPU Drivers
   drivers.amdgpu.enable = true;
