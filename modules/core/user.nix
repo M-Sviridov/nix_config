@@ -30,8 +30,20 @@
         stateVersion = "24.11";
       };
       programs = {
-        bat.enable = true;
-        btop.enable = true;
+        bat = {
+          enable = true;
+          extraPackages = with pkgs.bat-extras; [
+            batman
+            batpipe
+            batgrep
+          ];
+        };
+        btop = {
+          enable = true;
+          settings = {
+            vim_keys = true;
+          };
+        };
         home-manager.enable = true;
       };
       gtk = {
