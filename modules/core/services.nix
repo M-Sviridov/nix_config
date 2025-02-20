@@ -1,17 +1,16 @@
 {pkgs, ...}: {
-  # Enable RealtimeKit for audio purposes
-  security.rtkit.enable = true;
-
-  systemd.services.fprintd = {
-    wantedBy = ["multi-user.target"];
-    serviceConfig.Type = "simple";
+  security = {
+    rtkit.enable = true;
+    pam = {
+      services.hyprlock = {};
+      services.sudo = {};
+    };
   };
 
   # Services to start
   services = {
     # openssh.enable = true;
 
-    fprintd.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
 
