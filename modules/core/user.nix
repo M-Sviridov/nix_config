@@ -13,13 +13,14 @@
   ];
   home-manager = {
     useUserPackages = true;
-    useGlobalPkgs = true;
+    # useGlobalPkgs = true;
     backupFileExtension = "backup";
     extraSpecialArgs = {inherit inputs username host profile;};
     users.${username} = {
       imports = [
         ./../home
         inputs.catppuccin.homeManagerModules.catppuccin
+        inputs.hyprpanel.homeManagerModules.hyprpanel
         inputs.nvf.homeManagerModules.default
       ];
       home = {

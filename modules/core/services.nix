@@ -35,5 +35,7 @@
       authKeyFile = "/run/secrets/tailscale_key";
       extraUpFlags = ["--accept-dns" "--accept-routes"];
     };
+
+    upower.enable = true;
   };
 }

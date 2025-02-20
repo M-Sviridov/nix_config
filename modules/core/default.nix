@@ -4,6 +4,7 @@
     ./boot.nix
     ./firefox.nix
     ./fonts.nix
+    ./hardware.nix
     ./hyprland.nix
     ./network.nix
     ./packages.nix
