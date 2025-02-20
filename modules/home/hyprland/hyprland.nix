@@ -16,6 +16,8 @@
     style.name = "kvantum";
   };
 
+  services.mpris-proxy.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = [inputs.hyprsplit.packages."${pkgs.stdenv.hostPlatform.system}".hyprsplit];

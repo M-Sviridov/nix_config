@@ -1,7 +1,10 @@
-{ host, ... }:
-
 {
+  host,
+  inputs,
+  ...
+}: {
   imports = [
+    inputs.nixos-hardware.nixosModules.framework-13-7040-amd
     ../../hosts/${host}/hardware.nix
     ../../modules/core
     ../../modules/drivers
@@ -17,5 +20,3 @@
   # drivers.intel.enable = false;
   # vm.guest-services.enable = false;
 }
-
-
