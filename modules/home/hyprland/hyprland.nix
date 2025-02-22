@@ -4,8 +4,11 @@
   ...
 }: {
   home.packages = with pkgs; [
+    clipse
+    hyprpicker
     hyprpolkitagent
     swww
+    waypaper
     wl-clipboard
     xdg-desktop-portal-gtk
   ];
@@ -15,8 +18,6 @@
     platformTheme.name = "kvantum";
     style.name = "kvantum";
   };
-
-  services.mpris-proxy.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;

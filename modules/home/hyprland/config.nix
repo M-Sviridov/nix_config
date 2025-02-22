@@ -9,9 +9,10 @@
       exec-once = [
         # "uwsm app -- solaar --window=hide --battery-icons=solaar"
         # "uwsm app -- bitwarden-desktop"
-        # "uwsm app -- clipse -listen"
+        "uwsm app -- clipse -listen"
         # "uwsm app -- hyprpanel"
         # "uwsm app -- udiskie"
+        "uwsm app -- waypaper --restore"
       ];
 
       "plugin:hyprsplit" = {
@@ -39,7 +40,7 @@
         "$fileManager" = "nautilus";
         "$menu" = "tofi-drun --drun-launch=true";
         gaps_in = 4;
-        gaps_out = 8;
+        gaps_out = "2,8,8,8";
         border_size = 2;
         layout = "dwindle";
         resize_on_border = true;
