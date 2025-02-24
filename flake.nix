@@ -22,6 +22,10 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +38,11 @@
     host = "loki";
     profile = "framework-13-amd-7040";
     username = "msviridov";
+    pkgs-nur = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+      overlays = [inputs.nur.overlays.default];
+    };
   in {
     nixosConfigurations = {
       loki = nixpkgs.lib.nixosSystem {
@@ -43,8 +52,12 @@
           inherit username;
           inherit host;
           inherit profile;
+          inherit pkgs-nur;
         };
-        modules = [./profiles/framework-13-amd-7040];
+        modules = [
+          ./profiles/framework-13-amd-7040
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+        ];
       };
     };
   };
