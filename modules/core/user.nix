@@ -1,22 +1,25 @@
 {
   pkgs,
+  pkgs-nur,
   inputs,
   username,
   host,
   profile,
+  system,
   ...
 }: {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.fw-fanctrl.nixosModules.default
     inputs.home-manager.nixosModules.home-manager
+    inputs.nur.modules.nixos.default
     inputs.nvf.nixosModules.default
   ];
   home-manager = {
     useUserPackages = true;
-    # useGlobalPkgs = true;
+    useGlobalPkgs = true;
     backupFileExtension = "backup";
-    extraSpecialArgs = {inherit inputs username host profile;};
+    extraSpecialArgs = {inherit inputs username host profile system pkgs-nur;};
     users.${username} = {
       imports = [
         ./../home

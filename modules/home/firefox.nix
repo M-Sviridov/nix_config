@@ -1,4 +1,4 @@
-{firefox-addons-allowUnfree, ...}: {
+{pkgs-nur, ...}: {
   programs.firefox = {
     enable = true;
 
@@ -33,20 +33,20 @@
 
       containersForce = true;
 
-      extensions = with firefox-addons-allowUnfree; [
+      extensions = with pkgs-nur.nur.repos.rycee.firefox-addons; [
         bitwarden
-        # catppuccin-gh-file-explorer
+        catppuccin-gh-file-explorer
         enhancer-for-youtube
-        # firefox-color
-        # multi-account-containers
-        # proton-pass
-        # return-youtube-dislikes
-        # skip-redirect
-        # sponsorblock
-        # stylus
-        # tampermonkey
-        # ublock-origin
-        # vimium
+        firefox-color
+        multi-account-containers
+        proton-pass
+        return-youtube-dislikes
+        skip-redirect
+        sponsorblock
+        stylus
+        tampermonkey
+        ublock-origin
+        vimium
       ];
 
       search = {
