@@ -2,7 +2,6 @@
   imports = [
     ./catppuccin.nix
     ./boot.nix
-    ./firefox.nix
     ./fonts.nix
     ./hardware.nix
     ./hyprland.nix
