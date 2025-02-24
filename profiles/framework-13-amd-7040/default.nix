@@ -20,4 +20,5 @@
   # };
   # drivers.intel.enable = false;
   # vm.guest-services.enable = false;
+  nixpkgs.config.allowUnfree = true;
 }
