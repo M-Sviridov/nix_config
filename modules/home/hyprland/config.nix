@@ -116,7 +116,7 @@
         "$mainMod, Q, exec, uwsm app -- $terminal"
         "$mainMod, O, exec, hyprctl dispatch exit"
         "$mainMod, F, exec, uwsm app -- $browser -p framework13"
-        "$mainMod, L, exec, uwsm app -- $browser -p lg27"
+        "$mainMod, D, exec, uwsm app -- $browser -p lg27"
         "ctrl, space, exec, uwsm app -- $menu"
         "$mainMod, T, togglefloating"
         "ctrl alt, Q, exec, hyprlock"
