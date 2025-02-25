@@ -284,8 +284,8 @@
         ## FONTS
         "font.minimum-size.th" = 16;
         "font.size.variable.th" = 16;
-        "font.minimum-size.x-western" = 14;
-        "font.size.variable.x-western" = 14;
+        "font.minimum-size.x-western" = 13;
+        "font.size.variable.x-western" = 13;
 
         ## THEME ADJUSTMENTS
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
