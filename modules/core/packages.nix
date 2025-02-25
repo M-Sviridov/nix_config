@@ -17,6 +17,7 @@
     killall
     mpv
     nvme-cli
+    nwg-look
     playerctl
     ripgrep
     rose-pine-cursor
@@ -28,4 +29,11 @@
     wget
     zoxide
   ];
+
+  programs = {
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
+  };
 }
