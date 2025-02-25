@@ -2,7 +2,8 @@
   imports = [
     ./catppuccin.nix
     ./git.nix
-    ./firefox.nix
+    ./firefox-framework13.nix
+    ./firefox-lg27.nix
     ./hyprland
     ./nvf
     ./services.nix
