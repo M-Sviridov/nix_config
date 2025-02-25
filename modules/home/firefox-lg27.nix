@@ -17,6 +17,8 @@
           "https://chatgpt.com/"
           "https://claude.ai/"
           "https://github.com/"
+          "https://jellyfin.lan.msviridov.com/"
+          "https://jellyseerr.msviridov.com/"
           "https://perplexity.ai/"
           "https://proton.me/"
           "https://soundcloud.com/"
