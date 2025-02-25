@@ -7,6 +7,7 @@
     ./hyprland.nix
     ./network.nix
     ./packages.nix
+    ./samba.nix
     ./services.nix
     ./starship.nix
     ./system.nix
