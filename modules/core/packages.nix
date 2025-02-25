@@ -4,6 +4,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
+    bitwarden-desktop
     brightnessctl
     cifs-utils
     dig
@@ -11,6 +12,7 @@
     eza
     ffmpeg
     fw-ectool
+    gnomeExtensions.solaar-extension
     jellyfin-mpv-shim
     killall
     mpv

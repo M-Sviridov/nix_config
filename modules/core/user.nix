@@ -14,6 +14,7 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.nur.modules.nixos.default
     inputs.nvf.nixosModules.default
+    inputs.solaar.nixosModules.default
   ];
   home-manager = {
     useUserPackages = true;

@@ -34,6 +34,12 @@
       };
     };
 
+    solaar = {
+      enable = true;
+      window = "hide";
+      batteryIcons = "solaar";
+    };
+
     tailscale = {
       enable = true;
       authKeyFile = "/run/secrets/tailscale_key";
