@@ -102,6 +102,8 @@
       gpom = "git push -u origin main";
       gr = "git restore";
       gs = "git status";
+
+      tofigen = "rm $XDG_CACHE_HOME/tofi-*";
     };
 
     syntaxHighlighting.enable = true;

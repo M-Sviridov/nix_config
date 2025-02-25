@@ -11,6 +11,7 @@
     eza
     ffmpeg
     fw-ectool
+    jellyfin-mpv-shim
     killall
     mpv
     nvme-cli
