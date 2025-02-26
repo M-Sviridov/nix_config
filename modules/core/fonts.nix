@@ -11,8 +11,8 @@
     ];
     fontconfig = {
       defaultFonts = {
-        serif = ["Noto Sans" "Noto Serif Thai"];
-        sansSerif = ["Noto Sans Serif" "Noto Sans Thai"];
+        serif = ["Noto Serif" "Noto Serif Thai"];
+        sansSerif = ["Noto Sans" "Noto Sans Thai"];
         monospace = ["Maple Mono NF"];
       };
     };

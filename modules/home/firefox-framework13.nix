@@ -282,10 +282,12 @@
         "extensions.htmlaboutaddons.recommendations.enabled" = false;
 
         ## FONTS
-        "font.minimum-size.th" = 18;
+        "font.minimum-size.th" = 16;
         "font.size.variable.th" = 18;
-        "font.minimum-size.x-western" = 16;
+        "font.size.fixed.th" = 15;
+        "font.minimum-size.x-western" = 14;
         "font.size.variable.x-western" = 16;
+        "font.size.fixed.x-western" = 13;
 
         ## THEME ADJUSTMENTS
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
