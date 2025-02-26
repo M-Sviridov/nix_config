@@ -73,6 +73,7 @@
       EDITOR = "nvim";
       VISUAL = "nvim";
       LS_COLORS = "$(vivid generate catppuccin-mocha)";
+      YSU_HARDCORE = 1; # Hardcore mode for zsh-you-should-use
     };
 
     shellAliases = {
