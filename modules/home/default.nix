@@ -8,6 +8,7 @@
     ./nvf
     ./services.nix
     ./shell
+    ./ssh.nix
     ./wezterm
   ];
 }

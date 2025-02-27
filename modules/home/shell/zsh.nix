@@ -64,7 +64,6 @@
     ];
 
     sessionVariables = {
-      BITWARDEN_SSH_AUTH_SOCK = "/run/user/1000/bitwarden_ssh.sock";
       NPM_CONFIG_USERCONFIG = "$XDG_CONFIG_HOME/npm/npmrc";
       RUSTUP_HOME = "$XDG_CONFIG_HOME/rustup";
       CARGO_HOME = "$XDG_CONFIG_HOME/cargo";
@@ -103,6 +102,8 @@
       gpom = "git push -u origin main";
       gr = "git restore";
       gs = "git status";
+
+      ssha = "eval $(ssh-agent) && ssh-add ~/.ssh/ansible-controller_key";
 
       tofigen = "rm $XDG_CACHE_HOME/tofi-*";
     };
