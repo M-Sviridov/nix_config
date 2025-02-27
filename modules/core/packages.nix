@@ -12,7 +12,9 @@
     eza
     ffmpeg
     fw-ectool
+    gcc
     gnomeExtensions.solaar-extension
+    gnumake
     jellyfin-mpv-shim
     killall
     mpv
@@ -21,6 +23,7 @@
     playerctl
     ripgrep
     rose-pine-cursor
+    rustup
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     tree
     unrar
