@@ -14,7 +14,11 @@
 
   # Services to start
   services = {
-    avahi.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
 
     fwupd.enable = true;
     gvfs.enable = true;
@@ -47,6 +51,8 @@
         ];
       };
     };
+
+    printing.enable = true;
 
     solaar = {
       enable = true;
