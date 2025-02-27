@@ -79,6 +79,13 @@
       gtk = {
         enable = true;
       };
+      xdg = {
+        enable = true;
+        userDirs = {
+          enable = true;
+          createDirectories = true;
+        };
+      };
     };
   };
   users.mutableUsers = true;
