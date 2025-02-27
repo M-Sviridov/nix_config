@@ -14,17 +14,31 @@
 
   # Services to start
   services = {
-    # openssh.enable = true;
+    avahi.enable = true;
 
     fwupd.enable = true;
     gvfs.enable = true;
 
     pipewire = {
       enable = true;
+      extraConfig.pipewire = {
+        "10-airplay" = {
+          "context.modules" = [
+            {
+              name = "libpipewire-module-raop-discover";
+              # increase the buffer size if you get dropouts/glitches
+              # args = {
+              #   "raop.latency.ms" = 500;
+              # };
+            }
+          ];
+        };
+      };
       alsa.enable = true;
       alsa.support32Bit = true;
       # jack.enable = true; # comment or uncomment depending on needs
       pulse.enable = true;
+      raopOpenFirewall = true;
       wireplumber = {
         enable = true;
         extraLv2Packages = with pkgs; [
