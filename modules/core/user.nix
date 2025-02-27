@@ -83,7 +83,7 @@
   };
   users.mutableUsers = true;
   users.users.${username} = {
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["gamemode" "networkmanager" "wheel"];
     ignoreShellProgramCheck = true;
     isNormalUser = true;
     packages = with pkgs; [nautilus];

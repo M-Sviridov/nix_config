@@ -3,6 +3,7 @@
     ./catppuccin.nix
     ./boot.nix
     ./fonts.nix
+    ./gaming.nix
     ./hardware.nix
     ./hyprland.nix
     ./network.nix
