@@ -26,10 +26,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     solaar = {
       url = "github:Svenum/Solaar-Flake/main";

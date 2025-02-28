@@ -9,4 +9,3 @@
     userName = "M-Sviridov";
   };
 }
-
