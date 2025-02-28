@@ -24,6 +24,8 @@
     };
 
     initExtra = ''
+      eval "$(batman --export-env)"
+      eval "$(batpipe)"
       eval "$(zoxide init --cmd cd zsh)"
       zstyle ':completion:*' completer _complete _ignored _files
       zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'

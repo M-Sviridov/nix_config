@@ -47,6 +47,10 @@
           };
         };
         home-manager.enable = true;
+        man = {
+          enable = true;
+          generateCaches = true;
+        };
         tofi = {
           enable = true;
           settings = {
