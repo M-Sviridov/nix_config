@@ -16,11 +16,13 @@
         Allow = [
           "https://chatgpt.com/"
           "https://claude.ai/"
+          "https://freshrss.lan.msviridov.com/"
           "https://github.com/"
           "https://jellyfin.lan.msviridov.com/"
           "https://jellyseerr.msviridov.com/"
           "https://perplexity.ai/"
           "https://proton.me/"
+          "https://reddit.com/"
           "https://soundcloud.com/"
           "https://todo.lan.msviridov.com/"
           "https://youtube.com/"
@@ -94,6 +96,7 @@
 
         ## GENERAL
         "content.notify.interval" = 100000;
+        "extensions.autoDisableScopes" = 0;
 
         ## GFX & MEDIA
         "gfx.canvas.accelerated.cache-items" = 4096;

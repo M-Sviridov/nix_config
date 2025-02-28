@@ -7,6 +7,7 @@
     ./hardware.nix
     ./hyprland.nix
     ./network.nix
+    ./neovim.nix
     ./packages.nix
     ./samba.nix
     ./services.nix
