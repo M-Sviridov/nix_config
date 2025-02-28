@@ -18,6 +18,7 @@
     jellyfin-mpv-shim
     killall
     mpv
+    obsidian
     nvme-cli
     nwg-look
     playerctl
