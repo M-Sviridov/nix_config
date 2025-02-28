@@ -3,6 +3,10 @@
   inputs,
   ...
 }: {
+  environment.shells = with pkgs; [
+    zsh
+  ];
+
   environment.systemPackages = with pkgs; [
     bitwarden-desktop
     brightnessctl

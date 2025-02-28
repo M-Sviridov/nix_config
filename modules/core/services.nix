@@ -23,6 +23,36 @@
     fwupd.enable = true;
     gvfs.enable = true;
 
+    keyd = {
+      enable = true;
+      keyboards = {
+        default = {
+          ids = ["0001:0001:70533846"];
+          settings = {
+            main = {
+              capslock = "overload(control, esc)";
+              leftcontrol = "oneshot(meta)";
+              leftmeta = "layer(control)";
+              rightcontrol = "oneshot(meta)";
+              rightmeta = "layer(control)";
+              shift = "oneshot(shift)";
+              meta = "oneshot(meta)";
+            };
+          };
+        };
+        # externalKeyboard = {
+        #   ids = [ "1ea7:0907" ];
+        #   settings = {
+        #     main = {
+        #       esc = capslock;
+        #     };
+        #   };
+        # };
+      };
+    };
+
+    # input-remapper.enable = true;
+
     pipewire = {
       enable = true;
       extraConfig.pipewire = {
