@@ -78,6 +78,7 @@
     };
 
     shellAliases = {
+      c = "clear";
       cat = "bat";
       grep = "grep --color=auto";
       ipa = "ip -c -br a";

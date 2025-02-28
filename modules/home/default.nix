@@ -8,6 +8,7 @@
     ./services.nix
     ./shell
     ./ssh.nix
+    ./tmux.nix
     ./wezterm
   ];
 }
