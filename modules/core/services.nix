@@ -31,12 +31,11 @@
           settings = {
             main = {
               capslock = "overload(control, esc)";
-              leftcontrol = "oneshot(meta)";
+              leftcontrol = "layer(meta)";
               leftmeta = "layer(control)";
-              rightcontrol = "oneshot(meta)";
+              rightcontrol = "layer(meta)";
               rightmeta = "layer(control)";
               shift = "oneshot(shift)";
-              meta = "oneshot(meta)";
             };
           };
         };
@@ -50,8 +49,6 @@
         # };
       };
     };
-
-    # input-remapper.enable = true;
 
     pipewire = {
       enable = true;
@@ -81,8 +78,6 @@
         ];
       };
     };
-
-    printing.enable = true;
 
     solaar = {
       enable = true;
