@@ -26,10 +26,12 @@
     nvme-cli
     nwg-look
     playerctl
+    protonvpn-gui
     ripgrep
     rose-pine-cursor
     rustup
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    sshfs
     tree
     unrar
     unzip

@@ -1,7 +1,7 @@
 {host, ...}: {
   networking = {
     firewall = {
-      enable = true;
+      checkReversePath = false;
     };
 
     hostName = "${host}";
