@@ -18,6 +18,7 @@
           "https://claude.ai/"
           "https://freshrss.lan.msviridov.com/"
           "https://github.com/"
+          "https://google.com/"
           "https://jellyfin.lan.msviridov.com/"
           "https://jellyseerr.msviridov.com/"
           "https://perplexity.ai/"
