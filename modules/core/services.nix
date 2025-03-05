@@ -21,6 +21,7 @@
     };
 
     fwupd.enable = true;
+    gnome.sushi.enable = true;
     gvfs.enable = true;
 
     keyd = {
@@ -94,8 +95,8 @@
     upower.enable = true;
 
     udev.extraRules = ''
-      SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="/nix/store/2fhf6cmy9jf9yp1bw5b68a71b3rqs60w-power-profiles-daemon-0.30/bin/powerprofilesctl set power-saver"
-      SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="/nix/store/2fhf6cmy9jf9yp1bw5b68a71b3rqs60w-power-profiles-daemon-0.30/bin/powerprofilesctl set performance"
+      SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver'"
+      SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance'"
     '';
   };
 }
