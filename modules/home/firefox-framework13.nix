@@ -53,10 +53,18 @@
     profiles.framework13 = {
       id = 0;
 
-      containers."Le Club" = {
-        color = "turquoise";
-        icon = "briefcase";
-        id = 1;
+      containers = {
+        "Le Club" = {
+          color = "green";
+          icon = "briefcase";
+          id = 1;
+        };
+
+        "Admin" = {
+          color = "red";
+          icon = "fingerprint";
+          id = 2;
+        };
       };
 
       containersForce = true;
