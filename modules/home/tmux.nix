@@ -5,6 +5,8 @@
     extraConfig = ''
       set-option -sa terminal-overrides ",xterm*:Tc"
 
+      set -g allow-passthrough on
+
       set -g status-left-length 100
       set -g status-left ""
       set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_red},fg=#{@thm_bg},bold]  #S },#{#[bg=#{@thm_bg},fg=#{@thm_green}]  #S }}"
