@@ -21,6 +21,8 @@
     gnumake
     jellyfin-mpv-shim
     killall
+    lm_sensors
+    loupe
     mpv
     obsidian
     nvme-cli
@@ -31,7 +33,10 @@
     rose-pine-cursor
     rustup
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    signal-desktop
     sshfs
+    stress-ng
+    s-tui
     tree
     unrar
     unzip

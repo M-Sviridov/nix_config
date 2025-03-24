@@ -21,11 +21,13 @@
           "https://google.com/"
           "https://jellyfin.lan.msviridov.com/"
           "https://jellyseerr.msviridov.com/"
+          "https://mistral.ai/"
           "https://perplexity.ai/"
           "https://proton.me/"
           "https://reddit.com/"
           "https://soundcloud.com/"
           "https://todo.lan.msviridov.com/"
+          "https://ui.com/"
           "https://youtube.com/"
         ];
       };
@@ -86,18 +88,18 @@
       ];
 
       search = {
-        default = "DuckDuckGo";
+        default = "ddg";
         engines = {
-          "Amazon.com".metaData.hidden = true;
-          "Bing".metaData.hidden = true;
-          "eBay".metaData.hidden = true;
-          "Google".metaData.hidden = true;
-          "Wikipedia (en)".metaData.hidden = true;
+          "amazondotcom-us".metaData.hidden = true;
+          "bing".metaData.hidden = true;
+          "ebay".metaData.hidden = true;
+          "google".metaData.hidden = true;
+          "wikipedia".metaData.hidden = true;
         };
 
         force = true;
-        order = ["DuckDuckGo"];
-        privateDefault = "DuckDuckGo";
+        order = ["ddg"];
+        privateDefault = "ddg";
       };
 
       settings = {
