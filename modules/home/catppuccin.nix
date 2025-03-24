@@ -7,6 +7,10 @@
       enable = true;
       icon.enable = true;
     };
+    hyprlock = {
+      enable = true;
+      useDefaultConfig = false;
+    };
     tmux.extraConfig = ''
       set -g @catppuccin_flavor "mocha"
       set -g @catppuccin_status_background "none"
