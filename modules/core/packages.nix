@@ -38,6 +38,7 @@
     stress-ng
     s-tui
     tree
+    trezor-suite
     unrar
     unzip
     vivid
