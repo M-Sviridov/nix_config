@@ -1,5 +1,5 @@
 {
-  description = "NixOS Loki Config";
+  description = "NixOS Config";
 
   inputs = {
     catppuccin.url = "github:catppuccin/nix";
@@ -26,39 +26,44 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     solaar = {
       url = "github:Svenum/Solaar-Flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    fw-fanctrl,
+    home-manager,
+    hyprland,
+    hyprpanel,
+    hyprsplit,
+    nixos-hardware,
+    nixpkgs,
+    nur,
+    solaar,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    host = "loki"; # change to machine hostname
+    pkgs = nixpkgs.legacyPackages.${system};
     system = "x86_64-linux";
-    host = "loki";
-    profile = "framework-13-amd-7040";
-    username = "msviridov";
-    pkgs-nur = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-      overlays = [inputs.nur.overlays.default];
-    };
+    user = "msviridov"; # change to username
   in {
-    nixosConfigurations = {
-      loki = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-          inherit pkgs-nur;
-        };
-        modules = [
-          ./profiles/framework-13-amd-7040
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
-        ];
-      };
+    homeManagerModules = import ./modules/home-manager;
+    nixosModules = import ./modules/nixos;
+
+    homeConfigurations.${host} = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = {inherit inputs outputs user;};
+      modules = [./hosts/${host}/home.nix];
+    };
+
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = {inherit inputs outputs host;};
+      modules = [./hosts/${host}/configuration.nix];
     };
   };
 }
