@@ -1,5 +1,7 @@
 {...}: {
   programs = {
+    dconf.enable = true;
+
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;

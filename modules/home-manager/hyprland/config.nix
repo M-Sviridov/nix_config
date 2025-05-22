@@ -117,6 +117,9 @@
         "$mainMod, O, exec, hyprctl dispatch exit"
         "$mainMod, F, exec, uwsm app -- $browser -p msviridov"
         "$mainMod, D, exec, uwsm app -- $browser -p lg27"
+        "ctrl alt, 1, exec, uwsm app -- hyprshot -m region"
+        "ctrl alt, 2, exec, uwsm app -- hyprshot -m window"
+        "ctrl alt, 3, exec, uwsm app -- hyprshot -m output"
         "ctrl, space, exec, uwsm app -- $menu"
         "$mainMod, T, togglefloating"
         "ctrl alt, Q, exec, hyprlock"
@@ -173,6 +176,7 @@
         "size 622 652, class:(clipse)"
         "noanim, class:(clipse)"
         "float, class:(org.gnome.NautilusPreviewer)"
+        "float, title:(.*)(Extension)"
       ];
 
       workspace = [

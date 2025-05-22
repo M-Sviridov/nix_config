@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     hyprcursor
     hyprpicker
+    hyprshot
     rose-pine-hyprcursor
     waypaper
     wl-clipboard

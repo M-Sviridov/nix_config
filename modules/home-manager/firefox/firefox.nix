@@ -21,6 +21,7 @@
           "https://freshrss.lan.msviridov.com/"
           "https://github.com/"
           "https://google.com/"
+          "https://haos.lan.leclubavon.com/"
           "https://jellyfin.lan.msviridov.com/"
           "https://jellyseerr.msviridov.com/"
           "https://mistral.ai/"
@@ -28,8 +29,10 @@
           "https://proton.me/"
           "https://reddit.com/"
           "https://soundcloud.com/"
+          "https://t.coros.com/admin/views/dash-board"
           "https://todo.lan.msviridov.com/"
           "https://ui.com/"
+          "https://web.whatsapp.com/"
           "https://youtube.com/"
         ];
 

@@ -1,5 +1,6 @@
 {
   catppuccin = import ./catppuccin.nix;
+  easyeffects = import ./easyeffects.nix;
   firefox = import ./firefox;
   gammastep = import ./gammastep.nix;
   git = import ./git.nix;

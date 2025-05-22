@@ -8,6 +8,7 @@
 }: {
   imports = [
     outputs.homeManagerModules.catppuccin
+    outputs.homeManagerModules.easyeffects
     outputs.homeManagerModules.firefox
     outputs.homeManagerModules.gammastep
     outputs.homeManagerModules.git
@@ -59,8 +60,8 @@
     brightnessctl
     chromium
     ffmpeg
+    jellyfin-mpv-shim
     loupe
-    moonlight-qt
     mpv
     nautilus
     nwg-look

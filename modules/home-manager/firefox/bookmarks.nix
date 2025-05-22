@@ -48,6 +48,24 @@
           Folder = "Homelab";
         }
         {
+          Title = "FreshRSS";
+          URL = "https://freshrss.lan.msviridov.com";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
+        {
+          Title = "Frigate";
+          URL = "https://frigate.lan.leclubavon.com";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
+        {
+          Title = "HAOS";
+          URL = "https://haos.lan.leclubavon.com";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
+        {
           Title = "Heimdall";
           URL = "https://heimdall.lan.msviridov.com";
           Placement = "toolbar";
@@ -56,6 +74,12 @@
         {
           Title = "Immich";
           URL = "https://immich.lan.msviridov.com";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
+        {
+          Title = "Ntfy";
+          URL = "https://ntfy.lan.msviridov.com";
           Placement = "toolbar";
           Folder = "Homelab";
         }
@@ -101,8 +125,20 @@
           Placement = "toolbar";
           Folder = "Homelab";
         }
+        {
+          Title = "UniFi Site Manager";
+          URL = "https://unifi.ui.com/";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
 
         # PERSO
+        {
+          Title = "Coros Training Hub";
+          URL = "https://t.coros.com/admin/views/dash-board";
+          Placement = "toolbar";
+          Folder = "Perso";
+        }
         {
           Title = "Proton Mail";
           URL = "https://mail.proton.me";

@@ -27,6 +27,7 @@
       NIXOS_OZONE_WL = "1";
       HYPRCURSOR_THEME = "rose-pine-hyprcursor";
       HYPRCURSOR_SIZE = 24;
+      HYPRSHOT_DIR = "/home/msviridov/Pictures/screenshots";
       XCURSOR_THEME = "BreezeX-RosePine";
       XCURSOR_SIZE = 24;
     };
