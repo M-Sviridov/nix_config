@@ -130,6 +130,12 @@
           icon = "briefcase";
           id = 2;
         };
+
+        "TSST" = {
+          color = "yellow";
+          icon = "briefcase";
+          id = 3;
+        };
       };
 
       containersForce = true;

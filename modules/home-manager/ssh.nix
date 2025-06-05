@@ -23,6 +23,12 @@
         identityFile = "~/.ssh/heimdall_key";
       };
 
+      "dmz-freshrss" = {
+        hostname = "dmz-freshrss-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
       "dmz-immich" = {
         hostname = "dmz-immich-server";
         user = "msviridov";
@@ -31,6 +37,12 @@
 
       "dmz-jellyfin" = {
         hostname = "dmz-jellyfin-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "dmz-openwebui" = {
+        hostname = "dmz-openwebui-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };

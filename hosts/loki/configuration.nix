@@ -46,7 +46,7 @@
 
   environment.pathsToLink = ["/share/zsh"];
 
-  time.timeZone = "Europe/Paris";
+  time.timeZone = "Asia/Bangkok";
 
   i18n.defaultLocale = "en_DK.UTF-8";
 

@@ -28,9 +28,11 @@
     overlays = [
       inputs.nur.overlays.default
     ];
-
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [
+        "ventoy-1.1.05"
+      ];
     };
   };
   # Home Manager needs a bit of information about you and the paths it should
@@ -59,7 +61,11 @@
     ansible
     brightnessctl
     chromium
+    evince
     ffmpeg
+    hunspell
+    hunspellDicts.fr-any
+    hunspellDicts.en_AU-large
     jellyfin-mpv-shim
     loupe
     mpv
@@ -70,6 +76,7 @@
     signal-desktop-bin
     sshpass
     trezor-suite
+    ventoy
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

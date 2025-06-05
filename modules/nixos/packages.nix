@@ -10,6 +10,7 @@
     home-manager
     killall
     lm_sensors
+    nmap
     usbutils
     nvme-cli
     p7zip
