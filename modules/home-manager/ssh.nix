@@ -75,6 +75,12 @@
         identityFile = "~/.ssh/github_key";
       };
 
+      "haos-aopo" = {
+        hostname = "haos-aopo.tails";
+        user = "root";
+        identityFile = "~/.ssh/haos-aopo_key";
+      };
+
       "heimdall" = {
         hostname = "heimdall.tails";
         user = "root";
