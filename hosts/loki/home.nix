@@ -60,6 +60,7 @@
   home.packages = with pkgs; [
     ansible
     brightnessctl
+    caffeine-ng
     chromium
     evince
     ffmpeg
@@ -69,6 +70,7 @@
     jellyfin-mpv-shim
     loupe
     mpv
+    mqtt-explorer
     nautilus
     nwg-look
     obsidian
