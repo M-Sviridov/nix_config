@@ -21,8 +21,8 @@
       };
 
       input = {
-        kb_layout = "us";
-        kb_options = ["ctrl:nocaps"];
+        kb_layout = "us,th";
+        kb_options = ["ctrl:nocaps,grp:win_space_toggle"];
         follow_mouse = 1;
         sensitivity = 0.2; # -1.0 - 1.0, 0 means no modification.
         touchpad = {
