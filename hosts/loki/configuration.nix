@@ -56,6 +56,7 @@
   users.users.msviridov = {
     isNormalUser = true;
     extraGroups = [
+      "dialout"
       "networkmanager"
       "wheel"
     ];
