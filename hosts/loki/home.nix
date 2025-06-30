@@ -1,11 +1,10 @@
 {
-  config,
   inputs,
-  lib,
   outputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     outputs.homeManagerModules.catppuccin
     outputs.homeManagerModules.easyeffects
@@ -14,19 +13,26 @@
     outputs.homeManagerModules.git
     outputs.homeManagerModules.gtk
     outputs.homeManagerModules.hyprland
+    outputs.homeManagerModules.niri
+    outputs.homeManagerModules.nvf
     outputs.homeManagerModules.packages
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.ssh
     outputs.homeManagerModules.tmux
     outputs.homeManagerModules.wezterm
+    outputs.homeManagerModules.zen-browser
 
     inputs.catppuccin.homeModules.catppuccin
-    inputs.hyprpanel.homeManagerModules.hyprpanel
+    # inputs.hyprpanel.homeManagerModules.hyprpanel
+    inputs.niri.homeModules.niri
+    inputs.nvf.homeManagerModules.default
+    inputs.zen-browser.homeModules.beta
   ];
 
   nixpkgs = {
     overlays = [
       inputs.nur.overlays.default
+      inputs.niri.overlays.niri
     ];
     config = {
       allowUnfree = true;
@@ -39,6 +45,8 @@
   # manage.
   home.username = "msviridov";
   home.homeDirectory = "/home/msviridov";
+
+  services.gnome-keyring.enable = true;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -62,11 +70,15 @@
     brightnessctl
     caffeine-ng
     chromium
+    ente-auth
+    ente-cli
     evince
     ffmpeg
+    gcr
     hunspell
     hunspellDicts.fr-any
     hunspellDicts.en_AU-large
+    imagemagick
     jellyfin-mpv-shim
     loupe
     mpv
@@ -76,11 +88,14 @@
     obsidian
     protonvpn-gui
     signal-desktop-bin
+    sqlite
     sshpass
     sushi
+    termius
     trezor-suite
     ventoy
     winbox4
+    youtube-music
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

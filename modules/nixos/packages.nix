@@ -1,5 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
+    apacheHttpd
+    alacritty
     curl
     dig
     duf
@@ -10,11 +13,13 @@
     home-manager
     killall
     lm_sensors
+    nix-output-monitor
     nmap
     usbutils
     nvme-cli
     p7zip
     rustup
+    sqlite
     sshfs
     stress-ng
     s-tui

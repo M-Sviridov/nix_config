@@ -1,16 +1,11 @@
-{...}: {
+{ ... }:
+{
   programs.ssh = {
     enable = true;
     addKeysToAgent = "yes";
     compression = true;
 
     matchBlocks = {
-      "caddy" = {
-        hostname = "caddy-server.tails";
-        user = "msviridov";
-        identityFile = "~/.ssh/heimdall_key";
-      };
-
       "dmz-authentik" = {
         hostname = "dmz-authentik-server";
         user = "msviridov";
@@ -19,6 +14,12 @@
 
       "dmz-caddy" = {
         hostname = "dmz-caddy-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "dmz-calibre" = {
+        hostname = "dmz-calibre-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
@@ -54,19 +55,19 @@
       };
 
       "docker" = {
-        hostname = "docker-server.tails";
+        hostname = "docker-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
 
       "fileserver" = {
-        hostname = "fileserver-server.tails";
+        hostname = "fileserver-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
 
       "grafana" = {
-        hostname = "grafana-server.tails";
+        hostname = "grafana-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
@@ -76,13 +77,13 @@
       };
 
       "haos-aopo" = {
-        hostname = "haos-aopo.tails";
+        hostname = "haos-aopo";
         user = "root";
         identityFile = "~/.ssh/haos-aopo_key";
       };
 
       "heimdall" = {
-        hostname = "heimdall.tails";
+        hostname = "heimdall";
         user = "root";
         identityFile = "~/.ssh/heimdall_key";
       };
@@ -94,21 +95,50 @@
       };
 
       "influxdb" = {
-        hostname = "influxdb-server.tails";
+        hostname = "influxdb-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "prod-caddy" = {
+        hostname = "prod-caddy-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "prod-control" = {
+        hostname = "prod-control-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "prod-frigate" = {
+        hostname = "prod-frigate-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "prod-pms" = {
+        hostname = "prod-pms-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
 
       "jellyfin" = {
-        hostname = "jellyfin-server.tails";
+        hostname = "jellyfin-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
 
       "opnsense" = {
-        hostname = "opnsense-router.tails";
+        hostname = "opnsense-router";
         user = "msviridov";
         identityFile = "~/.ssh/opnsense_key";
+      };
+
+      "raspi" = {
+        hostname = "raspi";
+        user = "msviridov";
       };
     };
   };

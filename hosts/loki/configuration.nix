@@ -8,7 +8,8 @@
   outputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     outputs.nixosModules.amd-graphics
     outputs.nixosModules.bluetooth
@@ -22,7 +23,7 @@
     outputs.nixosModules.keyd-remapper
     outputs.nixosModules.logitech
     outputs.nixosModules.networking
-    outputs.nixosModules.neovim
+    # outputs.nixosModules.neovim
     outputs.nixosModules.nix
     outputs.nixosModules.packages
     outputs.nixosModules.programs
@@ -44,7 +45,7 @@
     };
   };
 
-  environment.pathsToLink = ["/share/zsh"];
+  environment.pathsToLink = [ "/share/zsh" ];
 
   time.timeZone = "Asia/Bangkok";
 
@@ -57,6 +58,7 @@
     isNormalUser = true;
     extraGroups = [
       "dialout"
+      "input"
       "networkmanager"
       "wheel"
     ];

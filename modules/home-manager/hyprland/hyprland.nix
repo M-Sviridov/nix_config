@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     hyprcursor
     hyprpicker
@@ -34,8 +35,12 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    plugins = [inputs.hyprsplit.packages."${pkgs.stdenv.hostPlatform.system}".hyprsplit];
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    plugins = [
+      inputs.hyprsplit.packages."${pkgs.stdenv.hostPlatform.system}".hyprsplit
+      inputs.hyprgrass.packages.${pkgs.system}.default
+    ];
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     systemd.enable = false;
     xwayland.enable = true;
   };
