@@ -10,7 +10,7 @@
     nodePackages.prettier
     stylua
     taplo
-		tree-sitter
+    tree-sitter
     yaml-language-server
     yamllint
   ];

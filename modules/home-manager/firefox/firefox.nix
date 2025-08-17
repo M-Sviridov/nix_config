@@ -94,29 +94,9 @@
       ShowHomeButton = true;
     };
 
+    profiles.default.extensions.force = true;
     profiles.msviridov = {
-      id = 0;
-
-      # bookmarks = {
-      #   force = true;
-      #
-      #   settings = [
-      #     {
-      #       name = "Homelab";
-      #       toolbar = true;
-      #       bookmarks = [
-      #         {
-      #           name = "Dozzle";
-      #           url = "https://dozzle.lan.msviridov.com";
-      #         }
-      #         {
-      #           name = "qBittorrent";
-      #           url = "https://qbit.lan.msviridov.com";
-      #         }
-      #       ];
-      #     }
-      #   ];
-      # };
+      id = 1;
 
       containers = {
         "Admin" = {
@@ -139,11 +119,12 @@
       };
 
       containersForce = true;
+      extensions.force = true;
 
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
         catppuccin-web-file-icons
-        enhancer-for-youtube
+        # enhancer-for-youtube
         firefox-color
         multi-account-containers
         proton-pass

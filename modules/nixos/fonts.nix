@@ -1,12 +1,11 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   fonts = {
     fontconfig = {
       enable = true;
 
       defaultFonts = {
-        emoji = [ "Noto Color Emoji" ];
-        monospace = [ "Maple Mono NF" ];
+        emoji = ["Noto Color Emoji"];
+        monospace = ["Maple Mono NF"];
         sansSerif = [
           "Noto Sans"
           "Noto Sans Thai"

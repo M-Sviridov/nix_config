@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.ssh = {
     enable = true;
     addKeysToAgent = "yes";
@@ -100,6 +99,12 @@
         identityFile = "~/.ssh/heimdall_key";
       };
 
+      "pbs" = {
+        hostname = "pbs-server";
+        user = "root";
+        identityFile = "~/.ssh/pbs-server_key";
+      };
+
       "prod-caddy" = {
         hostname = "prod-caddy-server";
         user = "msviridov";
@@ -108,6 +113,12 @@
 
       "prod-control" = {
         hostname = "prod-control-server";
+        user = "msviridov";
+        identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "prod-docker" = {
+        hostname = "prod-docker-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
       };
@@ -122,6 +133,12 @@
         hostname = "prod-pms-server";
         user = "msviridov";
         identityFile = "~/.ssh/heimdall_key";
+      };
+
+      "pve-club" = {
+        hostname = "pve-club";
+        user = "root";
+        identityFile = "~/.ssh/pve-club_key";
       };
 
       "jellyfin" = {

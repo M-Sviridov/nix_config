@@ -45,42 +45,39 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      fw-fanctrl,
-      home-manager,
-      hyprland,
-      hyprpanel,
-      hyprsplit,
-      nixos-hardware,
-      nixpkgs,
-      nur,
-      solaar,
-      zen-browser,
-      ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-      host = "loki"; # change to machine hostname
-      pkgs = nixpkgs.legacyPackages.${system};
-      system = "x86_64-linux";
-      user = "msviridov"; # change to username
-    in
-    {
-      homeManagerModules = import ./modules/home-manager;
-      nixosModules = import ./modules/nixos;
+  outputs = {
+    self,
+    fw-fanctrl,
+    home-manager,
+    hyprland,
+    hyprpanel,
+    hyprsplit,
+    nixos-hardware,
+    nixpkgs,
+    nur,
+    solaar,
+    zen-browser,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    host = "loki"; # change to machine hostname
+    pkgs = nixpkgs.legacyPackages.${system};
+    system = "x86_64-linux";
+    user = "msviridov"; # change to username
+  in {
+    homeManagerModules = import ./modules/home-manager;
+    nixosModules = import ./modules/nixos;
 
-      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs outputs user; };
-        modules = [ ./hosts/${host}/home.nix ];
-      };
-
-      nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs outputs host; };
-        modules = [ ./hosts/${host}/configuration.nix ];
-      };
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = {inherit inputs outputs user;};
+      modules = [./hosts/${host}/home.nix];
     };
+
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = {inherit inputs outputs host;};
+      modules = [./hosts/${host}/configuration.nix];
+    };
+  };
 }

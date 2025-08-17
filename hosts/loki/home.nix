@@ -3,8 +3,7 @@
   outputs,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     outputs.homeManagerModules.catppuccin
     outputs.homeManagerModules.easyeffects
@@ -26,7 +25,7 @@
     # inputs.hyprpanel.homeManagerModules.hyprpanel
     inputs.niri.homeModules.niri
     inputs.nvf.homeManagerModules.default
-    inputs.zen-browser.homeModules.beta
+    inputs.zen-browser.homeModules.twilight
   ];
 
   nixpkgs = {
@@ -67,6 +66,7 @@
   # environment.
   home.packages = with pkgs; [
     ansible
+    bitwarden
     brightnessctl
     caffeine-ng
     chromium
@@ -87,6 +87,7 @@
     nwg-look
     obsidian
     protonvpn-gui
+    rustup
     signal-desktop-bin
     sqlite
     sshpass

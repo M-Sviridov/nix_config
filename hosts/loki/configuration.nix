@@ -8,8 +8,7 @@
   outputs,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     outputs.nixosModules.amd-graphics
     outputs.nixosModules.bluetooth
@@ -45,7 +44,7 @@
     };
   };
 
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = ["/share/zsh"];
 
   time.timeZone = "Asia/Bangkok";
 

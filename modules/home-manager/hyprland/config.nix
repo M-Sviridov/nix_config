@@ -20,6 +20,12 @@
         persistent_workspaces = true;
       };
 
+      "plugin:hyprgrass" = {
+        touch_gestures = {
+          workspace_swipe_fingers = 3;
+        };
+      };
+
       input = {
         kb_layout = "us,th";
         kb_options = ["ctrl:nocaps,grp:win_space_toggle"];
@@ -46,6 +52,11 @@
         resize_on_border = true;
         "col.active_border" = "rgba(cba6f7ee) rgba(f5e0dcee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
+      };
+
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_cancel_ratio = 0.15;
       };
 
       decoration = {

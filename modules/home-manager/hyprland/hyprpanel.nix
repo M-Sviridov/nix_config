@@ -1,22 +1,17 @@
 {user, ...}: {
   programs.hyprpanel = {
     enable = true;
-    hyprland.enable = true;
-    overlay.enable = true;
-    overwrite.enable = true;
+    systemd.enable = true;
 
     settings = {
-      layout = {
-        "bar.layouts" = {
+      bar = {
+        layouts = {
           "*" = {
             left = ["dashboard" "workspaces"];
             middle = ["media"];
             right = ["network" "systray" "volume" "battery" "kbinput" "clock" "notifications"];
           };
         };
-      };
-
-      bar = {
         autoHide = "fullscreen";
         bluetooth.label = false;
         clock.format = "%a %b %d  %H:%M";
@@ -24,11 +19,10 @@
         network.label = false;
         workspaces.ignored = "-98";
       };
-
       menus = {
         clock = {
           time = {
-            hideSeconds = false;
+            hideSeconds = true;
             military = true;
           };
 
@@ -36,7 +30,7 @@
             enabled = true;
             interval = 30000;
             key = "dd98f4cb33b144528b083444250401";
-            location = "Fontainebleau, France";
+            location = "Phuket, Thailand";
             unit = "metric";
           };
         };
@@ -103,11 +97,6 @@
         notification.scaling = 90;
         osd.scaling = 95;
         tooltip.scaling = 90;
-      };
-
-      wallpaper = {
-        enable = true;
-        image = "/home/${user}/Pictures/catppuccin/cat_ef_ign_unsplash46.png";
       };
     };
   };

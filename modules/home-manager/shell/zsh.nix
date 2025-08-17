@@ -12,7 +12,7 @@
       compinit -C
     '';
 
-    dotDir = ".config/zsh";
+    dotDir = "/home/msviridov/.config/zsh";
 
     history = {
       append = true;

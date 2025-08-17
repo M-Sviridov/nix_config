@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.zen-browser = {
     enable = true;
 
@@ -38,7 +37,7 @@
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
         catppuccin-web-file-icons
-        enhancer-for-youtube
+        # enhancer-for-youtube
         firefox-color
         multi-account-containers
         proton-pass
@@ -62,7 +61,7 @@
         };
 
         force = true;
-        order = [ "ddg" ];
+        order = ["ddg"];
         privateDefault = "ddg";
       };
     };

@@ -2,8 +2,7 @@
   inputs,
   pkgs,
   ...
-}:
-{
+}: {
   home.packages = with pkgs; [
     hyprcursor
     hyprpicker
