@@ -16,7 +16,7 @@
     outputs.nixosModules.fingerprint
     outputs.nixosModules.fonts
     outputs.nixosModules.framework-13-7040-amd
-    outputs.nixosModules.fw-fanctrl
+    # outputs.nixosModules.fw-fanctrl
     outputs.nixosModules.gaming
     outputs.nixosModules.hyprland
     outputs.nixosModules.keyd-remapper
