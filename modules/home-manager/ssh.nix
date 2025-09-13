@@ -1,11 +1,9 @@
 {...}: {
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
 
     matchBlocks = {
-      # addKeysToAgent = "yes";
-      # compression = true;
-
       "dmz-authentik" = {
         hostname = "dmz-authentik-server";
         user = "msviridov";
