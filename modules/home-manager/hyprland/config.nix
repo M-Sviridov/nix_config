@@ -7,12 +7,8 @@
       ];
 
       exec-once = [
-        # "uwsm app -- solaar --window=hide --battery-icons=solaar"
         # "uwsm app -- bitwarden-desktop"
-        # "uwsm app -- clipse -listen"
-        # "uwsm app -- hyprpanel"
-        # "uwsm app -- udiskie"
-        # "uwsm app -- waypaper --restore"
+        "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false"
       ];
 
       "plugin:hyprsplit" = {
@@ -41,8 +37,8 @@
 
       general = {
         "$mainMod" = "SUPER";
-        "$browser" = "firefox";
-        "$terminal" = "wezterm";
+        "$browser" = "zen";
+        "$terminal" = "ghostty";
         "$fileManager" = "nautilus";
         "$menu" = "tofi-drun --drun-launch=true";
         gaps_in = 4;
@@ -54,10 +50,10 @@
         "col.inactive_border" = "rgba(595959aa)";
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_cancel_ratio = 0.15;
-      };
+      # gestures = {
+      #   workspace_swipe = true;
+      #   workspace_swipe_cancel_ratio = 0.15;
+      # };
 
       decoration = {
         rounding = 10;
@@ -131,7 +127,7 @@
         "ctrl alt, 1, exec, uwsm app -- hyprshot -m region"
         "ctrl alt, 2, exec, uwsm app -- hyprshot -m window"
         "ctrl alt, 3, exec, uwsm app -- hyprshot -m output"
-        "ctrl, space, exec, uwsm app -- $menu"
+        "ctrl, space, exec, vicinae vicinae://toggle"
         "$mainMod, T, togglefloating"
         "ctrl alt, Q, exec, hyprlock"
         "$mainMod, p, togglesplit"
@@ -156,7 +152,7 @@
         "$mainMod, 2, movewindow, mon:DP-2"
         "$mainMod, S, togglespecialworkspace, magic"
         "ctrl SHIFT, S, split:movetoworkspace, special:magic"
-        "$mainMod, V, exec, uwsm app -- $terminal start --class clipse -e 'clipse'"
+        "$mainMod, V, exec, uwsm app -- $terminal -e clipse"
       ];
 
       bindm = [
@@ -180,12 +176,17 @@
         ",XF86AudioPrev, exec, playerctl previous"
       ];
 
+      layerrule = [
+        "blur,vicinae"
+        "ignorealpha 0, vicinae"
+      ];
+
       windowrule = [
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "float, class:(clipse)"
-        "size 622 652, class:(clipse)"
-        "noanim, class:(clipse)"
+        "float, class:(com.example.clipse)"
+        "size 622 652, class:(com.example.clipse)"
+        "noanim, class:(com.example.clipse)"
         "float, class:(org.gnome.NautilusPreviewer)"
         "float, title:(.*)(Extension)"
       ];

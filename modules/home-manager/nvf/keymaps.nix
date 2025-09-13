@@ -12,7 +12,7 @@
         key = "<leader>/";
         mode = "n";
         silent = true;
-        action = ":lua snacks.picker.grep()<cr>";
+        action = ":lua Snacks.picker.grep()<CR>";
         desc = "grep";
       }
       {

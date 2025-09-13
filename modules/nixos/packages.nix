@@ -23,7 +23,6 @@
     stress-ng
     s-tui
     tree
-    unrar
     unzip
     rar
     wget

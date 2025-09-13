@@ -5,26 +5,30 @@
   ...
 }: {
   imports = [
+    outputs.homeManagerModules.alacritty
+    outputs.homeManagerModules.anki
     outputs.homeManagerModules.catppuccin
     outputs.homeManagerModules.easyeffects
-    outputs.homeManagerModules.firefox
+    # outputs.homeManagerModules.firefox
     outputs.homeManagerModules.gammastep
+    outputs.homeManagerModules.ghostty
     outputs.homeManagerModules.git
     outputs.homeManagerModules.gtk
     outputs.homeManagerModules.hyprland
-    outputs.homeManagerModules.niri
+    # outputs.homeManagerModules.niri
     outputs.homeManagerModules.nvf
     outputs.homeManagerModules.packages
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.ssh
     outputs.homeManagerModules.tmux
+    outputs.homeManagerModules.vicinae
     outputs.homeManagerModules.wezterm
     outputs.homeManagerModules.zen-browser
 
     inputs.catppuccin.homeModules.catppuccin
-    # inputs.hyprpanel.homeManagerModules.hyprpanel
-    inputs.niri.homeModules.niri
+    # inputs.niri.homeModules.niri
     inputs.nvf.homeManagerModules.default
+    inputs.vicinae.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
   ];
 
@@ -36,16 +40,20 @@
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        "ventoy-1.1.05"
+        "ventoy-1.1.07"
+        "qtwebengine-5.15.19"
       ];
     };
   };
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "msviridov";
   home.homeDirectory = "/home/msviridov";
 
+  services.caffeine.enable = true;
   services.gnome-keyring.enable = true;
+  services.udiskie = {
+    enable = true;
+    tray = "never";
+  };
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -53,23 +61,12 @@
     };
   };
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "24.11";
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = with pkgs; [
     ansible
     bitwarden
     brightnessctl
-    caffeine-ng
-    chromium
     ente-auth
     ente-cli
     evince
@@ -80,6 +77,7 @@
     hunspellDicts.en_AU-large
     imagemagick
     jellyfin-mpv-shim
+    kitty
     loupe
     mpv
     mqtt-explorer
@@ -92,7 +90,6 @@
     sqlite
     sshpass
     sushi
-    termius
     trezor-suite
     ventoy
     winbox4

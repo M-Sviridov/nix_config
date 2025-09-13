@@ -22,5 +22,13 @@
         "file:///home/msviridov/Videos/"
       ];
     };
+
+    theme = {
+      name = "Catppuccin-GTK-Purple-Dark";
+      package = pkgs.magnetic-catppuccin-gtk.override {
+        accent = ["purple"];
+        tweaks = ["macos"];
+      };
+    };
   };
 }

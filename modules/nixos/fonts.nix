@@ -26,6 +26,7 @@
       font-awesome
       maple-mono.NF-unhinted
       material-icons
+      nerd-fonts.jetbrains-mono
       nerd-fonts.noto
       noto-fonts
       noto-fonts-cjk-sans

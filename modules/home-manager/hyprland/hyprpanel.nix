@@ -1,6 +1,11 @@
-{user, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.hyprpanel = {
     enable = true;
+    package = inputs.hyprpanel.packages.${pkgs.system}.default;
     systemd.enable = true;
 
     settings = {
@@ -13,8 +18,9 @@
           };
         };
         autoHide = "fullscreen";
+        launcher.autoDetectIcon = true;
         bluetooth.label = false;
-        clock.format = "%a %b %d  %H:%M";
+        clock.format = "%H:%M";
         media.show_active_only = true;
         network.label = false;
         workspaces.ignored = "-98";
@@ -89,7 +95,7 @@
         };
 
         font = {
-          name = "Noto Sans";
+          name = "NotoSans Nerd Font Regular";
           size = "1.0rem";
           weight = 600;
         };

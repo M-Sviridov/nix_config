@@ -10,6 +10,7 @@
     rose-pine-hyprcursor
     waypaper
     wl-clipboard
+    xdg-desktop-portal-gtk
   ];
 
   qt = {
@@ -36,7 +37,7 @@
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     plugins = [
       inputs.hyprsplit.packages."${pkgs.stdenv.hostPlatform.system}".hyprsplit
-      inputs.hyprgrass.packages.${pkgs.system}.default
+      # inputs.hyprgrass.packages.${pkgs.system}.default
     ];
     portalPackage =
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;

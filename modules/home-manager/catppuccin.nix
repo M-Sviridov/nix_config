@@ -6,5 +6,6 @@
     gtk.icon.enable = true;
     hyprlock.useDefaultConfig = false;
     waybar.enable = false;
+    wezterm.enable = false;
   };
 }
