@@ -21,5 +21,7 @@
         consoleMode = "auto";
       };
     };
+
+    plymouth.enable = true;
   };
 }
