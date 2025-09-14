@@ -1,40 +1,34 @@
 {pkgs, ...}: {
-  programs = {
-    btop = {
-      enable = true;
-      settings.vim_keys = true;
-    };
-
-    fd.enable = true;
-
-    man = {
-      enable = true;
-      generateCaches = true;
-    };
-
-    ripgrep.enable = true;
-  };
-
-  # gtk = {
-  #   enable = true;
-  #
-  #   cursorTheme = {
-  #     name = "BreezeX-RosePine-Linux";
-  #     package = pkgs.rose-pine-cursor;
-  #     size = 24;
-  #   };
-  #
-  # };
-
-  xdg = {
-    enable = true;
-
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-      desktop = null;
-      publicShare = null;
-      templates = null;
-    };
-  };
+  home.packages = with pkgs; [
+    ansible
+    bitwarden
+    brightnessctl
+    ente-auth
+    ente-cli
+    evince
+    ffmpeg
+    gcr
+    hunspell
+    hunspellDicts.fr-any
+    hunspellDicts.en_AU-large
+    imagemagick
+    jellyfin-mpv-shim
+    kitty
+    loupe
+    mpv
+    mqtt-explorer
+    nautilus
+    nwg-look
+    obsidian
+    protonvpn-gui
+    rustup
+    signal-desktop-bin
+    sqlite
+    sshpass
+    sushi
+    trezor-suite
+    ventoy
+    winbox4
+    youtube-music
+  ];
 }
