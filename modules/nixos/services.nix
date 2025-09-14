@@ -1,9 +1,15 @@
-{...}: {
+{pkgs, ...}: {
   services = {
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
+    };
+
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      package = pkgs.kdePackages.sddm;
     };
 
     fwupd.enable = true;

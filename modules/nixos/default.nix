@@ -2,6 +2,7 @@
   amd-graphics = import ./amd-graphics.nix;
   bluetooth = import ./bluetooth.nix;
   boot = import ./boot.nix;
+  catppuccin = import ./catppuccin.nix;
   fingerprint = import ./fingerprint.nix;
   fonts = import ./fonts.nix;
   framework-13-7040-amd = import ./framework-13-7040-amd.nix;

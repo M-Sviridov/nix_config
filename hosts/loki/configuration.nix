@@ -13,6 +13,7 @@
     outputs.nixosModules.amd-graphics
     outputs.nixosModules.bluetooth
     outputs.nixosModules.boot
+    outputs.nixosModules.catppuccin
     outputs.nixosModules.fingerprint
     outputs.nixosModules.fonts
     outputs.nixosModules.framework-13-7040-amd
@@ -31,7 +32,8 @@
     outputs.nixosModules.sound
     outputs.nixosModules.tailscale
 
-    inputs.fw-fanctrl.nixosModules.default
+    inputs.catppuccin.nixosModules.catppuccin
+    # inputs.fw-fanctrl.nixosModules.default
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
     inputs.solaar.nixosModules.default
 
@@ -49,9 +51,6 @@
   time.timeZone = "Asia/Bangkok";
 
   i18n.defaultLocale = "en_DK.UTF-8";
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
 
   users.users.msviridov = {
     isNormalUser = true;
