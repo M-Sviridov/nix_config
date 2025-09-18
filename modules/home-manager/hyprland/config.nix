@@ -8,7 +8,6 @@
 
       exec-once = [
         # "uwsm app -- bitwarden-desktop"
-        "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false"
       ];
 
       "plugin:hyprsplit" = {
@@ -38,7 +37,7 @@
       general = {
         "$mainMod" = "SUPER";
         "$browser" = "zen";
-        "$terminal" = "ghostty";
+        "$terminal" = "wezterm";
         "$fileManager" = "nautilus";
         "$menu" = "tofi-drun --drun-launch=true";
         gaps_in = 4;
