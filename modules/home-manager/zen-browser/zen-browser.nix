@@ -79,7 +79,7 @@
       };
 
       SearchSuggestEnabled = false;
-      ShowHomeButton = true;
+      ShowHomeButton = false;
     };
 
     profiles.msviridov = {
