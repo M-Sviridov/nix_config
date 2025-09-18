@@ -3,8 +3,6 @@
     ansible
     bitwarden
     brightnessctl
-    ente-auth
-    ente-cli
     evince
     ffmpeg
     gcr
@@ -13,7 +11,6 @@
     hunspellDicts.en_AU-large
     imagemagick
     jellyfin-mpv-shim
-    kitty
     loupe
     mpv
     mqtt-explorer
