@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -12,7 +16,7 @@
       compinit -C
     '';
 
-    dotDir = "/home/msviridov/.config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
 
     history = {
       append = true;

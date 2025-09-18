@@ -36,8 +36,8 @@
           Folder = "Homelab";
         }
         {
-          Title = "Code Docker";
-          URL = "https://code-docker.lan.msviridov.com";
+          Title = "Coder";
+          URL = "https://coder.lan.msviridov.com";
           Placement = "toolbar";
           Folder = "Homelab";
         }
@@ -49,7 +49,7 @@
         }
         {
           Title = "FreshRSS";
-          URL = "https://freshrss.lan.msviridov.com";
+          URL = "https://freshrss.msviridov.com";
           Placement = "toolbar";
           Folder = "Homelab";
         }
@@ -73,13 +73,19 @@
         }
         {
           Title = "Immich";
-          URL = "https://immich.lan.msviridov.com";
+          URL = "https://immich.msviridov.com";
           Placement = "toolbar";
           Folder = "Homelab";
         }
         {
           Title = "Ntfy";
           URL = "https://ntfy.lan.msviridov.com";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
+        {
+          Title = "Open WebUI";
+          URL = "https://openwebui.lan.msviridov.com";
           Placement = "toolbar";
           Folder = "Homelab";
         }
@@ -158,28 +164,22 @@
           Folder = "Perso";
         }
         {
-          Title = "Todo Vikunja";
-          URL = "https://todo.lan.msviridov.com";
-          Placement = "toolbar";
-          Folder = "Homelab";
-        }
-        {
           Title = "VaultWarden";
-          URL = "https://vault.lan.msviridov.com";
+          URL = "https://vault.msviridov.com";
           Placement = "toolbar";
           Folder = "Perso";
         }
 
         # PRO
         {
-          Title = "Google Calendar";
-          URL = "https://calendar.google.com";
+          Title = "Gmail";
+          URL = "https://mail.google.com";
           Placement = "toolbar";
           Folder = "Pro";
         }
         {
-          Title = "Deciplus";
-          URL = "https://avonsquash.deciplus.pro";
+          Title = "Google Calendar";
+          URL = "https://calendar.google.com";
           Placement = "toolbar";
           Folder = "Pro";
         }
