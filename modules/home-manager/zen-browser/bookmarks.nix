@@ -84,6 +84,12 @@
           Folder = "Homelab";
         }
         {
+          Title = "Open WebUI";
+          URL = "https://openwebui.lan.msviridov.com";
+          Placement = "toolbar";
+          Folder = "Homelab";
+        }
+        {
           Title = "OPNsense";
           URL = "https://opnsense.lan.msviridov.com";
           Placement = "toolbar";
