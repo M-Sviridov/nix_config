@@ -56,11 +56,31 @@
     isNormalUser = true;
     extraGroups = [
       "dialout"
+      "gamemode"
       "input"
       "networkmanager"
       "wheel"
     ];
     shell = pkgs.zsh;
+  };
+
+  security.sudo = {
+    enable = true;
+    extraRules = [
+      {
+        users = ["msviridov"];
+        commands = [
+          {
+            command = "/run/current-system/sw/bin/systemctl stop keyd";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "/run/current-system/sw/bin/systemctl start keyd";
+            options = ["NOPASSWD"];
+          }
+        ];
+      }
+    ];
   };
 
   system.stateVersion = "24.11";
