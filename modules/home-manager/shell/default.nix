@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./fzf.nix
-    ./packages.nix
+    ./programs.nix
     ./starship.nix
     ./zsh.nix
   ];
