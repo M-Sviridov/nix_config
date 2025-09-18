@@ -4,22 +4,20 @@
   ...
 }: {
   imports = [
-    outputs.homeManagerModules.alacritty
     outputs.homeManagerModules.anki
     outputs.homeManagerModules.catppuccin
-    outputs.homeManagerModules.easyeffects
     # outputs.homeManagerModules.firefox
     outputs.homeManagerModules.gammastep
-    outputs.homeManagerModules.ghostty
     outputs.homeManagerModules.git
     outputs.homeManagerModules.gtk
     outputs.homeManagerModules.hyprland
     outputs.homeManagerModules.nvf
     outputs.homeManagerModules.packages
+    outputs.homeManagerModules.programs
+    outputs.homeManagerModules.services
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.ssh
     outputs.homeManagerModules.tmux
-    outputs.homeManagerModules.vicinae
     outputs.homeManagerModules.wezterm
     outputs.homeManagerModules.zen-browser
 
@@ -48,6 +46,8 @@
     stateVersion = "24.11";
     shell.enableZshIntegration = true;
   };
+
+  news.display = "silent";
 
   programs.home-manager.enable = true;
 }
