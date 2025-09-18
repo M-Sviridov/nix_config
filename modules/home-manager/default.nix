@@ -4,12 +4,10 @@
   easyeffects = import ./easyeffects.nix;
   firefox = import ./firefox;
   gammastep = import ./gammastep.nix;
-  ghostty = import ./ghostty.nix;
   git = import ./git.nix;
   gtk = import ./gtk.nix;
   hyprland = import ./hyprland;
   niri = import ./niri.nix;
-  nixvim = import ./nixvim.nix;
   nvf = import ./nvf;
   packages = import ./packages.nix;
   shell = import ./shell;
