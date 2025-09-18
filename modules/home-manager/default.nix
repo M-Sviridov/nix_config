@@ -2,7 +2,6 @@
   alacritty = import ./alacritty.nix;
   anki = import ./anki.nix;
   catppuccin = import ./catppuccin.nix;
-  easyeffects = import ./easyeffects.nix;
   firefox = import ./firefox;
   gammastep = import ./gammastep.nix;
   ghostty = import ./ghostty.nix;
@@ -13,10 +12,11 @@
   nixvim = import ./nixvim.nix;
   nvf = import ./nvf;
   packages = import ./packages.nix;
+  programs = import ./programs.nix;
+  services = import ./services.nix;
   shell = import ./shell;
   ssh = import ./ssh.nix;
   tmux = import ./tmux.nix;
-  vicinae = import ./vicinae.nix;
   wezterm = import ./wezterm;
   zen-browser = import ./zen-browser;
 }
