@@ -7,7 +7,9 @@ else
   config = {}
 end
 
-config.font_size = 12
+config.dpi = 384
+
+config.font_size = 11
 
 config.font = wezterm.font({
   family = "Maple Mono NF",
