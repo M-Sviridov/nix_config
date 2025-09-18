@@ -1,5 +1,4 @@
 {
-  alacritty = import ./alacritty.nix;
   anki = import ./anki.nix;
   catppuccin = import ./catppuccin.nix;
   easyeffects = import ./easyeffects.nix;
