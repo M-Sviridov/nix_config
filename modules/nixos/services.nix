@@ -8,6 +8,7 @@
 
     displayManager.sddm = {
       enable = true;
+      enableHidpi = false;
       wayland.enable = true;
       package = pkgs.kdePackages.sddm;
     };
