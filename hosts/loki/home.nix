@@ -18,6 +18,7 @@
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.ssh
     outputs.homeManagerModules.tmux
+    outputs.homeManagerModules.waybar
     outputs.homeManagerModules.wezterm
     outputs.homeManagerModules.zen-browser
 

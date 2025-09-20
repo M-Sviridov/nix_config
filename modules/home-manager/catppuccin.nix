@@ -5,7 +5,10 @@
     # gtk.enable = true;
     gtk.icon.enable = true;
     hyprlock.useDefaultConfig = false;
-    waybar.enable = false;
+    waybar = {
+      enable = true;
+      mode = "prependImport";
+    };
     wezterm.enable = false;
   };
 }

@@ -14,6 +14,7 @@
   shell = import ./shell;
   ssh = import ./ssh.nix;
   tmux = import ./tmux.nix;
+  waybar = import ./waybar.nix;
   wezterm = import ./wezterm;
   zen-browser = import ./zen-browser;
 }
