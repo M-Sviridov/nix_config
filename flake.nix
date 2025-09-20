@@ -12,10 +12,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    # hyprgrass = {
-    # url = "github:horriblename/hyprgrass";
-    # inputs.hyprland.follows = "hyprland";
-    # };
     hyprpanel = {
       url = "github:jas-singhfsu/hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,23 +44,14 @@
 
   outputs = {
     self,
-    fw-fanctrl,
     home-manager,
-    hyprland,
-    hyprpanel,
-    hyprsplit,
-    nixos-hardware,
     nixpkgs,
-    nur,
-    solaar,
-    vicinae,
-    zen-browser,
     ...
   } @ inputs: let
     inherit (self) outputs;
     host = "loki"; # change to machine hostname
     pkgs = nixpkgs.legacyPackages.${system};
-    system = "x86_64-linux";
+    system = "x86_64-linux"; # or aarch64-darwin
     user = "msviridov"; # change to username
   in {
     homeManagerModules = import ./modules/home-manager;
