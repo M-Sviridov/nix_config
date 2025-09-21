@@ -1,6 +1,11 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.zen-browser = {
     enable = true;
+    nativeMessagingHosts = [pkgs.firefoxpwa];
 
     languagePacks = [
       "en-US"
@@ -89,23 +94,49 @@
         "Admin" = {
           color = "red";
           icon = "fingerprint";
-          id = 1;
+          id = 3;
         };
 
         "Personal" = {
-          color = "green";
+          color = "purple";
           icon = "circle";
-          id = 2;
+          id = 1;
         };
 
         "Work" = {
           color = "blue";
           icon = "briefcase";
-          id = 3;
+          id = 2;
         };
       };
 
       containersForce = true;
+      spacesForce = true;
+
+      spaces = let
+        containers = config.programs.zen-browser.profiles.msviridov.containers;
+      in {
+        "Admin" = {
+          container = containers."Admin".id;
+          id = "17ca787b-ed88-4fab-96fe-e79aed72c0fc";
+          icon = "🫆";
+          position = 3000;
+        };
+
+        "Personal" = {
+          container = containers."Personal".id;
+          id = "3327e6b3-8ec7-4d87-804c-148c767091a9";
+          icon = "💻";
+          position = 1000;
+        };
+
+        "Work" = {
+          container = containers."Work".id;
+          id = "554a9f93-8546-4525-b744-e4bf39f9a3af";
+          icon = "🦐";
+          position = 2000;
+        };
+      };
 
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
