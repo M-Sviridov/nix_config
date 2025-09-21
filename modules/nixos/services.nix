@@ -6,13 +6,7 @@
       openFirewall = true;
     };
 
-    displayManager.sddm = {
-      enable = true;
-      enableHidpi = false;
-      wayland.enable = true;
-      package = pkgs.kdePackages.sddm;
-    };
-
+    displayManager.gdm.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
     openssh.enable = true;
