@@ -1,8 +1,12 @@
-{...}: {
+{pkgs, ...}: {
   services = {
     # caffeine.enable = true;
     easyeffects.enable = true;
     gnome-keyring.enable = true;
+    gpg-agent = {
+      enable = true;
+      pinentry.package = pkgs.pinentry-gnome3;
+    };
 
     udiskie = {
       enable = true;
