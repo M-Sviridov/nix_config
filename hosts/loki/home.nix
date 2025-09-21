@@ -4,9 +4,7 @@
   ...
 }: {
   imports = [
-    outputs.homeManagerModules.anki
     outputs.homeManagerModules.catppuccin
-    # outputs.homeManagerModules.firefox
     outputs.homeManagerModules.gammastep
     outputs.homeManagerModules.git
     outputs.homeManagerModules.gtk

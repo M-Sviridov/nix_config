@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    anki
     ansible
     bitwarden
     bitwarden-cli
@@ -8,8 +9,9 @@
     ffmpeg
     gcr
     hunspell
-    hunspellDicts.fr-any
     hunspellDicts.en_AU-large
+    hunspellDicts.fr-any
+    hunspellDicts.th_TH
     imagemagick
     jellyfin-mpv-shim
     loupe
