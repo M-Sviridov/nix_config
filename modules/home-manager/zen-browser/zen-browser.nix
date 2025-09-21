@@ -65,7 +65,7 @@
       PasswordManagerEnabled = false;
 
       PictureInPicture = {
-        Enabled = false;
+        Enabled = true;
       };
 
       PrintingEnabled = true;
