@@ -2,11 +2,6 @@
   programs = {
     dconf.enable = true;
 
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-
     localsend = {
       enable = true;
       openFirewall = true;
