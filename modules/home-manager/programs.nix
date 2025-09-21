@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs = {
     btop = {
       enable = true;
@@ -6,6 +6,11 @@
     };
 
     fd.enable = true;
+
+    gpg = {
+      enable = true;
+      homedir = "${config.xdg.configHome}/gnupg";
+    };
 
     man = {
       enable = true;
