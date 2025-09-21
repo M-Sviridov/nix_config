@@ -55,21 +55,20 @@
       # };
 
       decoration = {
-        rounding = 10;
-
-        shadow = {
-          enabled = true;
-          range = 4;
-          render_power = 3;
-          color = "rgba(1a1a1aee)";
-        };
-
         blur = {
           enabled = true;
-          size = 8;
-          passes = 2;
+          passes = 4;
+          size = 5;
+          special = true;
           vibrancy = 0.1696;
+          xray = true;
         };
+
+        dim_special = 0.3;
+        inactive_opacity = 0.8;
+
+        rounding = 10;
+        shadow.enabled = true;
       };
 
       animations = {
@@ -183,11 +182,12 @@
       windowrule = [
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "float, class:(com.example.clipse)"
         "size 622 652, class:(com.example.clipse)"
         "noanim, class:(com.example.clipse)"
+        "float, class:(com.example.clipse)"
         "float, class:(org.gnome.NautilusPreviewer)"
         "float, title:(.*)(Extension)"
+        "float, class:^zen-twilight$,title:^(Picture-in-Picture)"
       ];
 
       workspace = [
