@@ -68,5 +68,7 @@
       specialArgs = {inherit inputs outputs host;};
       modules = [./hosts/${host}/configuration.nix];
     };
+
+    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
 }
