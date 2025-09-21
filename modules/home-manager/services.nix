@@ -1,6 +1,6 @@
 {...}: {
   services = {
-    caffeine.enable = true;
+    # caffeine.enable = true;
     easyeffects.enable = true;
     gnome-keyring.enable = true;
 

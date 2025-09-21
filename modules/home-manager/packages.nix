@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     ansible
     bitwarden
+    bitwarden-cli
     brightnessctl
     evince
     ffmpeg
