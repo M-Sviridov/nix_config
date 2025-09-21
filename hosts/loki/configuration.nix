@@ -64,6 +64,8 @@
     shell = pkgs.zsh;
   };
 
+  security.pam.services.login.enableGnomeKeyring = true;
+
   security.sudo = {
     enable = true;
     extraRules = [
