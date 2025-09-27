@@ -188,6 +188,7 @@
         "float, class:(org.gnome.NautilusPreviewer)"
         "float, title:(.*)(Extension)"
         "float, class:^zen-twilight$,title:^(Picture-in-Picture)"
+        "float, class:^Bitwarden$,title:^(Bitwarden)"
       ];
 
       workspace = [

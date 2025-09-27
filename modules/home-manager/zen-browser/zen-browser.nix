@@ -31,7 +31,7 @@
           "https://mistral.ai/"
           "https://ntfy.lan.msviridov.com/"
           "https://proton.me/"
-          "https://redditcom/"
+          "https://reddit.com/"
           "https://soundcloud.com/"
           "https://t.coros.com/admin/views/dash-board"
           "https://ui.com/"

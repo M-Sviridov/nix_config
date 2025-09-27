@@ -12,7 +12,7 @@
   programs = import ./programs.nix;
   services = import ./services.nix;
   shell = import ./shell;
-  ssh = import ./ssh.nix;
+  ssh = import ./ssh;
   tmux = import ./tmux.nix;
   waybar = import ./waybar.nix;
   wezterm = import ./wezterm;
