@@ -30,7 +30,7 @@
 
     signing = {
       format = "ssh";
-      key = "${config.home.homeDirectory}/.ssh/id_github_ed25519.pub";
+      key = "${config.home.homeDirectory}/.ssh/sign_github_ed25519.pub";
       signByDefault = true;
     };
 
