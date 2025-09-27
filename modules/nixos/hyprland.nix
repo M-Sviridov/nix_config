@@ -24,6 +24,7 @@
 
   environment = {
     variables = {
+      DISPLAY = ":0";
       ELECTRON_OZONE_PLATFORM_HINT = "wayland";
       NIXOS_OZONE_WL = "1";
       HYPRCURSOR_THEME = "rose-pine-hyprcursor";
