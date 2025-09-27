@@ -17,6 +17,10 @@
       generateCaches = true;
     };
 
+    obsidian = {
+      enable = true;
+    };
+
     ripgrep.enable = true;
   };
 
@@ -32,6 +36,16 @@
         genericName = "Password Manager";
         mimeType = ["x-scheme-handler/bitwarden"];
         name = "Bitwarden";
+        type = "Application";
+      };
+
+      obsidian = {
+        categories = ["Office"];
+        comment = "Knowledge base";
+        exec = "obsidian --ozone-platform-hint=auto %u";
+        icon = "obsidian";
+        mimeType = ["x-scheme-handler/obsidian"];
+        name = "Obsidian";
         type = "Application";
       };
     };
