@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.git = {
     enable = true;
 
@@ -27,6 +27,13 @@
     };
 
     maintenance.enable = true;
+
+    signing = {
+      format = "ssh";
+      key = "${config.home.homeDirectory}/.ssh/id_github_ed25519.pub";
+      signByDefault = true;
+    };
+
     userEmail = "74146348+M-Sviridov@users.noreply.github.com";
     userName = "M-Sviridov";
   };
