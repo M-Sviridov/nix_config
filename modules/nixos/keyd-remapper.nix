@@ -9,10 +9,10 @@
             capslock = "overload(control, esc)";
             leftcontrol = "layer(meta)";
             leftmeta = "layer(control)";
-            rightcontrol = "layer(meta)";
-            rightmeta = "layer(control)";
-            leftshift = "oneshot(shift)";
-            rightshift = "oneshot(shift)";
+            # rightcontrol = "layer(meta)";
+            # rightmeta = "layer(control)";
+            # leftshift = "oneshot(shift)";
+            # rightshift = "oneshot(shift)";
             a = "overloadt(control, a, 200)";
             s = "overloadt(shift, s, 200)";
             d = "overloadt(meta, d, 200)";
