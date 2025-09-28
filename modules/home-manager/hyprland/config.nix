@@ -23,7 +23,7 @@
 
       input = {
         kb_layout = "us,th";
-        kb_options = ["ctrl:nocaps,grp:win_space_toggle"];
+        kb_options = ["grp:win_space_toggle"];
         follow_mouse = 1;
         sensitivity = 0.2; # -1.0 - 1.0, 0 means no modification.
         touchpad = {
@@ -65,7 +65,7 @@
         };
 
         dim_special = 0.3;
-        inactive_opacity = 0.8;
+        inactive_opacity = 0.9;
 
         rounding = 10;
         shadow.enabled = true;
@@ -187,7 +187,6 @@
         "float, class:(com.example.clipse)"
         "float, class:(org.gnome.NautilusPreviewer)"
         "float, title:(.*)(Extension)"
-        "float, class:^zen-twilight$,title:^(Picture-in-Picture)"
         "float, class:^Bitwarden$,title:^(Bitwarden)"
       ];
 
