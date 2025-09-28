@@ -33,6 +33,8 @@
       noto-fonts-cjk-serif
       noto-fonts-emoji
       noto-fonts-extra
+      overpass
+      rubik
     ];
   };
 }
