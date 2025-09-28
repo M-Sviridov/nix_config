@@ -19,6 +19,7 @@
     mqtt-explorer
     nautilus
     nwg-look
+    obsidian
     protonvpn-gui
     rustup
     signal-desktop-bin

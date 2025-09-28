@@ -17,10 +17,6 @@
       generateCaches = true;
     };
 
-    obsidian = {
-      enable = true;
-    };
-
     ripgrep.enable = true;
   };
 
