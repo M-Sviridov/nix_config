@@ -20,12 +20,14 @@
     nautilus
     nwg-look
     obsidian
+    opentofu
     protonvpn-gui
     rustup
     signal-desktop-bin
     sqlite
     sshpass
     sushi
+    terraform
     trezor-suite
     ventoy
     winbox4
