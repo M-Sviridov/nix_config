@@ -17,6 +17,12 @@
 
         fidget = true;
         flash = true;
+
+        gitsigns = {
+          enabled = true;
+          transparent = true;
+        };
+
         native_lsp.enabled = true;
         noice = true;
         notify = true;
