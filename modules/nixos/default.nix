@@ -12,7 +12,6 @@
   keyd-remapper = import ./keyd-remapper.nix;
   logitech = import ./logitech.nix;
   networking = import ./networking.nix;
-  neovim = import ./neovim.nix;
   nix = import ./nix.nix;
   packages = import ./packages.nix;
   programs = import ./programs.nix;
