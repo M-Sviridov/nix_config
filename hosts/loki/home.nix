@@ -9,7 +9,7 @@
     outputs.homeManagerModules.git
     outputs.homeManagerModules.gtk
     outputs.homeManagerModules.hyprland
-    outputs.homeManagerModules.nvf
+    outputs.homeManagerModules.nixvim
     outputs.homeManagerModules.packages
     outputs.homeManagerModules.programs
     outputs.homeManagerModules.services
@@ -21,7 +21,7 @@
     outputs.homeManagerModules.zen-browser
 
     inputs.catppuccin.homeModules.catppuccin
-    inputs.nvf.homeManagerModules.default
+    inputs.nixvim.homeModules.nixvim
     inputs.vicinae.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
   ];
