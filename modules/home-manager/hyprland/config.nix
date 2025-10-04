@@ -111,6 +111,7 @@
       };
 
       misc = {
+        focus_on_activate = true;
         force_default_wallpaper = -1;
         disable_hyprland_logo = true;
         vrr = 1;
@@ -125,7 +126,7 @@
         "ctrl alt, 1, exec, uwsm app -- hyprshot -m region"
         "ctrl alt, 2, exec, uwsm app -- hyprshot -m window"
         "ctrl alt, 3, exec, uwsm app -- hyprshot -m output"
-        "ctrl, space, exec, vicinae vicinae://toggle"
+        "ctrl, space, exec, uwsm app -- $menu"
         "$mainMod, T, togglefloating"
         "ctrl alt, Q, exec, hyprlock"
         "$mainMod, p, togglesplit"

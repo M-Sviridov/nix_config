@@ -27,7 +27,7 @@
       prompt-padding = 5;
       result-spacing = 15;
       selection-color = "#f38ba8";
-      tect-color = "#cdd6f4";
+      text-color = "#cdd6f4";
       width = "99%";
     };
   };
