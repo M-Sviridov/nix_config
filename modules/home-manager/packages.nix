@@ -22,7 +22,6 @@
     obsidian
     opentofu
     protonvpn-gui
-    rustup
     signal-desktop-bin
     sqlite
     sshpass
