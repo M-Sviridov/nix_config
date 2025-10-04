@@ -26,6 +26,7 @@
     nvim-surround.enable = true;
     rainbow-delimiters.enable = true;
     tiny-devicons-auto-colors.enable = true;
+    tmux-navigator.enable = true;
     which-key.enable = true;
   };
 }
