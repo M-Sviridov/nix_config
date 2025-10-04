@@ -12,6 +12,8 @@
       homedir = "${config.xdg.configHome}/gnupg";
     };
 
+    lazygit.enable = true;
+
     man = {
       enable = true;
       generateCaches = true;
