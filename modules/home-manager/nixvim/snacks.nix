@@ -8,6 +8,7 @@
       indent.enabled = true;
       input.enable = true;
       notifier.enabled = true;
+      notify.enabled = true;
       picker = {
         enabled = true;
         db.sqlite3_path = "${pkgs.sqlite.out}/lib/libsqlite3.so";
@@ -16,7 +17,11 @@
       scope.enabled = true;
       scroll.enabled = false;
       statuscolumn.enabled = true;
-      toggle.enabled = true;
+      toggle = {
+        enabled = true;
+        notify = true;
+        which-key = true;
+      };
       words.enabled = true;
       zen.enabled = true;
     };

@@ -26,5 +26,6 @@
     nvim-surround.enable = true;
     rainbow-delimiters.enable = true;
     tiny-devicons-auto-colors.enable = true;
+    which-key.enable = true;
   };
 }

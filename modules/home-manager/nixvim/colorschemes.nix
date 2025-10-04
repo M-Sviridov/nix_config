@@ -35,6 +35,7 @@
         };
 
         treesitter_context = true;
+        which_key = true;
       };
     };
   };
