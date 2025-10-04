@@ -6,7 +6,7 @@
   git = import ./git.nix;
   gtk = import ./gtk.nix;
   hyprland = import ./hyprland;
-  niri = import ./niri.nix;
+  nixvim = import ./nixvim;
   nvf = import ./nvf;
   packages = import ./packages.nix;
   programs = import ./programs.nix;
