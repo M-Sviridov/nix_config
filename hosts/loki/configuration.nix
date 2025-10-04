@@ -23,7 +23,6 @@
     outputs.nixosModules.keyd-remapper
     outputs.nixosModules.logitech
     outputs.nixosModules.networking
-    # outputs.nixosModules.neovim
     outputs.nixosModules.nix
     outputs.nixosModules.packages
     outputs.nixosModules.programs
