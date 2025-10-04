@@ -141,14 +141,12 @@
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
         catppuccin-web-file-icons
-        firefox-color
+        karakeep
         multi-account-containers
         proton-pass
-        return-youtube-dislikes
         skip-redirect
         sponsorblock
         stylus
-        tampermonkey
         ublock-origin
         vimium
         yomitan
@@ -290,6 +288,7 @@
         "browser.search.suggest.enabled" = false;
         "browser.urlbar.suggest.searches" = false;
         "browser.findbar.suggest.enabled" = false;
+        "zen.urlbar.behavior" = "float";
       };
     };
   };
