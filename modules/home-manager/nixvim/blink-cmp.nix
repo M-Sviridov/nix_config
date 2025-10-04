@@ -1,0 +1,18 @@
+{...}: {
+  programs.nixvim.plugins.blink-cmp = {
+    enable = true;
+
+    settings = {
+      appearance.nerd_font_variant = "mono";
+
+      completion = {
+        documentation.auto_show = false;
+        accept.auto_brackets.enabled = false;
+      };
+
+      fuzzy.implementation = "prefer_rust_with_warning";
+      keymap.preset = "default";
+      sources.default = ["lsp" "path" "snippets" "buffer"];
+    };
+  };
+}
