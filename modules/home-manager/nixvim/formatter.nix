@@ -5,8 +5,13 @@
 
     settings = {
       formatters_by_ft = {
+        bash = ["beautysh"];
         markdown = ["prettier"];
         nix = ["alejandra"];
+        sh = ["beautysh"];
+        terraform = ["terraform_fmt"];
+        tofu = ["tofu_fmt"];
+        yaml = ["prettier"];
       };
 
       format_on_save = {

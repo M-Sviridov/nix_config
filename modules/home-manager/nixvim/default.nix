@@ -8,7 +8,7 @@
     ./formatter.nix
     ./highlights.nix
     ./keymaps.nix
-    # ./linter.nix
+    ./lint.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
