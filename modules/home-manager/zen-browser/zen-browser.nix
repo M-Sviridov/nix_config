@@ -288,7 +288,6 @@
         "browser.search.suggest.enabled" = false;
         "browser.urlbar.suggest.searches" = false;
         "browser.findbar.suggest.enabled" = false;
-        "zen.urlbar.behavior" = "float";
       };
     };
   };
