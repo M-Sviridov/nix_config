@@ -14,7 +14,7 @@
     };
 
     vicinae = {
-      enable = true;
+      enable = false;
       autoStart = true;
       settings = {
         faviconService = "twenty";
