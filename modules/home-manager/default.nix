@@ -16,5 +16,6 @@
   tmux = import ./tmux.nix;
   waybar = import ./waybar.nix;
   wezterm = import ./wezterm;
+  xdg = import ./xdg.nix;
   zen-browser = import ./zen-browser;
 }

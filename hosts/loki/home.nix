@@ -18,6 +18,7 @@
     outputs.homeManagerModules.tmux
     outputs.homeManagerModules.waybar
     outputs.homeManagerModules.wezterm
+    outputs.homeManagerModules.xdg
     outputs.homeManagerModules.zen-browser
 
     inputs.catppuccin.homeModules.catppuccin
