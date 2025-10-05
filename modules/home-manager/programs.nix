@@ -25,29 +25,6 @@
   xdg = {
     enable = true;
 
-    desktopEntries = {
-      bitwarden = {
-        categories = ["Utility"];
-        comment = "Secure and free password manager for all of your devices";
-        exec = "bitwarden --ozone-platform-hint=auto %U";
-        icon = "bitwarden";
-        genericName = "Password Manager";
-        mimeType = ["x-scheme-handler/bitwarden"];
-        name = "Bitwarden";
-        type = "Application";
-      };
-
-      obsidian = {
-        categories = ["Office"];
-        comment = "Knowledge base";
-        exec = "obsidian --ozone-platform-hint=auto %u";
-        icon = "obsidian";
-        mimeType = ["x-scheme-handler/obsidian"];
-        name = "Obsidian";
-        type = "Application";
-      };
-    };
-
     userDirs = {
       enable = true;
       createDirectories = true;
