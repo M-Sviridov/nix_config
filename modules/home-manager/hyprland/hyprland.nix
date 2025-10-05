@@ -9,7 +9,7 @@
     hyprpicker
     hyprshot
     rose-pine-hyprcursor
-    waypaper
+    # waypaper
     wl-clipboard
     xdg-desktop-portal-gtk
   ];
@@ -76,8 +76,20 @@
 
     hyprpolkitagent.enable = true;
     playerctld.enable = true;
-    swww.enable = true;
+    # swww.enable = true;
     udiskie.enable = true;
+    wpaperd = {
+      enable = true;
+
+      settings = {
+        eDP-1 = {
+          path = "${config.home.homeDirectory}/pictures/catppuccin/";
+          apply-shadow = true;
+          duration = "60m";
+          sorting = "random";
+        };
+      };
+    };
   };
 
   wayland.windowManager.hyprland = {
