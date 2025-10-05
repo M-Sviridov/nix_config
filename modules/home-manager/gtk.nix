@@ -15,11 +15,11 @@
 
     gtk3 = {
       bookmarks = [
-        "file:///home/msviridov/Documents/"
-        "file:///home/msviridov/Downloads/"
-        "file:///home/msviridov/Music/"
-        "file:///home/msviridov/Pictures/"
-        "file:///home/msviridov/Videos/"
+        "file:///home/msviridov/documents/"
+        "file:///home/msviridov/downloads/"
+        "file:///home/msviridov/music/"
+        "file:///home/msviridov/pictures/"
+        "file:///home/msviridov/videos/"
       ];
     };
 
