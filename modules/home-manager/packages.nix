@@ -7,6 +7,7 @@
     brightnessctl
     evince
     ffmpeg
+    feishin
     gcr
     hunspell
     hunspellDicts.en_AU-large
