@@ -187,8 +187,12 @@
         "float, class:(clipse)"
         "dimaround, class:(clipse)"
         "float, class:(org.gnome.NautilusPreviewer)"
+        "size 933 652, class:(org.gnome.NautilusPreviewer)"
+        "float, class:(org.gnome.Nautilus)"
+        "size 1000 652, class:(org.gnome.Nautilus)"
         "float, title:(.*)(Extension)"
         "float, class:^Bitwarden$,title:^(Bitwarden)"
+        "size 1000 652, class:(Bitwarden)"
       ];
 
       workspace = [
