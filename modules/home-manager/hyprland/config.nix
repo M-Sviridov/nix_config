@@ -151,7 +151,7 @@
         "$mainMod, 2, movewindow, mon:DP-2"
         "$mainMod, S, togglespecialworkspace, magic"
         "ctrl SHIFT, S, split:movetoworkspace, special:magic"
-        "$mainMod, V, exec, uwsm app -- $terminal -e clipse"
+        "$mainMod, V, exec, uwsm app -- $terminal start --class clipse -e 'clipse'"
       ];
 
       bindm = [
@@ -183,9 +183,9 @@
       windowrule = [
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "size 622 652, class:(com.example.clipse)"
-        "noanim, class:(com.example.clipse)"
-        "float, class:(com.example.clipse)"
+        "size 622 652, class:(clipse)"
+        "float, class:(clipse)"
+        "dimaround, class:(clipse)"
         "float, class:(org.gnome.NautilusPreviewer)"
         "float, title:(.*)(Extension)"
         "float, class:^Bitwarden$,title:^(Bitwarden)"
