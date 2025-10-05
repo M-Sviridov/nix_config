@@ -85,7 +85,7 @@
         eDP-1 = {
           path = "${config.home.homeDirectory}/pictures/catppuccin/";
           apply-shadow = true;
-          duration = "60m";
+          duration = "30m";
           sorting = "random";
         };
       };
