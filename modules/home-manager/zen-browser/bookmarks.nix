@@ -49,7 +49,7 @@
         }
         {
           Title = "FreshRSS";
-          URL = "https://freshrss.msviridov.com";
+          URL = "https://rss.msviridov.com";
           Placement = "toolbar";
           Folder = "Homelab";
         }

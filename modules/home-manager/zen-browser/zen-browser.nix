@@ -21,9 +21,9 @@
 
       Cookies = {
         Allow = [
+          "https://auth.msviridov.com/"
           "https://chatgpt.com/"
           "https://claude.ai/"
-          "https://freshrss.msviridov.com/"
           "https://github.com/"
           "https://google.com/"
           "https://jellyfin.lan.msviridov.com/"
@@ -42,7 +42,7 @@
         Behavior = "reject-tracker-and-partition-foreign";
       };
 
-      DefaultDownloadDirectory = "\${home}/Downloads/";
+      DefaultDownloadDirectory = "${config.home.homeDirectory}/downloads";
       DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
       DisableFormHistory = true;
@@ -288,6 +288,7 @@
         "browser.search.suggest.enabled" = false;
         "browser.urlbar.suggest.searches" = false;
         "browser.findbar.suggest.enabled" = false;
+        "zen.urlbar.behavior" = "float";
       };
     };
   };
