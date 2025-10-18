@@ -2,6 +2,13 @@
   programs.nixvim = {
     clipboard.register = "unnamedplus";
 
+    filetype = {
+      pattern = {
+        "compose.*%.ya?ml" = "yaml.docker-compose";
+        "docker%-compose.*%.ya?ml" = "yaml.docker-compose";
+      };
+    };
+
     globals = {
       have_nerd_font = true;
       maplocalleader = " ";

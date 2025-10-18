@@ -9,7 +9,7 @@
         markdown = ["prettier"];
         nix = ["alejandra"];
         sh = ["beautysh"];
-        terraform = ["terraform_fmt"];
+        terraform = ["tofu_fmt"];
         tofu = ["tofu_fmt"];
         yaml = ["prettier"];
       };
