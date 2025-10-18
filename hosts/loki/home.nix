@@ -24,7 +24,7 @@
     inputs.catppuccin.homeModules.catppuccin
     inputs.nixvim.homeModules.nixvim
     inputs.vicinae.homeManagerModules.default
-    inputs.zen-browser.homeModules.twilight
+    inputs.zen-browser.homeModules.twilight-official
   ];
 
   nixpkgs = {
