@@ -3,7 +3,7 @@
     enable = true;
     keyboards = {
       default = {
-        ids = ["0001:0001:70533846"];
+        ids = ["0001:0001:09b4e68d"];
         settings = {
           main = {
             capslock = "overload(control, esc)";
