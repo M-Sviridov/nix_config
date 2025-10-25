@@ -1,8 +1,9 @@
 {config, ...}: {
   programs.git = {
     enable = true;
+    maintenance.enable = true;
 
-    extraConfig = {
+    settings = {
       branch.sort = "-committerdate";
       color.ui = "auto";
       column.ui = "auto";
@@ -15,26 +16,17 @@
       push.autoSetupRemote = true;
       status.branch = true;
       tag.sort = "-version:refname";
-    };
 
-    delta = {
-      enable = true;
-      options = {
-        line-numbers = true;
-        navigate = true;
-        side-by-side = true;
+      user = {
+        email = "74146348+M-Sviridov@users.noreply.github.com";
+        name = "M-Sviridov";
       };
     };
-
-    maintenance.enable = true;
 
     signing = {
       format = "ssh";
       key = "${config.home.homeDirectory}/.ssh/sign_github_ed25519.pub";
       signByDefault = true;
     };
-
-    userEmail = "74146348+M-Sviridov@users.noreply.github.com";
-    userName = "M-Sviridov";
   };
 }
