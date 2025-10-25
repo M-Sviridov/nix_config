@@ -5,6 +5,7 @@
 }: {
   imports = [
     outputs.homeManagerModules.catppuccin
+    outputs.homeManagerModules.delta
     outputs.homeManagerModules.gammastep
     outputs.homeManagerModules.git
     outputs.homeManagerModules.gtk
