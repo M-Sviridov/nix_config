@@ -1,6 +1,7 @@
 {
   anki = import ./anki.nix;
   catppuccin = import ./catppuccin.nix;
+  delta = import ./delta.nix;
   firefox = import ./firefox;
   gammastep = import ./gammastep.nix;
   git = import ./git.nix;
