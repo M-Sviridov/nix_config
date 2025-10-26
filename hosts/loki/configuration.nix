@@ -2,9 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 {
-  config,
   inputs,
-  lib,
   outputs,
   pkgs,
   ...
@@ -39,11 +37,7 @@
     ./hardware-configuration.nix
   ];
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
+  nixpkgs.config.allowUnfree = true;
 
   environment.pathsToLink = ["/share/zsh"];
 
