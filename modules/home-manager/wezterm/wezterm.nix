@@ -3,11 +3,13 @@
     air-laptop-01 = {
       dpi = 144.0;
       fontSize = 13.0;
+      windowDecorations = "RESIZE";
     };
 
     loki = {
       dpi = 384.0;
       fontSize = 11.0;
+      windowDecorations = "NONE";
     };
   };
 
@@ -25,9 +27,12 @@ in {
         config = {}
       end
 
+      -- Host specific settings
       config.font_size = ${toString settings.fontSize}
       config.dpi = ${toString settings.dpi}
+      config.window_decorations = "${settings.windowDecorations}"
 
+      -- Shared settings
       config.font = wezterm.font {
         family = 'Maple Mono NF',
         harfbuzz_features = { 'calt', 'cv01', 'ss05', 'ss08' },
@@ -50,7 +55,6 @@ in {
         },
       }
 
-      config.window_decorations = 'RESIZE'
       config.window_close_confirmation = 'NeverPrompt'
 
       config.color_scheme = 'Catppuccin Mocha'
