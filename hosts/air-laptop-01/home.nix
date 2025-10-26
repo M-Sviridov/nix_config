@@ -12,7 +12,7 @@
     outputs.homeManagerModules.ssh
     outputs.homeManagerModules.tmux
     outputs.homeManagerModules.wezterm
-    outputs.homeManagerModules.zen-browser
+    # outputs.homeManagerModules.zen-browser
 
     inputs.catppuccin.homeModules.catppuccin
     inputs.nixvim.homeModules.nixvim
