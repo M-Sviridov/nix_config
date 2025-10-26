@@ -1,5 +1,5 @@
 {
-  description = "NixOS Config";
+  description = "NixOS & Nix-Darwin Config";
 
   inputs = {
     catppuccin.url = "github:catppuccin/nix";
@@ -57,33 +57,64 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-    host = "air-laptop-01"; # change to machine hostname
-    pkgs = nixpkgs.legacyPackages.${system};
-    # system = "x86_64-linux";
-    system = "aarch64-darwin";
-    user = "msviridov"; # change to username
+
+    machines = {
+      air-laptop-01 = {
+        system = "aarch64-darwin";
+        user = "msviridov";
+        type = "darwin";
+      };
+
+      loki = {
+        system = "x86_64-linux";
+        user = "msviridov";
+        type = "nixos";
+      };
+    };
+
+    mkDarwin = hostname: config:
+      nix-darwin.lib.darwinSystem {
+        system = config.system;
+        specialArgs = {inherit inputs outputs hostname;};
+        modules = [./hosts/${hostname}/configuration.nix];
+      };
+
+    mkHome = hostname: config:
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${config.system};
+        extraSpecialArgs = {inherit inputs outputs hostname;};
+        modules = [./hosts/${hostname}/home.nix];
+      };
+
+    mkNixos = hostname: config:
+      nixpkgs.lib.nixosSystem {
+        system = config.system;
+        specialArgs = {inherit inputs outputs hostname;};
+        modules = [./hosts/${hostname}/configuration.nix];
+      };
   in {
     darwinModules = import ./modules/darwin;
     homeManagerModules = import ./modules/home-manager;
     nixosModules = import ./modules/nixos;
 
-    darwinConfigurations.${host} = nix-darwin.lib.darwinSystem {
-      specialArgs = {inherit inputs outputs host;};
-      modules = [./hosts/${host}/configuration.nix];
-    };
+    darwinConfigurations =
+      nixpkgs.lib.mapAttrs mkDarwin
+      (nixpkgs.lib.filterAttrs (n: v: v.type == "darwin") machines);
 
-    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = {inherit inputs outputs user;};
-      modules = [./hosts/${host}/home.nix];
-    };
+    homeConfigurations =
+      nixpkgs.lib.mapAttrs' (
+        hostname: config:
+          nixpkgs.lib.nameValuePair "${config.user}@${hostname}" (mkHome hostname config)
+      )
+      machines;
 
-    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {inherit inputs outputs host;};
-      modules = [./hosts/${host}/configuration.nix];
-    };
+    nixosConfigurations =
+      nixpkgs.lib.mapAttrs mkNixos
+      (nixpkgs.lib.filterAttrs (n: v: v.type == "nixos") machines);
 
-    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+    formatter =
+      nixpkgs.lib.genAttrs
+      (nixpkgs.lib.unique (nixpkgs.lib.mapAttrsToList (n: v: v.system) machines))
+      (system: nixpkgs.legacyPackages.${system}.alejandra);
   };
 }
