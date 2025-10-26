@@ -20,6 +20,10 @@
       url = "github:shezdy/hyprsplit";
       inputs.hyprland.follows = "hyprland";
     };
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim = {
@@ -48,17 +52,25 @@
   outputs = {
     self,
     home-manager,
+    nix-darwin,
     nixpkgs,
     ...
   } @ inputs: let
     inherit (self) outputs;
-    host = "loki"; # change to machine hostname
+    host = "air-laptop-01"; # change to machine hostname
     pkgs = nixpkgs.legacyPackages.${system};
-    system = "x86_64-linux"; # or aarch64-darwin
+    # system = "x86_64-linux";
+    system = "aarch64-darwin";
     user = "msviridov"; # change to username
   in {
+    darwinModules = import ./modules/darwin;
     homeManagerModules = import ./modules/home-manager;
     nixosModules = import ./modules/nixos;
+
+    darwinConfigurations.${host} = nix-darwin.lib.darwinSystem {
+      specialArgs = {inherit inputs outputs host;};
+      modules = [./hosts/${host}/configuration.nix];
+    };
 
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
