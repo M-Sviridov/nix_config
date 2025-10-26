@@ -10,5 +10,6 @@
       mode = "prependImport";
     };
     wezterm.enable = false;
+    zathura.flavor = "latte";
   };
 }

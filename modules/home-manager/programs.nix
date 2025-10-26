@@ -6,6 +6,7 @@
     };
 
     fd.enable = true;
+    go.enable = true;
 
     gpg = {
       enable = true;
@@ -20,5 +21,14 @@
     };
 
     ripgrep.enable = true;
+
+    zathura = {
+      enable = true;
+
+      options = {
+        recolor = "true";
+        recolor-keephue = "true";
+      };
+    };
   };
 }
