@@ -8,6 +8,7 @@
     outputs.homeManagerModules.delta
     outputs.homeManagerModules.git
     outputs.homeManagerModules.nixvim
+    outputs.homeManagerModules.programs
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.ssh
     outputs.homeManagerModules.tmux
