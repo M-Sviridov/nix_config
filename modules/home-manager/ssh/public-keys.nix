@@ -1,5 +1,9 @@
 {...}: {
   home.file = {
+    ".ssh/id_aopo_prod_ed25519.pub".text = ''
+      ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOVRSWYWMcXldUDDUMC2fBltH3EKHcD1xc8WUs88RUTj tsst@AOPO_PROD_ed25519
+    '';
+
     ".ssh/id_github_ed25519.pub".text = ''
       ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEe9tlp6GJUCSXrnyyYt0pjFEFqGV452wJHA9T7gNdko msviridov@GITHUB_ed25519
     '';
