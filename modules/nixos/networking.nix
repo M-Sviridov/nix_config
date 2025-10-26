@@ -1,7 +1,7 @@
-{host, ...}: {
+{hostname, ...}: {
   networking = {
     firewall.checkReversePath = false;
-    hostName = "${host}";
+    hostName = "${hostname}";
     networkmanager.enable = true;
   };
 }
