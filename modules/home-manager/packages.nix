@@ -2,9 +2,11 @@
   home.packages = with pkgs; [
     anki
     ansible
+    awscli
     bitwarden
     bitwarden-cli
     brightnessctl
+    ente-cli
     evince
     ffmpeg
     feishin
@@ -28,6 +30,7 @@
     sshpass
     sushi
     terraform
+    todoist-electron
     trezor-suite
     ventoy
     winbox4
