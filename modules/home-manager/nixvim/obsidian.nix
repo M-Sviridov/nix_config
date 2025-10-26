@@ -7,12 +7,12 @@
 
       workspaces = [
         {
-          name = "my-second-brain";
-          path = "${config.home.homeDirectory}/my-second-brain";
+          name = "my_second_brain";
+          path = "${config.home.homeDirectory}/my_second_brain";
         }
       ];
 
-      notes_subdir = "notes";
+      notes_subdir = "notes/inbox";
 
       daily_notes = {
         folder = "notes/dailies";
