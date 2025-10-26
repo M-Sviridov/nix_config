@@ -82,14 +82,20 @@
     mkHome = hostname: config:
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${config.system};
-        extraSpecialArgs = {inherit inputs outputs hostname;};
+        extraSpecialArgs = {
+          inherit inputs outputs hostname;
+          user = config.user;
+        };
         modules = [./hosts/${hostname}/home.nix];
       };
 
     mkNixos = hostname: config:
       nixpkgs.lib.nixosSystem {
         system = config.system;
-        specialArgs = {inherit inputs outputs hostname;};
+        specialArgs = {
+          inherit inputs outputs hostname;
+          user = config.user;
+        };
         modules = [./hosts/${hostname}/configuration.nix];
       };
   in {
