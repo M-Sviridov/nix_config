@@ -27,5 +27,9 @@
     ".ssh/pve-club_key.pub".text = ''
       ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICZHB67qFau4obfUvhN/UM2BcKFins690iA6G9nSlez1 msviridov@loki
     '';
+
+    ".ssh/sign_github_ed25519.pub".text = ''
+      ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOWVkM3oDqFJ1efHN6A9k802YztirL1drOsSZy2mhlAY msviridov@SIGN_GITHUB_ed25519
+    '';
   };
 }
