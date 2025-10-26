@@ -1,8 +1,22 @@
 {
   config,
+  hostname,
   pkgs,
+  user,
   ...
-}: {
+}: let
+  machines = {
+    air-laptop-01 = {
+      sshAuthSock = "/Users/${user}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
+    };
+
+    loki = {
+      sshAuthSock = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
+    };
+  };
+
+  settings = machines.${hostname};
+in {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -71,7 +85,7 @@
 
     sessionVariables = {
       NPM_CONFIG_USERCONFIG = "$XDG_CONFIG_HOME/npm/npmrc";
-      SSH_AUTH_SOCK = "$HOME/.bitwarden-ssh-agent.sock";
+      SSH_AUTH_SOCK = "${settings.sshAuthSock}";
       RUSTUP_HOME = "$XDG_CONFIG_HOME/rustup";
       CARGO_HOME = "$XDG_CONFIG_HOME/cargo";
       TERMINAL = "wezterm";
