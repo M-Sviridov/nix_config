@@ -61,21 +61,27 @@
     machines = {
       air-laptop-01 = {
         system = "aarch64-darwin";
-        user = "msviridov";
+        timeZone = "Asia/Bangkok";
         type = "darwin";
+        user = "msviridov";
       };
 
       loki = {
         system = "x86_64-linux";
-        user = "msviridov";
+        timeZone = "Asia/Bangkok";
         type = "nixos";
+        user = "msviridov";
       };
     };
 
     mkDarwin = hostname: config:
       nix-darwin.lib.darwinSystem {
         system = config.system;
-        specialArgs = {inherit inputs outputs hostname;};
+        specialArgs = {
+          inherit inputs outputs hostname;
+          timeZone = config.timeZone;
+          user = config.user;
+        };
         modules = [./hosts/${hostname}/configuration.nix];
       };
 
@@ -84,6 +90,7 @@
         pkgs = nixpkgs.legacyPackages.${config.system};
         extraSpecialArgs = {
           inherit inputs outputs hostname;
+          timeZone = config.timeZone;
           user = config.user;
         };
         modules = [./hosts/${hostname}/home.nix];
@@ -94,6 +101,7 @@
         system = config.system;
         specialArgs = {
           inherit inputs outputs hostname;
+          timeZone = config.timeZone;
           user = config.user;
         };
         modules = [./hosts/${hostname}/configuration.nix];
