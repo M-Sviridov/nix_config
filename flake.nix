@@ -25,6 +25,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -104,7 +113,9 @@
           timeZone = config.timeZone;
           user = config.user;
         };
-        modules = [./hosts/${hostname}/configuration.nix];
+        modules = [
+          ./hosts/${hostname}/configuration.nix
+        ];
       };
   in {
     darwinModules = import ./modules/darwin;
