@@ -1,14 +1,18 @@
 {
+  inputs,
   outputs,
   timeZone,
   ...
 }: {
   imports = [
     outputs.darwinModules.fonts
+    outputs.darwinModules.homebrew
     outputs.darwinModules.networking
     outputs.darwinModules.nix
     outputs.darwinModules.packages
     outputs.darwinModules.system
+
+    inputs.nix-homebrew.darwinModules.nix-homebrew
   ];
 
   nixpkgs.config.allowUnfree = true;
