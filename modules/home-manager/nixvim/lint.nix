@@ -8,6 +8,7 @@
     enable = true;
 
     lintersByFt = {
+      ansible = ["ansible_lint"];
       bash = ["shellcheck"];
       markdown = ["vale"];
       sh = ["shellcheck"];

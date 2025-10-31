@@ -4,6 +4,7 @@
       inlayHints.enable = true;
 
       servers = {
+        ansiblels.enable = true;
         bashls.enable = true;
         docker_language_server.enable = true;
         gopls.enable = true;

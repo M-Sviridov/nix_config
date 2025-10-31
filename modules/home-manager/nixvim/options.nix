@@ -3,6 +3,7 @@
     clipboard.register = "unnamedplus";
 
     filetype = {
+      extension.yml = "yaml.ansible";
       pattern = {
         "compose.*%.ya?ml" = "yaml.docker-compose";
         "docker%-compose.*%.ya?ml" = "yaml.docker-compose";
