@@ -45,6 +45,9 @@ in {
       "file-server".identityFile = "${sshDir}/id_home_prod_ed25519.pub";
       "jellyfin-server".identityFile = "${sshDir}/id_home_prod_ed25519.pub";
       "prod*".identityFile = "${sshDir}/id_home_prod_ed25519.pub";
+
+      # Homelab TEST
+      "test*".identityFile = "${sshDir}/id_home_test_ed25519.pub";
     };
   };
 }
