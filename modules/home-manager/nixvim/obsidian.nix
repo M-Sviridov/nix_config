@@ -29,26 +29,26 @@
 
       new_notes_location = "notes_subdir";
 
-      note_id_func = ''
-        function(title)
-          local suffix = ""
+      note_id_func = {
+        __raw = "function(title)
+          local suffix = ''
           if title ~= nil then
-            suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+            suffix = title:gsub(' ', '-'):gsub('[^A-Za-z0-9-]', ''):lower()
           else
             for _ = 1, 4 do
               suffix = suffix .. string.char(math.random(65, 90))
             end
           end
-          return tostring(os.date "%Y-%m-%d") .. "-" .. suffix
-        end
-      '';
+          return tostring(os.date '%Y-%m-%d') .. '-' .. suffix
+        end";
+      };
 
-      note_path_func = ''
-        function(spec)
+      note_path_func = {
+        __raw = "function(spec)
           local path = spec.dir / tostring(spec.id)
-          return path:with_suffix(".md")
-         end
-      '';
+          return path:with_suffix('.md ')
+         end";
+      };
 
       templates = {
         folder = "vault_management/templates";
