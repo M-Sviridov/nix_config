@@ -2,7 +2,7 @@
   machines = {
     air-laptop-01 = {
       dpi = 144.0;
-      fontSize = 13.0;
+      fontSize = 14.0;
       windowDecorations = "RESIZE";
     };
 
