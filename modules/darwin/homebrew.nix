@@ -7,6 +7,10 @@
     enable = true;
     caskArgs.no_quarantine = true;
 
+    brews = [
+      "ansible-language-server"
+    ];
+
     casks = [
       "actual"
       "aerospace"
