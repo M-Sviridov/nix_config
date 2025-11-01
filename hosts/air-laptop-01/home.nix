@@ -8,6 +8,7 @@
     outputs.homeManagerModules.delta
     outputs.homeManagerModules.git
     outputs.homeManagerModules.nixvim
+    outputs.homeManagerModules.packages
     outputs.homeManagerModules.programs
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.ssh
@@ -19,6 +20,8 @@
     inputs.nixvim.homeModules.nixvim
     inputs.zen-browser.homeModules.twilight-official
   ];
+
+  packages.common.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [inputs.nur.overlays.default];
