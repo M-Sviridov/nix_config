@@ -34,6 +34,10 @@
       url = "github:homebrew/homebrew-core";
       flake = false;
     };
+    homebrew-zathura = {
+      url = "github:homebrew-zathura/homebrew-zathura";
+      flake = false;
+    };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim = {
       url = "github:nix-community/nixvim";
