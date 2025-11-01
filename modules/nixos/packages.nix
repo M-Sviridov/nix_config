@@ -13,6 +13,7 @@
     lm_sensors
     nix-output-monitor
     nmap
+    nodejs
     usbutils
     nvme-cli
     p7zip
