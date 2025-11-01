@@ -28,6 +28,13 @@
     inputs.zen-browser.homeModules.twilight-official
   ];
 
+  # Custom written module
+  packages = {
+    common.enable = true;
+    gui.enable = true;
+    utils.enable = true;
+  };
+
   nixpkgs = {
     overlays = [
       inputs.nur.overlays.default

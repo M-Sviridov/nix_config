@@ -9,7 +9,7 @@
   hyprland = import ./hyprland;
   nixvim = import ./nixvim;
   nvf = import ./nvf;
-  packages = import ./packages.nix;
+  packages = import ./packages;
   programs = import ./programs.nix;
   services = import ./services.nix;
   shell = import ./shell;
