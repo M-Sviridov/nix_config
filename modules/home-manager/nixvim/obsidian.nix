@@ -27,6 +27,27 @@
         create_new = true;
       };
 
+      frontmatter = {
+        enabled = true;
+        func = {
+          __raw = "function(note)
+            local out = {
+              date = os.date('%Y-%m-%d'),
+              id = note.id, 
+              -- aliases = note.aliases, 
+              tags = note.tags }
+
+            if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+              for k, v in pairs(note.metadata) do
+                out[k] = v
+              end
+            end
+            return out
+          end";
+        };
+        sort = ["date" "id" "aliases" "tags"];
+      };
+
       new_notes_location = "notes_subdir";
 
       note_id_func = {
@@ -39,15 +60,8 @@
               suffix = suffix .. string.char(math.random(65, 90))
             end
           end
-          return tostring(os.date '%Y-%m-%d') .. '-' .. suffix
+          return suffix
         end";
-      };
-
-      note_path_func = {
-        __raw = "function(spec)
-          local path = spec.dir / tostring(spec.id)
-          return path:with_suffix('.md ')
-         end";
       };
 
       templates = {
