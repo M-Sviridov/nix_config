@@ -208,6 +208,14 @@
           silent = true;
         };
       }
+      {
+        action = "<CMD>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
+        key = "<leader>th";
+        options = {
+          desc = "Toggle Inlay Hints";
+          silent = true;
+        };
+      }
     ];
   };
 }
