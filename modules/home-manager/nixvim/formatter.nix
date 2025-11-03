@@ -1,4 +1,9 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    alejandra
+    prettier
+  ];
+
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
     autoInstall.enable = true;
