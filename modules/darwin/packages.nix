@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    cargo
     curl
     dig
     duf
@@ -14,7 +15,7 @@
     nmap
     usbutils
     p7zip
-    rustup
+    rustc
     sqlite
     tree
     unzip
