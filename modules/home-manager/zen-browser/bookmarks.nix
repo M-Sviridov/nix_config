@@ -183,6 +183,20 @@
           Placement = "toolbar";
           Folder = "Pro";
         }
+
+        # TECH
+        {
+          Title = "MyNixOS";
+          URL = "https://mynixos.com/";
+          Placement = "toolbar";
+          Folder = "Tech";
+        }
+        {
+          Title = "NixOS Wiki";
+          URL = "https://wiki.nixos.org/wiki/NixOS_Wiki";
+          Placement = "toolbar";
+          Folder = "Tech";
+        }
       ];
     };
   };
