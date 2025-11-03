@@ -9,6 +9,7 @@
 
     brews = [
       "ansible-language-server"
+      "homebrew-zathura/zathura/zathura-pdf-mupdf"
     ];
 
     casks = [
@@ -20,6 +21,7 @@
       "flux-app"
       "jordanbaird-ice"
       "karabiner-elements"
+      "libreoffice"
       "localsend"
       "logi-options+"
       "mqtt-explorer"
