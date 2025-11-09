@@ -216,6 +216,88 @@
           silent = true;
         };
       }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_references()<CR>";
+        key = "gr";
+        mode = "n";
+        options = {
+          desc = "References";
+          nowait = true;
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_definitions()<CR>";
+        key = "gd";
+        mode = "n";
+        options = {
+          desc = "Goto Definition";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_declarations()<CR>";
+        key = "gD";
+        mode = "n";
+        options = {
+          desc = "Goto Declaration";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_implementations()<CR>";
+        key = "gI";
+        mode = "n";
+        options = {
+          desc = "Goto Implementation";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_type_definitions()<CR>";
+        key = "gt";
+        mode = "n";
+        options = {
+          desc = "Goto Type Definition";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_symbols()<CR>";
+        key = "<leader>ss";
+        mode = "n";
+        options = {
+          desc = "LSP Symbols";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua Snacks.picker.lsp_workspace_symbols()<CR>";
+        key = "<leader>sS";
+        mode = "n";
+        options = {
+          desc = "LSP Workspace Symbols";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua vim.lsp.buf.code_action<CR>";
+        key = "<leader>ca";
+        mode = ["n" "x"];
+        options = {
+          desc = "Code Action";
+          silent = true;
+        };
+      }
+      {
+        action = "<CMD>lua vim.lsp.buf.rename<CR>";
+        key = "<leader>rn";
+        mode = ["n" "x"];
+        options = {
+          desc = "Rename";
+          silent = true;
+        };
+      }
     ];
   };
 }
