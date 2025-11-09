@@ -13,11 +13,13 @@ in {
     home.packages = with pkgs; [
       ansible
       awscli
+      bootdev-cli
       hunspell
       hunspellDicts.en_AU-large
       hunspellDicts.fr-any
       hunspellDicts.th_TH
       imagemagick
+      jq
       opentofu
       sqlite
       terraform
