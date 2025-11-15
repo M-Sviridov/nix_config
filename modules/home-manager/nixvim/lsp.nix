@@ -13,6 +13,14 @@
           config = {
             settings = {
               gopls = {
+                analyses = {
+                  unusedparams = true;
+                };
+
+                completeUnimported = true;
+                gofumpt = true;
+                usePlaceholders = true;
+
                 "ui.inlayhint.hints" = {
                   assignVariableTypes = true;
                   compositeLiteralFields = true;

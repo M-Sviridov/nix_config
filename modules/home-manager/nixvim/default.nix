@@ -4,6 +4,7 @@
     ./blink-cmp.nix
     ./colorschemes.nix
     ./diagnostic.nix
+    ./extra-config.nix
     ./extra-plugins.nix
     ./formatter.nix
     ./highlights.nix
