@@ -281,7 +281,7 @@
         };
       }
       {
-        action = "<CMD>lua vim.lsp.buf.code_action<CR>";
+        action = "<CMD>lua vim.lsp.buf.code_action()<CR>";
         key = "<leader>ca";
         mode = ["n" "x"];
         options = {
@@ -290,7 +290,7 @@
         };
       }
       {
-        action = "<CMD>lua vim.lsp.buf.rename<CR>";
+        action = "<CMD>lua vim.lsp.buf.rename()<CR>";
         key = "<leader>rn";
         mode = ["n" "x"];
         options = {
