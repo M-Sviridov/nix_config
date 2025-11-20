@@ -42,8 +42,8 @@ in {
     };
 
     initContent = ''
-      eval "$(batman --export-env)"
-      eval "$(batpipe)"
+      # eval "$(batman --export-env)"
+      # eval "$(batpipe)"
       zstyle ':completion:*' completer _complete _ignored _files
       zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
