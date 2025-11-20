@@ -14,6 +14,7 @@ in {
       ansible
       awscli
       bootdev-cli
+      goose
       hunspell
       hunspellDicts.en_AU-large
       hunspellDicts.fr-any
@@ -21,6 +22,7 @@ in {
       imagemagick
       jq
       opentofu
+      sqlc
       sqlite
       terraform
       wget
