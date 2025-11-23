@@ -175,24 +175,19 @@
         ",XF86AudioPrev, exec, playerctl previous"
       ];
 
-      layerrule = [
-        "blur,vicinae"
-        "ignorealpha 0, vicinae"
-      ];
-
       windowrule = [
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "size 622 652, class:(clipse)"
-        "float, class:(clipse)"
-        "dimaround, class:(clipse)"
-        "float, class:(org.gnome.NautilusPreviewer)"
-        "size 933 652, class:(org.gnome.NautilusPreviewer)"
-        "float, class:(org.gnome.Nautilus)"
-        "size 1000 652, class:(org.gnome.Nautilus)"
-        "float, title:(.*)(Extension)"
-        "float, class:^Bitwarden$,title:^(Bitwarden)"
-        "size 1000 652, class:(Bitwarden)"
+        "match:class .*, suppress_event maximize"
+        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0"
+        "match:class clipse, size 622 652"
+        "match:class clipse, float yes, center on"
+        "match:class clipse, dim_around on"
+        "match:class org.gnome.NautilusPreviewer, float yes, center on"
+        "match:class org.gnome.NautilusPreviewer, size 933 652"
+        "match:class org.gnome.Nautilus, float yes, center on"
+        "match:class org.gnome.Nautilus, size 1000 652"
+        "match:title .*Extension, float yes, center on"
+        "match:class ^Bitwarden$, match:title ^Bitwarden"
+        "match:class Bitwarden, size 1000 652"
       ];
 
       workspace = [
