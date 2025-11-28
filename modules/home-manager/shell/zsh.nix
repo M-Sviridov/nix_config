@@ -103,6 +103,7 @@ in {
       ipa = "ip -c -br a";
       lsa = "eza -lhga -F --group-directories-first";
       ls = "eza -lhg -F --group-directories-first";
+      mkdir = "mkdir -p";
       ".." = "cd ..";
       tree = "tree -C";
       update = "sudo nixos-rebuild switch --flake .#loki";
