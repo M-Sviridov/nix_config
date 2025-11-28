@@ -12,8 +12,9 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       ansible
-      awscli
+      awscli2
       bootdev-cli
+      ffmpeg
       goose
       hunspell
       hunspellDicts.en_AU-large
@@ -22,6 +23,7 @@ in {
       imagemagick
       jq
       opentofu
+      postgresql
       sqlc
       sqlite
       terraform
