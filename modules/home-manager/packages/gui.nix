@@ -13,6 +13,7 @@ in {
     home.packages = with pkgs; [
       anki
       bitwarden-desktop
+      bruno
       evince
       feishin
       jellyfin-mpv-shim
