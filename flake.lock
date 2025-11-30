@@ -409,11 +409,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1764310856,
-        "narHash": "sha256-Vzm8SQnaxBeWZ9xGt97fI+zHMyv0ruP4w3JtbLgTTQM=",
+        "lastModified": 1764317841,
+        "narHash": "sha256-D3EFJ19xKTZPQoAN5WInASwNxkR2qrtsQ8z3c/gXaXs=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "d40752a408995d664875882d1e29f650af89bb26",
+        "rev": "51bd6743aa21e5fbe458a8de9731eb63bbf3b2aa",
         "type": "github"
       },
       "original": {
@@ -917,6 +917,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1763618868,
+        "narHash": "sha256-v5afmLjn/uyD9EQuPBn7nZuaZVV9r+JerayK/4wvdWA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a8d610af3f1a5fb71e23e08434d8d61a466fc942",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1762111121,
         "narHash": "sha256-4vhDuZ7OZaZmKKrnDpxLZZpGIJvAeMtK6FKLJYUtAdw=",
         "owner": "NixOS",
@@ -934,9 +950,7 @@
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
+        "nixpkgs": "nixpkgs_4",
         "nuschtosSearch": "nuschtosSearch",
         "systems": "systems_4"
       },
@@ -962,11 +976,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764313051,
-        "narHash": "sha256-rVp6akomez+u4jDFoBbtnvk1o3i1Zb65MgoLdf99UVA=",
+        "lastModified": 1764315984,
+        "narHash": "sha256-+SZj+LqR3UoxUv4r8G1e/Z8KWC7iFyNlvtB7CIHMYH8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "146f7518bbfbbf7dbe766efbfbdd4092d5ca4646",
+        "rev": "1cc20cae1c23d86fd9f9f66669538078d251c94a",
         "type": "github"
       },
       "original": {
@@ -1222,7 +1236,7 @@
     },
     "vicinae": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "systems": "systems_7"
       },
       "locked": {
