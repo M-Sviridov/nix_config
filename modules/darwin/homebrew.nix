@@ -19,6 +19,7 @@
       "beekeeper-studio"
       "brave-browser"
       "bruno"
+      "docker-desktop"
       "ente-auth"
       "flux-app"
       "jordanbaird-ice"
