@@ -12,6 +12,7 @@
       ansible = ["ansible_lint"];
       bash = ["shellcheck"];
       markdown = ["vale"];
+      python = ["ruff"];
       sh = ["shellcheck"];
       text = ["text"];
       yaml = ["yamllint"];

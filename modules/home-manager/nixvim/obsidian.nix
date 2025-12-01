@@ -73,9 +73,13 @@
       picker.name = "snacks.pick";
 
       backlinks.parse_headers = false;
-      sort_by = "modified";
-      sort_reverse = true;
-      search_max_lines = 1000;
+
+      search = {
+        sort_reverse = true;
+        max_lines = 1000;
+        sort_by = "modified";
+      };
+
       open_notes_in = "current";
     };
   };

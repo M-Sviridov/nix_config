@@ -38,6 +38,7 @@
         lua_ls.enable = true;
         markdown_oxide.enable = true;
         nixd.enable = true;
+        pylsp.enable = true;
         terraformls.enable = true;
         yamlls.enable = true;
       };

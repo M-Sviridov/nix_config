@@ -13,6 +13,7 @@
         bash = ["beautysh"];
         markdown = ["prettier"];
         nix = ["alejandra"];
+        python = ["ruff"];
         sh = ["beautysh"];
         terraform = ["tofu_fmt"];
         tofu = ["tofu_fmt"];
