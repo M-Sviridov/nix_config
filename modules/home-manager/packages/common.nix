@@ -27,6 +27,7 @@ in {
       sqlc
       sqlite
       terraform
+      uv
       wget
     ];
   };
