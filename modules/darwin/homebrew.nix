@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   user,
   ...
 }: {
@@ -60,6 +61,12 @@
     enable = true;
     enableRosetta = true;
     autoMigrate = true;
+
+    taps = {
+      "homebrew/homebrew-core" = inputs.homebrew-core;
+      "homebrew/homebrew-cask" = inputs.homebrew-cask;
+    };
+
     user = user;
   };
 }
