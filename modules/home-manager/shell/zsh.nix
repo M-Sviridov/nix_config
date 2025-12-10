@@ -91,7 +91,7 @@ in {
       TERMINAL = "wezterm";
       EDITOR = "nvim";
       VISUAL = "nvim";
-      PATH = "$PATH:$HOME/.npm-global/bin";
+      PATH = "$PATH:$HOME/.npm-global/bin:$HOME/go/bin";
       # LS_COLORS = "$(vivid generate catppuccin-mocha)";
       YSU_HARDCORE = 1; # Hardcore mode for zsh-you-should-use
     };
