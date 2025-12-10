@@ -13,7 +13,7 @@ in {
     home.packages = with pkgs; [
       ansible
       awscli2
-      bootdev-cli
+      # bootdev-cli
       ffmpeg
       goose
       hunspell
