@@ -27,7 +27,7 @@
 
       set -g window-status-format "●"
       set -g window-status-current-format "●"
-      set -g window-status-current-style "#{?client_prefix,fg=red,#{?window_zoomed_flag,fg=yellow,fg=magenta},nobold}"
+      set -g window-status-current-style "#{?client_prefix,fg=red,#{?window_zoomed_flag,fg=yellow,fg=magenta}},nobold"
       set -g window-status-bell-style "fg=red,nobold"
 
       unbind %
