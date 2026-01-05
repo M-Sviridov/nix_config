@@ -20,6 +20,7 @@
       generateCaches = true;
     };
 
+    nix-index.enable = true;
     ripgrep.enable = true;
 
     zathura = {
