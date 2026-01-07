@@ -33,12 +33,15 @@
       "obsidian"
       "proton-drive"
       "protonvpn"
+      "qbittorrent"
       "raycast"
       "rustdesk"
+      "signal"
       "the-unarchiver"
       "todoist-app"
       "vlc"
       "winbox"
+      "xnviewmp"
       "zen"
     ];
 

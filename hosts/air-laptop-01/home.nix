@@ -18,6 +18,7 @@
 
     inputs.catppuccin.homeModules.catppuccin
     inputs.nixvim.homeModules.nixvim
+    inputs.nix-index-database.homeModules.default
     inputs.zen-browser.homeModules.twilight-official
   ];
 

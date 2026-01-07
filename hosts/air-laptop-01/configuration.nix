@@ -13,6 +13,7 @@
     outputs.darwinModules.system
 
     inputs.nix-homebrew.darwinModules.nix-homebrew
+    inputs.nix-index-database.darwinModules.nix-index
   ];
 
   nixpkgs.config.allowUnfree = true;

@@ -26,6 +26,10 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
       flake = false;
