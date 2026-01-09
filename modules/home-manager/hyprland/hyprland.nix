@@ -85,7 +85,7 @@
 
       settings = {
         eDP-1 = {
-          path = "${config.home.homeDirectory}/pictures/catppuccin/";
+          path = "${config.xdg.userDirs.pictures}/catppuccin/";
           apply-shadow = true;
           duration = "30m";
           sorting = "random";

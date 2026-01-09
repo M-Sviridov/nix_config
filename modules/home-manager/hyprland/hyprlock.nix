@@ -8,7 +8,7 @@
       background = [
         {
           monitor = " ";
-          path = "${config.home.homeDirectory}/pictures/catppuccin/cat_ef_ign_unsplash46.png";
+          path = "${config.xdg.userDirs.pictures}/catppuccin/cat_ef_ign_unsplash46.png";
           color = "$base";
           blur_size = 5;
           blur_passes = 4;
