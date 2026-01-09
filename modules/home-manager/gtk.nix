@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   gtk = {
     enable = true;
 
@@ -15,11 +19,11 @@
 
     gtk3 = {
       bookmarks = [
-        "file:///home/msviridov/documents/"
-        "file:///home/msviridov/downloads/"
-        "file:///home/msviridov/music/"
-        "file:///home/msviridov/pictures/"
-        "file:///home/msviridov/videos/"
+        "file://${config.xdg.userDirs.documents}"
+        "file://${config.xdg.userDirs.download}"
+        "file://${config.xdg.userDirs.music}"
+        "file://${config.xdg.userDirs.pictures}"
+        "file://${config.xdg.userDirs.videos}"
       ];
     };
 
