@@ -24,6 +24,7 @@
     HYPRSHOT_DIR = "${config.xdg.userDirs.pictures}/screenshots";
     XCURSOR_THEME = "BreezeX-RosePine";
     XCURSOR_SIZE = 24;
+    XDG_CURRENT_DESKTOP = "Hyprland";
   };
 
   xdg.configFile."uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
@@ -95,14 +96,11 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = null;
     plugins = [
       inputs.hyprsplit.packages."${pkgs.stdenv.hostPlatform.system}".hyprsplit
       # inputs.hyprgrass.packages.${pkgs.system}.default
     ];
-    portalPackage =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    systemd.enable = false;
-    xwayland.enable = true;
+    portalPackage = null;
   };
 }

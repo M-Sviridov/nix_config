@@ -35,11 +35,6 @@
       };
 
       general = {
-        "$mainMod" = "SUPER";
-        "$browser" = "zen";
-        "$terminal" = "wezterm";
-        "$fileManager" = "nautilus";
-        "$menu" = "tofi-drun --drun-launch=true";
         gaps_in = 4;
         gaps_out = "2,8,8,8";
         border_size = 2;
@@ -118,20 +113,20 @@
       };
 
       bind = [
-        "$mainMod, E, exec, uwsm app -- $fileManager"
-        "$mainMod, Q, exec, uwsm app -- $terminal"
-        "$mainMod, O, exec, hyprctl dispatch exit"
-        "$mainMod, F, exec, uwsm app -- $browser -p msviridov"
-        "$mainMod, D, exec, uwsm app -- $browser -p lg27"
+        "SUPER, E, exec, uwsm app -- nautilus"
+        "SUPER, Q, exec, uwsm app -- wezterm"
+        "SUPER, O, exec, hyprctl dispatch exit"
+        "SUPER, F, exec, uwsm app -- zen -p msviridov"
+        "SUPER, D, exec, uwsm app -- zen -p lg27"
         "ctrl alt, 1, exec, uwsm app -- hyprshot -m region"
         "ctrl alt, 2, exec, uwsm app -- hyprshot -m window"
         "ctrl alt, 3, exec, uwsm app -- hyprshot -m output"
-        "ctrl, space, exec, uwsm app -- $menu"
-        "$mainMod, T, togglefloating"
+        "ctrl, space, exec, uwsm app -- tofi-drun --drun-launch=true"
+        "SUPER, T, togglefloating"
         "ctrl alt, Q, exec, hyprlock"
-        "$mainMod, p, togglesplit"
-        "$mainMod, c, killactive"
-        "$mainMod, m, fullscreen"
+        "SUPER, p, togglesplit"
+        "SUPER, c, killactive"
+        "SUPER, m, fullscreen"
         "ctrl, 1, split:workspace, 1"
         "ctrl, 2, split:workspace, 2"
         "ctrl, 3, split:workspace, 3"
@@ -142,21 +137,21 @@
         "ctrl SHIFT, 3, split:movetoworkspace, 3"
         "ctrl SHIFT, 4, split:movetoworkspace, 4"
         "ctrl SHIFT, 5, split:movetoworkspace, 5"
-        "$mainMod, R, split:grabroguewindows"
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
-        "$mainMod, 1, movewindow, mon:eDP-1"
-        "$mainMod, 2, movewindow, mon:DP-2"
-        "$mainMod, S, togglespecialworkspace, magic"
+        "SUPER, R, split:grabroguewindows"
+        "SUPER, h, movefocus, l"
+        "SUPER, l, movefocus, r"
+        "SUPER, k, movefocus, u"
+        "SUPER, j, movefocus, d"
+        "SUPER, 1, movewindow, mon:eDP-1"
+        "SUPER, 2, movewindow, mon:DP-2"
+        "SUPER, S, togglespecialworkspace, magic"
         "ctrl SHIFT, S, split:movetoworkspace, special:magic"
-        "$mainMod, V, exec, uwsm app -- $terminal start --class clipse -e 'clipse'"
+        "SUPER, V, exec, uwsm app -- $terminal start --class clipse -e 'clipse'"
       ];
 
       bindm = [
-        "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindow"
+        "SUPER, mouse:272, movewindow"
+        "SUPER, mouse:273, resizewindow"
       ];
 
       bindel = [
@@ -177,7 +172,7 @@
 
       windowrule = [
         "match:class .*, suppress_event maximize"
-        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0"
+        "no_focus on, match:class ^$, match:title ^$, match:float 1, match:fullscreen 0, match:pin 0"
         "match:class clipse, size 622 652"
         "match:class clipse, float yes, center on"
         "match:class clipse, dim_around on"
@@ -192,7 +187,7 @@
 
       workspace = [
         "special:magic, gapsout:100"
-        "special:magic, on-created-empty:uwsm app -- $terminal"
+        "special:magic, on-created-empty:uwsm app -- wezterm"
       ];
     };
   };
