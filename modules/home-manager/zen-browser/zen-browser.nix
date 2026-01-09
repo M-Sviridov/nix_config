@@ -42,7 +42,7 @@
         Behavior = "reject-tracker-and-partition-foreign";
       };
 
-      DefaultDownloadDirectory = "${config.home.homeDirectory}/downloads";
+      DefaultDownloadDirectory = "${config.xdg.userDirs.download}";
       DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
       DisableFormHistory = true;
