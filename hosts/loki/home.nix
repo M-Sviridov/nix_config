@@ -45,7 +45,7 @@
         "beekeeper-studio-5.3.4"
         "electron-36.9.5"
         "qtwebengine-5.15.19"
-        "ventoy-1.1.07"
+        "ventoy-1.1.10"
       ];
     };
   };
