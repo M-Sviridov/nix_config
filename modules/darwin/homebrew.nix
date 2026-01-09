@@ -10,6 +10,7 @@
 
     brews = [
       "ansible-language-server"
+      "borders"
       "homebrew-zathura/zathura/zathura-pdf-mupdf"
     ];
 
