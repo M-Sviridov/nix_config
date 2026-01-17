@@ -5,6 +5,7 @@
       settings.vim_keys = true;
     };
 
+    claude-code.enable = true;
     fd.enable = true;
     go.enable = true;
 
