@@ -146,7 +146,7 @@
         "SUPER, 2, movewindow, mon:DP-2"
         "SUPER, S, togglespecialworkspace, magic"
         "ctrl SHIFT, S, split:movetoworkspace, special:magic"
-        "SUPER, V, exec, uwsm app -- $terminal start --class clipse -e 'clipse'"
+        "SUPER, V, exec, uwsm app -- wezterm start --class clipse -e 'clipse'"
       ];
 
       bindm = [
