@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.packages.gui;
+  cfg = config.my.packages.gui;
 in {
-  options.packages.gui.enable = mkEnableOption "gui packages";
+  options.my.packages.gui.enable = mkEnableOption "gui packages";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.packages.common;
+  cfg = config.my.packages.common;
 in {
-  options.packages.common.enable = mkEnableOption "common packages";
+  options.my.packages.common.enable = mkEnableOption "common packages";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
