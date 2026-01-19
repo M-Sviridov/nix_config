@@ -50,8 +50,8 @@
     shell.zsh = {
       enable = true;
       sshAuthSock = "/Users/msviridov/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
-      rebuildCommand = "darwin-rebuild switch --flake .#air-laptop-01";
-      upgradeCommand = "nix flake update && darwin-rebuild switch --flake .#air-laptop-01";
+      rebuildCommand = "sudo darwin-rebuild switch --flake .#air-laptop-01";
+      upgradeCommand = "nix flake update && sudo darwin-rebuild switch --flake .#air-laptop-01";
       cleanCommand = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
       homeRebuildCommand = "home-manager switch --flake .#msviridov@air-laptop-01";
     };
