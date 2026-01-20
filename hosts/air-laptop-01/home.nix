@@ -2,6 +2,8 @@
   config,
   inputs,
   outputs,
+  type,
+  user,
   ...
 }: {
   imports = [
@@ -49,11 +51,8 @@
 
     shell.zsh = {
       enable = true;
-      sshAuthSock = "/Users/msviridov/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
-      rebuildCommand = "sudo darwin-rebuild switch --flake .#air-laptop-01";
-      upgradeCommand = "nix flake update && sudo darwin-rebuild switch --flake .#air-laptop-01";
+      sshAuthSock = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
       cleanCommand = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
-      homeRebuildCommand = "home-manager switch --flake .#msviridov@air-laptop-01";
     };
   };
 
@@ -61,9 +60,13 @@
   nixpkgs.overlays = [inputs.nur.overlays.default];
 
   home = {
-    username = "msviridov";
-    homeDirectory = "/Users/msviridov";
+    username = user;
+    homeDirectory =
+      if type == "darwin"
+      then "/Users/${user}"
+      else "/home/${user}";
     stateVersion = "25.05";
+    shell.enableZshIntegration = true;
   };
 
   programs.home-manager.enable = true;

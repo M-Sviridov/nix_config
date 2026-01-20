@@ -1,6 +1,9 @@
 {
+  config,
   inputs,
   outputs,
+  type,
+  user,
   ...
 }: {
   imports = [
@@ -24,15 +27,37 @@
 
     inputs.catppuccin.homeModules.catppuccin
     inputs.nixvim.homeModules.nixvim
+    inputs.nix-index-database.homeModules.default
     inputs.vicinae.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight-official
   ];
 
-  # Custom written module
-  packages = {
-    common.enable = true;
-    gui.enable = true;
-    utils.enable = true;
+  my = {
+    packages = {
+      common.enable = true;
+      gui.enable = true;
+      utils.enable = true;
+    };
+
+    programs = {
+      git = {
+        enable = true;
+        userName = "M-Sviridov";
+        userEmail = "74146348+M-Sviridov@users.noreply.github.com";
+        signing.key = "${config.home.homeDirectory}/.ssh/sign_github_ed25519.pub";
+      };
+
+      wezterm = {
+        enable = true;
+        fontSize = 12.0;
+        dpi = 96.0;
+      };
+    };
+
+    shell.zsh = {
+      enable = true;
+      sshAuthSock = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
+    };
   };
 
   nixpkgs = {
@@ -51,8 +76,11 @@
   };
 
   home = {
-    username = "msviridov";
-    homeDirectory = "/home/msviridov";
+    username = user;
+    homeDirectory =
+      if type == "darwin"
+      then "/Users/${user}"
+      else "/home/${user}";
     stateVersion = "24.11";
     shell.enableZshIntegration = true;
   };
