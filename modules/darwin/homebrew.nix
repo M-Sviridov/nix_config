@@ -21,6 +21,7 @@
       "beekeeper-studio"
       "brave-browser"
       "bruno"
+      "discord"
       "docker-desktop"
       "ente-auth"
       "flux-app"
