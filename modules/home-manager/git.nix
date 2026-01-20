@@ -57,22 +57,24 @@ in {
         signByDefault = true;
       };
 
-      settings = {
-        user = {
-          name = cfg.userName;
-          email = cfg.userEmail;
-        };
-        branch.sort = "-committerdate";
-        column.ui = "auto";
-        commit.verbose = true;
-        core.compression = 9;
-        diff.algorithm = "histogram";
-        init.defaultBranch = "main";
-        maintenance.strategy = "incremental";
-        merge.conflictStyle = "zdiff3";
-        push.autoSetupRemote = true;
-        tag.sort = "-version:refname";
-      } // cfg.extraSettings;
+      settings =
+        {
+          user = {
+            name = cfg.userName;
+            email = cfg.userEmail;
+          };
+          branch.sort = "-committerdate";
+          column.ui = "auto";
+          commit.verbose = true;
+          core.compression = 9;
+          diff.algorithm = "histogram";
+          init.defaultBranch = "main";
+          maintenance.strategy = "incremental";
+          merge.conflictStyle = "zdiff3";
+          push.autoSetupRemote = true;
+          tag.sort = "-version:refname";
+        }
+        // cfg.extraSettings;
     };
   };
 }
