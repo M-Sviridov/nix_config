@@ -93,8 +93,7 @@
         system = config.system;
         specialArgs = {
           inherit inputs outputs hostname;
-          timeZone = config.timeZone;
-          user = config.user;
+          inherit (config) timeZone user;
         };
         modules = [./hosts/${hostname}/configuration.nix];
       };
@@ -104,8 +103,7 @@
         pkgs = nixpkgs.legacyPackages.${config.system};
         extraSpecialArgs = {
           inherit inputs outputs hostname;
-          timeZone = config.timeZone;
-          user = config.user;
+          inherit (config) system timeZone type user;
         };
         modules = [./hosts/${hostname}/home.nix];
       };
@@ -115,12 +113,9 @@
         system = config.system;
         specialArgs = {
           inherit inputs outputs hostname;
-          timeZone = config.timeZone;
-          user = config.user;
+          inherit (config) timeZone user;
         };
-        modules = [
-          ./hosts/${hostname}/configuration.nix
-        ];
+        modules = [./hosts/${hostname}/configuration.nix];
       };
   in {
     darwinModules = import ./modules/darwin;
