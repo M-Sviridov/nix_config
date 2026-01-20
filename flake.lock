@@ -266,25 +266,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768707181,
-        "narHash": "sha256-GdwFfnwdUgABFpc4sAmX7GYx8eQs6cEjOPo6nBJ0YaI=",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "lastModified": 1768598210,
-        "narHash": "sha256-kkgA32s/f4jaa4UG+2f8C225Qvclxnqs76mf8zvTVPg=",
-=======
         "lastModified": 1768798936,
         "narHash": "sha256-eHld4id3TeD9Sxx5vgv58BnTl1fz+ewIKspz/kEoAE8=",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "owner": "nix-community",
         "repo": "home-manager",
-<<<<<<< HEAD
-        "rev": "83bcb17377f0242376a327e742e9404e9a528647",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "rev": "c47b2cc64a629f8e075de52e4742de688f930dc6",
-=======
         "rev": "2954aa29441a1a98901362e4d35515875761ad65",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "type": "github"
       },
       "original": {
@@ -338,25 +324,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768722403,
-        "narHash": "sha256-eAfl0H77cJ8OreLGMJDkxPuJ4v2OPaKks/pqzLFjmB0=",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "lastModified": 1768633648,
-        "narHash": "sha256-mFtt/hNlHTFWy6tCJNOy702R7WBDT+8alZQLsAv9gLs=",
-=======
         "lastModified": 1768799796,
         "narHash": "sha256-QPsuGcfk5AkjxVuZ80Bz0gRAvuab/65bDpD5N4VDWhY=",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "owner": "homebrew",
         "repo": "homebrew-cask",
-<<<<<<< HEAD
-        "rev": "f4e9d00d7043fb46a9433e80cc0c5686113dc47b",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "rev": "0e7f4d11f44deae97f6987178396913d4a2d0562",
-=======
         "rev": "d0bc92173144260aa194cb7895be19e008524ed1",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "type": "github"
       },
       "original": {
@@ -368,25 +340,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768723274,
-        "narHash": "sha256-aHaG3opkLpK3v0/jsSe+bmyls3J5v/otcg+fYwJIde0=",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "lastModified": 1768632626,
-        "narHash": "sha256-4r6Rn78hWvJ4SNzsEc1u29MR0qjhqHrqitLTQiZUzuQ=",
-=======
-        "lastModified": 1768802407,
-        "narHash": "sha256-R+8FiAHadLsxbMS77EBCGWxGBu37gqrQcp1by90JBWs=",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
+        "lastModified": 1768808127,
+        "narHash": "sha256-kNvGdWDiVrSWWRm2ucOz5M8ygW50nFIvNcfSRa1F/v4=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-<<<<<<< HEAD
-        "rev": "585c144745b9d06c8b356ddcdec7f5a68075382c",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "rev": "14f7b1b09dbf64924fa7fcfbd20971678ae97f4c",
-=======
-        "rev": "cf61c1ca7494f6ba0146c1269e6cf907c2542879",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
+        "rev": "8780f18e1e80517b5b509058411e7045107a8505",
         "type": "github"
       },
       "original": {
@@ -486,25 +444,11 @@
         "xdph": "xdph"
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768660279,
-        "narHash": "sha256-ak7mm3HiluwyMXHadoEzhrzzMGz2T1UkOVL0N0sbYUc=",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "lastModified": 1768579186,
-        "narHash": "sha256-Is2h3l7X9bqBoOviY6BibzBHz3c4QztxmmSt9Us57NA=",
-=======
         "lastModified": 1768746153,
         "narHash": "sha256-H3BxpO76d/SX/qiCzl3bUi352xIkgdqqSb0sJfuv25w=",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "owner": "hyprwm",
         "repo": "Hyprland",
-<<<<<<< HEAD
-        "rev": "c99eb23869da2b80e3613a886aa1b99851367a3c",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "rev": "36aa465a216002169879a60416d2f10c28741162",
-=======
         "rev": "eb0480ba0d0870ab5d8a876f01c6ab033a4b35f4",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "type": "github"
       },
       "original": {
@@ -1006,25 +950,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768726738,
-        "narHash": "sha256-vpk24EAQlcmEM0sv6TB4w2Aiz9qIp5U4tWW0eE22R9I=",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "lastModified": 1768633658,
-        "narHash": "sha256-id7bWEIFT24+/S9o7u1E/jkGPD69AnBK7sdRALmFFcA=",
-=======
-        "lastModified": 1768802467,
-        "narHash": "sha256-WBBHWcayWZPAN49qsUoS1WvdEhR6tiolCpm88GHQpuk=",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
+        "lastModified": 1768808311,
+        "narHash": "sha256-rMZF85NLdr010KTtD0wG/JrEMXcCAML/kjRv2YDLvTo=",
         "owner": "nix-community",
         "repo": "NUR",
-<<<<<<< HEAD
-        "rev": "56753d3f559b3bf327624fcced7df11d6d8f2db2",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "rev": "15d65f8c1375e7d06ee2261d139eab071a31355c",
-=======
-        "rev": "8342bc05dbd2b12d0ef436621302fdf58e96aee6",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
+        "rev": "2dd174c6c93b444879234342546168215abbc412",
         "type": "github"
       },
       "original": {
@@ -1304,25 +1234,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768711359,
-        "narHash": "sha256-3n2ixvAMWij1ZOh/KMJJqizX+sRU083wFR8pa6+IkyU=",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "lastModified": 1768620209,
-        "narHash": "sha256-08+iYinKGC6XvJbctMF76EhUvuyysvFQwOLj9vb3t5c=",
-=======
         "lastModified": 1768788372,
         "narHash": "sha256-TTEB3amVrXNX5AmIj7Bb8Dp2W8BOD73GbW8p5uH8kQI=",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-<<<<<<< HEAD
-        "rev": "8c9e9425946f290fa60e0e6fd7b1464cbcdbc53e",
-||||||| parent of 4dcf5bd (Update flake from macOS machine)
-        "rev": "ec7eefdd4006c9da3437148f952989926261e649",
-=======
         "rev": "756b3eff6a629b70ea971b8a1819f22bc3789730",
->>>>>>> 4dcf5bd (Update flake from macOS machine)
         "type": "github"
       },
       "original": {
