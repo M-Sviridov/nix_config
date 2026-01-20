@@ -1,12 +1,19 @@
 {
   config,
+  hostname,
   lib,
   pkgs,
+  user,
   ...
 }:
 with lib; let
   cfg = config.my.shell.zsh;
   inherit (pkgs.stdenv) isDarwin isLinux;
+
+  rebuildCmd =
+    if isDarwin
+    then "darwin-rebuild"
+    else "nixos-rebuild";
 
   # Alias groups defined separately for clarity
   commonAliases = {
@@ -48,11 +55,12 @@ with lib; let
     tofigen = "rm $XDG_CACHE_HOME/tofi-*";
   };
 
-  nixAliases =
-    {nix-clean = cfg.cleanCommand;}
-    // optionalAttrs (cfg.rebuildCommand != null) {nix-rebuild = cfg.rebuildCommand;}
-    // optionalAttrs (cfg.upgradeCommand != null) {nix-upgrade = cfg.upgradeCommand;}
-    // optionalAttrs (cfg.homeRebuildCommand != null) {hm-rebuild = cfg.homeRebuildCommand;};
+  nixAliases = {
+    nix-clean = cfg.cleanCommand;
+    nix-rebuild = cfg.rebuildCommand;
+    nix-upgrade = cfg.upgradeCommand;
+    hm-rebuild = cfg.homeRebuildCommand;
+  };
 in {
   options.my.shell.zsh = {
     enable = mkEnableOption "Zsh shell with opinionated defaults";
@@ -65,16 +73,14 @@ in {
     };
 
     rebuildCommand = mkOption {
-      type = types.nullOr types.str;
-      default = null;
-      example = "sudo nixos-rebuild switch --flake .#myhost";
+      type = types.str;
+      default = "sudo ${rebuildCmd} switch --flake .#${hostname}";
       description = "Command for the 'nix-rebuild' alias";
     };
 
     upgradeCommand = mkOption {
-      type = types.nullOr types.str;
-      default = null;
-      example = "nix flake update && sudo nixos-rebuild switch --flake .#myhost";
+      type = types.str;
+      default = "nix flake update && sudo ${rebuildCmd} switch --flake .#${hostname}";
       description = "Command for the 'nix-upgrade' alias (updates flake inputs first)";
     };
 
@@ -85,9 +91,8 @@ in {
     };
 
     homeRebuildCommand = mkOption {
-      type = types.nullOr types.str;
-      default = null;
-      example = "home-manager switch --flake .#user@host";
+      type = types.str;
+      default = "home-manager switch --flake .#${user}@${hostname}";
       description = "Command for the 'hm-rebuild' alias";
     };
 
