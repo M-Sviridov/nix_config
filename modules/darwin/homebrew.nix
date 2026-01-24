@@ -59,7 +59,9 @@
       upgrade = true;
     };
 
-    taps = builtins.attrNames config.nix-homebrew.taps;
+    taps = builtins.attrNames config.nix-homebrew.taps ++ [
+      "nikitabobko/tap"
+    ];
   };
 
   nix-homebrew = {
