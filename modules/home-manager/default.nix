@@ -1,4 +1,5 @@
 {
+  aerospace = import ./aerospace;
   anki = import ./anki.nix;
   catppuccin = import ./catppuccin.nix;
   delta = import ./delta.nix;

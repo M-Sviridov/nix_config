@@ -7,6 +7,7 @@
   ...
 }: {
   imports = [
+    outputs.homeManagerModules.aerospace
     outputs.homeManagerModules.catppuccin
     outputs.homeManagerModules.delta
     outputs.homeManagerModules.git
@@ -29,6 +30,8 @@
     packages.common.enable = true;
 
     programs = {
+      aerospace.enable = true;
+
       git = {
         enable = true;
         userName = "M-Sviridov";
