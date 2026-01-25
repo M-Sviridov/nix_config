@@ -97,7 +97,7 @@
       screencapture = {
         disable-shadow = true;
         include-date = true;
-        location = "/Users/msviridov/Pictures/screenshots";
+        location = "/Users/${user}/Pictures/screenshots";
         show-thumbnail = false;
         target = "clipboard";
       };
