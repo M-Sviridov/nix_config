@@ -45,6 +45,11 @@
         userName = "M-Sviridov";
         userEmail = "74146348+M-Sviridov@users.noreply.github.com";
         signing.key = "${config.home.homeDirectory}/.ssh/sign_github_ed25519.pub";
+
+        extraSettings = {
+          pull.rebase = true;
+          rerere.enabled = true;
+        };
       };
 
       wezterm = {
