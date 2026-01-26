@@ -1,5 +1,6 @@
 {
   config,
+  hostname,
   user,
   ...
 }: {
@@ -105,8 +106,8 @@
       screensaver.askForPassword = true;
 
       smb = {
-        NetBIOSName = "air-laptop-01";
-        ServerDescription = "air-laptop-01";
+        NetBIOSName = hostname;
+        ServerDescription = hostname;
       };
     };
     primaryUser = user;
