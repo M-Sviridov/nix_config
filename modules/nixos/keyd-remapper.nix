@@ -27,8 +27,8 @@
         };
       };
 
-      externalKeyboard = {
-        ids = ["04d9:a0d1"];
+      externalKeyboards = {
+        ids = ["04d9:a0d1" "07d7:0000:289c6699"];
         settings = {
           main = {
             capslock = "overload(control, esc)";
@@ -38,16 +38,16 @@
             rightmeta = "layer(meta)";
             # leftshift = "oneshot(shift)";
             # rightshift = "oneshot(shift)";
-            # a = "overloadt(control, a, 200)";
-            s = "overloadt(shift, s, 200)";
-            d = "overloadt(meta, d, 200)";
+            a = "overloadt(control, a, 200)";
+            s = "overloadt(meta, s, 200)";
+            d = "overloadt(shift, d, 200)";
             f = "overloadt(alt, f, 200)";
-            # j = "overloadt(alt, j, 200)";
-            # k = "overloadt(meta, k, 200)";
-            # l = "overloadt(shift, l, 200)";
+            j = "overloadt(alt, j, 200)";
+            k = "overloadt(shit, k, 200)";
+            l = "overloadt(meta, l, 200)";
             ";" = "overloadt(control, ;, 200)";
-            # v = "overloadt(altgr, v, 200)";
-            # m = "overloadt(altgr, m, 200)";
+            v = "overloadt(altgr, v, 200)";
+            m = "overloadt(altgr, m, 200)";
           };
         };
       };
