@@ -54,8 +54,8 @@
 
       wezterm = {
         enable = true;
-        fontSize = 12.0;
-        dpi = 96.0;
+        fontSize = 11.0;
+        dpi = 384.0;
         windowDecorations = "NONE";
       };
     };
