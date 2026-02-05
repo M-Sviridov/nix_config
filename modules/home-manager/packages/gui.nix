@@ -28,7 +28,7 @@ in {
       todoist-electron
       trezor-suite
       winbox4
-      youtube-music
+      pear-desktop
     ];
   };
 }
