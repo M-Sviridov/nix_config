@@ -39,12 +39,12 @@
             # leftshift = "oneshot(shift)";
             # rightshift = "oneshot(shift)";
             a = "overloadt(control, a, 200)";
-            s = "overloadt(meta, s, 200)";
-            d = "overloadt(shift, d, 200)";
+            s = "overloadt(shift, s, 200)";
+            d = "overloadt(meta, d, 200)";
             f = "overloadt(alt, f, 200)";
             j = "overloadt(alt, j, 200)";
-            k = "overloadt(shit, k, 200)";
-            l = "overloadt(meta, l, 200)";
+            k = "overloadt(meta, k, 200)";
+            l = "overloadt(shift, l, 200)";
             ";" = "overloadt(control, ;, 200)";
             v = "overloadt(altgr, v, 200)";
             m = "overloadt(altgr, m, 200)";
