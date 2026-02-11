@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  environment.variables.MOZ_LEGACY_PROFILES = 1;
+
   programs.zen-browser = {
     enable = true;
     nativeMessagingHosts = [pkgs.firefoxpwa];
@@ -89,6 +91,9 @@
 
     profiles.msviridov = {
       id = 0;
+      isDefault = true;
+      containersForce = true;
+      spacesForce = true;
 
       containers = {
         "Admin" = {
@@ -109,9 +114,6 @@
           id = 2;
         };
       };
-
-      containersForce = true;
-      spacesForce = true;
 
       spaces = let
         containers = config.programs.zen-browser.profiles.msviridov.containers;
