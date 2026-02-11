@@ -38,10 +38,8 @@
       showmode = false;
       undofile = true;
       scrolloff = 10;
-      # shiftwidth = 2;
       number = true;
       list = true;
-      # tabstop = 2;
       mouse = "a";
       expandtab = true;
     };
