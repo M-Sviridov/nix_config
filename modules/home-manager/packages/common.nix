@@ -26,7 +26,6 @@ in {
       postgresql
       sqlc
       sqlite
-      terraform
       uv
       wget
     ];
