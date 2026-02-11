@@ -11,6 +11,7 @@
     };
 
     friendly-snippets.enable = true;
+    guess-indent.enable = true;
 
     gitsigns = {
       enable = true;
