@@ -3,11 +3,12 @@
   pkgs,
   ...
 }: {
-  environment.variables.MOZ_LEGACY_PROFILES = 1;
+  home.sessionVariables.MOZ_LEGACY_PROFILES = 1;
 
   programs.zen-browser = {
     enable = true;
     nativeMessagingHosts = [pkgs.firefoxpwa];
+    suppressXdgMigrationWarning = true;
 
     languagePacks = [
       "en-US"
@@ -89,7 +90,7 @@
       ShowHomeButton = false;
     };
 
-    profiles.msviridov = {
+    profiles."default" = {
       id = 0;
       isDefault = true;
       containersForce = true;
@@ -116,25 +117,25 @@
       };
 
       spaces = let
-        containers = config.programs.zen-browser.profiles.msviridov.containers;
+        containers = config.programs.zen-browser.profiles."default".containers;
       in {
         "Admin" = {
           container = containers."Admin".id;
-          id = "17ca787b-ed88-4fab-96fe-e79aed72c0fc";
+          id = "01dbd71a-0eb0-4dbe-a6bc-6bbb4f2670ff";
           icon = "🫆";
           position = 3000;
         };
 
         "Personal" = {
           container = containers."Personal".id;
-          id = "3327e6b3-8ec7-4d87-804c-148c767091a9";
+          id = "1198a8cf-c49d-481f-a0d6-487f16c90220";
           icon = "💻";
           position = 1000;
         };
 
         "Work" = {
           container = containers."Work".id;
-          id = "554a9f93-8546-4525-b744-e4bf39f9a3af";
+          id = "30e5feb9-eb6b-4c59-8588-d1e9a6b777e3";
           icon = "🦐";
           position = 2000;
         };
@@ -170,127 +171,29 @@
       };
 
       settings = {
+        ## GENERAL ##
         "browser.preferences.defaultPerformanceSettings.enabled" = false;
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
-        ## NETWORK
-        "network.dnsCacheEntries" = 10000;
-        "network.dnsCacheExpiration" = 600;
-        "network.dnsCacheExpirationGracePeriod" = 120;
-        "network.http.max-connections" = 1200;
-        "network.http.max-persistent-connections-per-server" = 8;
-        "network.http.max-urgent-start-excessive-connections-per-host" = 5;
-        "network.http.pacing.requests.burst" = 32;
-        "network.http.pacing.requests.enabled" = false;
-        "network.http.pacing.requests.min-parallelism" = 10;
-        "network.http.request.max-start-delay" = 5;
-        "network.ssl_tokens_cache_capacity" = 32768;
-
-        ## SPECULATIVE LOADING
-        "browser.urlbar.speculativeConnect.enabled" = false;
-        "browser.places.speculativeConnect.enabled" = false;
-        "network.dns.disablePrefetchFromHTTPS" = true;
-        "network.dns.disablePrefetch" = true;
-        "network.http.speculative-parallel-limit" = 0;
-        "network.predictor.enabled" = false;
-        "network.prefetch-next" = false;
-
-        ## MEMORY & CACHING
-        "javascript.options.mem.high_water_mark" = 128;
-        "browser.cache.disk.enable" = false;
-        "browser.cache.disk.capacity" = 0;
-        "browser.cache.disk.smart_size.enabled" = false;
-        "browser.cache.disk.metadata_memory_limit" = 16384;
-        "browser.cache.max_shutdown_io_lag" = 100;
-        "browser.cache.memory.max_entry_size" = 32768;
-        "browser.cache.memory.capacity" = 131072;
-        "browser.cache.memory.enable" = true;
-        "image.mem.max_decoded_image_kb" = 512000;
-        "image.cache.size" = 10485760;
-        "image.mem.decode_bytes_at_a_time" = 65536;
-        "image.mem.shared.unmap.min_expiration_ms" = 90000;
-        "media.memory_cache_max_size" = 1048576;
-        "media.memory_caches_combined_limit_kb" = 4194304;
-        "media.cache_readahead_limit" = 600;
-        "media.cache_resume_threshold" = 300;
-        "dom.storage.default_quota" = 20480;
-        "dom.storage.shadow_writes" = true;
-        "browser.sessionstore.interval" = 60000;
-        "browser.sessionhistory.max_total_viewers" = 10;
-        "browser.sessionstore.max_tabs_undo" = 10;
-        "browser.sessionstore.max_entries" = 10;
-        "browser.tabs.min_inactive_duration_before_unload" = 600000;
-
-        ## JAVASCRIPTS & CONTENT
-        "content.maxtextrun" = 8191;
-        "content.interrupt.parsing" = true;
-        "content.notify.ontimer" = true;
-        "content.notify.interval" = 50000;
-        "content.max.tokenizing.time" = 2000000;
-        "content.switch.threshold" = 300000;
-        "layout.frame_rate" = -1;
-        "nglayout.initialpaint.delay" = 5;
-        "gfx.content.skia-font-cache-size" = 32;
-
-        ## GPU & RENDERING
-        "gfx.webrender.all" = true;
-        "gfx.webrender.enabled" = true;
-        "gfx.webrender.compositor" = true;
-        "gfx.webrender.precache-shaders" = true;
-        "gfx.webrender.software" = false;
-        "gfx.canvas.accelerated.cache-items" = 32768;
-        "gfx.canvas.accelerated.cache-size" = 4096;
-        "gfx.canvas.max-size" = 16384;
-        "webgl.max-size" = 16384;
-        "dom.webgpu.enabled" = true;
-
-        ## UI RESPONSIVENESS
+        ## UI RESPONSIVENES ##
         "ui.submenuDelay" = 0;
         "dom.element.animate.enabled" = true;
-        "general.smoothScroll" = true;
-        "general.smoothScroll.msdPhysics.enabled" = false;
-        "general.smoothScroll.currentVelocityWeighting" = 0;
-        "apz.overscroll.enabled" = false;
-        "general.smoothScroll.stopDecelerationWeighting" = 1;
-        "general.smoothScroll.mouseWheel.durationMaxMS" = 150;
-        "general.smoothScroll.mouseWheel.durationMinMS" = 50;
         "mousewheel.min_line_scroll_amount" = 15;
         "mousewheel.scroll_series_timeout" = 10;
 
-        ## PROCESSES & TABS
-        "dom.ipc.processCount" = 8;
-        "dom.ipc.keepProcessesAlive.web" = 4;
-        "accessibility.force_disabled" = 1;
-
-        ## MEDIA & CODECS
+        ## MEDIA & CODECS ##
         "dom.media.webcodecs.h265.enabled" = true;
         "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled" = true;
         "media.ffmpeg.vaapi.enabled" = true;
         "media.hardware-video-decoding.force-enabled" = true;
 
-        ## SECURITY & PRIVACY
-        "privacy.query_stripping.enabled" = true;
-        "network.http.referer.XOriginPolicy" = 0;
-        "network.http.referer.XOriginTrimmingPolicy" = 0;
-        "privacy.partition.network_state" = false;
-
-        ## TAB PAGE
-        "browser.newtabpage.activity-stream.default.sites" = "";
-        "browser.newtabpage.activity-stream.feeds.topsites" = false;
-        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
-        "browser.newtabpage.activity-stream.showWeather" = false;
-
-        ## LINUX SPECIFIC
+        ## LINUX SPECIFIC ##
         "widget.wayland.opaque-region.enabled" = true;
         "widget.wayland.fractional-scale.enabled" = true;
 
-        ## ZEN SPECIFIC & AI TOOLS
+        ## ZEN SPECIFIC & AI TOOLS ##
         "reader.parse-on-load.enabled" = false;
-        "browser.ml.chat.enabled" = false;
-        "browser.search.suggest.enabled" = false;
-        "browser.urlbar.suggest.searches" = false;
-        "browser.findbar.suggest.enabled" = false;
         "zen.urlbar.behavior" = "float";
+        "zen.welcome-screen.seen" = true;
       };
     };
   };

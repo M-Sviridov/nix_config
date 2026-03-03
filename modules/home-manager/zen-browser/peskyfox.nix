@@ -31,6 +31,7 @@
 
     ## URL BAR ##
     "browser.urlbar.trending.featureGate" = false;
+    "dom.text_fragments.create_text_fragment.enabled" = true;
 
     ## NEW TAB PAGE ##
     "browser.newtabpage.activity-stream.default.sites" = "";
