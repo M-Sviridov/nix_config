@@ -27,9 +27,10 @@
     outputs.nixosModules.services
     outputs.nixosModules.shares
     outputs.nixosModules.sound
-    outputs.nixosModules.tailscale
+    # outputs.nixosModules.tailscale
 
     inputs.catppuccin.nixosModules.catppuccin
+    inputs.determinate.nixosModules.default
     # inputs.fw-fanctrl.nixosModules.default
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
     inputs.solaar.nixosModules.default

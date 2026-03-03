@@ -29,7 +29,7 @@
     inputs.nixvim.homeModules.nixvim
     inputs.nix-index-database.homeModules.default
     inputs.vicinae.homeManagerModules.default
-    inputs.zen-browser.homeModules.twilight-official
+    inputs.zen-browser.homeModules.twilight
   ];
 
   my = {
