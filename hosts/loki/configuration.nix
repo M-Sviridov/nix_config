@@ -27,7 +27,7 @@
     outputs.nixosModules.services
     outputs.nixosModules.shares
     outputs.nixosModules.sound
-    # outputs.nixosModules.tailscale
+    outputs.nixosModules.tailscale
 
     inputs.catppuccin.nixosModules.catppuccin
     inputs.determinate.nixosModules.default
