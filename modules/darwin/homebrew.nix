@@ -33,6 +33,7 @@
       "mqtt-explorer"
       "notion"
       "obsidian"
+      "plexamp"
       "proton-drive"
       "protonvpn"
       "qbittorrent"
