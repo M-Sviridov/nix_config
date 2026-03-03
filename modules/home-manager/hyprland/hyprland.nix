@@ -22,6 +22,7 @@
     HYPRCURSOR_THEME = "rose-pine-hyprcursor";
     HYPRCURSOR_SIZE = 24;
     HYPRSHOT_DIR = "${config.xdg.userDirs.pictures}/screenshots";
+    MOZ_LEGACY_PROFILES = 1;
     XCURSOR_THEME = "BreezeX-RosePine";
     XCURSOR_SIZE = 24;
     XDG_CURRENT_DESKTOP = "Hyprland";

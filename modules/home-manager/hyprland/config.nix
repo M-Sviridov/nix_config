@@ -116,7 +116,7 @@
         "SUPER, E, exec, uwsm app -- nautilus"
         "SUPER, Q, exec, uwsm app -- wezterm"
         "SUPER, O, exec, hyprctl dispatch exit"
-        "SUPER, F, exec, uwsm app -- zen -p msviridov"
+        "SUPER, F, exec, uwsm app -- zen-twilight"
         "SUPER, D, exec, uwsm app -- zen -p lg27"
         "ctrl alt, 1, exec, uwsm app -- hyprshot -m region"
         "ctrl alt, 2, exec, uwsm app -- hyprshot -m window"
