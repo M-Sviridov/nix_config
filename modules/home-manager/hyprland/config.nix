@@ -124,7 +124,7 @@
         "ctrl, space, exec, uwsm app -- tofi-drun --drun-launch=true"
         "SUPER, T, togglefloating"
         "ctrl alt, Q, exec, hyprlock"
-        "SUPER, p, togglesplit"
+        # "SUPER, p, togglesplit"
         "SUPER, c, killactive"
         "SUPER, m, fullscreen"
         "ctrl, 1, split:workspace, 1"
