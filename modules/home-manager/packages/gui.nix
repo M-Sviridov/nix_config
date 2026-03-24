@@ -24,7 +24,7 @@ in {
       nwg-look
       obsidian
       protonvpn-gui
-      signal-desktop-bin
+      signal-desktop
       todoist-electron
       trezor-suite
       winbox4
