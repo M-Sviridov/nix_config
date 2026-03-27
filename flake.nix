@@ -1,150 +1,24 @@
+# DO-NOT-EDIT. This file was auto-generated using github:vic/flake-file.
+# Use `nix run .#write-flake` to regenerate it.
 {
-  description = "NixOS & Nix-Darwin Config";
+  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 
   inputs = {
     catppuccin.url = "github:catppuccin/nix";
-    determinate = {
-      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    fw-fanctrl = {
-      url = "github:TamtamHero/fw-fanctrl/packaging/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+    den.url = "github:vic/den";
+    flake-aspects.url = "github:vic/flake-aspects";
+    flake-file.url = "github:vic/flake-file";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprpanel = {
-      url = "github:jas-singhfsu/hyprpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprsplit = {
-      url = "github:shezdy/hyprsplit";
-      inputs.hyprland.follows = "hyprland";
-    };
-    nix-darwin = {
-      url = "github:nix-darwin/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    import-tree.url = "github:vic/import-tree";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    homebrew-cask = {
-      url = "github:homebrew/homebrew-cask";
-      flake = false;
-    };
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
-      flake = false;
-    };
-    homebrew-zathura = {
-      url = "github:homebrew-zathura/homebrew-zathura";
-      flake = false;
-    };
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    solaar = {
-      url = "github:Svenum/Solaar-Flake/main";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    vicinae.url = "github:vicinaehq/vicinae";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-  };
-
-  outputs = {
-    self,
-    home-manager,
-    nix-darwin,
-    nixpkgs,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-
-    machines = {
-      air-laptop-01 = {
-        system = "aarch64-darwin";
-        timeZone = "Asia/Bangkok";
-        type = "darwin";
-        user = "msviridov";
-      };
-
-      loki = {
-        system = "x86_64-linux";
-        timeZone = "Asia/Bangkok";
-        type = "nixos";
-        user = "msviridov";
-      };
-    };
-
-    mkDarwin = hostname: config:
-      nix-darwin.lib.darwinSystem {
-        system = config.system;
-        specialArgs = {
-          inherit inputs outputs hostname;
-          inherit (config) timeZone user;
-        };
-        modules = [./hosts/${hostname}/configuration.nix];
-      };
-
-    mkHome = hostname: config:
-      home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${config.system};
-        extraSpecialArgs = {
-          inherit inputs outputs hostname;
-          inherit (config) system timeZone type user;
-        };
-        modules = [./hosts/${hostname}/home.nix];
-      };
-
-    mkNixos = hostname: config:
-      nixpkgs.lib.nixosSystem {
-        system = config.system;
-        specialArgs = {
-          inherit inputs outputs hostname;
-          inherit (config) timeZone user;
-        };
-        modules = [./hosts/${hostname}/configuration.nix];
-      };
-  in {
-    darwinModules = import ./modules/darwin;
-    homeManagerModules = import ./modules/home-manager;
-    nixosModules = import ./modules/nixos;
-
-    darwinConfigurations =
-      nixpkgs.lib.mapAttrs mkDarwin
-      (nixpkgs.lib.filterAttrs (n: v: v.type == "darwin") machines);
-
-    homeConfigurations =
-      nixpkgs.lib.mapAttrs' (
-        hostname: config:
-          nixpkgs.lib.nameValuePair "${config.user}@${hostname}" (mkHome hostname config)
-      )
-      machines;
-
-    nixosConfigurations =
-      nixpkgs.lib.mapAttrs mkNixos
-      (nixpkgs.lib.filterAttrs (n: v: v.type == "nixos") machines);
-
-    formatter =
-      nixpkgs.lib.genAttrs
-      (nixpkgs.lib.unique (nixpkgs.lib.mapAttrsToList (n: v: v.system) machines))
-      (system: nixpkgs.legacyPackages.${system}.alejandra);
+    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
+    nixpkgs-lib.follows = "nixpkgs";
   };
 }
