@@ -73,6 +73,7 @@
     ];
 
     sessionVariables = {
+      SSH_AUTH_SOCK = "${config.xdg.configHome}.bitwarden-ssh-agent.sock";
       NPM_CONFIG_USERCONFIG = "$XDG_CONFIG_HOME/npm/npmrc";
       RUSTUP_HOME = "$XDG_CONFIG_HOME/rustup";
       CARGO_HOME = "$XDG_CONFIG_HOME/cargo";
