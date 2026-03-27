@@ -28,12 +28,10 @@
         init.defaultBranch = "main";
         maintenance.strategy = "incremental";
         merge.conflictStyle = "zdiff3";
-        push.autoSetupRemote = true;
-        tag.sort = "-version:refname";
-      };
-      extraSettings = {
         pull.rebase = true;
+        push.autoSetupRemote = true;
         rerere.enabled = true;
+        tag.sort = "-version:refname";
       };
     };
   };
