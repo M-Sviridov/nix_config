@@ -13,14 +13,17 @@
         git
         gtk
         keyd-remapper
+        programs
         ssh
+        starship
         wezterm
+        zsh
       ]
       ++ [
         den.provides.define-user
         den.provides.hostname
         den.provides.primary-user
-        (den.provides.user-shell "fish")
+        (den.provides.user-shell "zsh")
       ];
 
     homeManager = {pkgs, ...}: {
