@@ -16,7 +16,6 @@
         programs
         ssh
         starship
-        wezterm
         zsh
       ]
       ++ [
