@@ -2,6 +2,9 @@
   my.ssh.homeManager = {config, ...}: let
     sshDir = "${config.home.homeDirectory}/.ssh";
   in {
+    # imports = [
+    #   ./public-keys.nix
+    # ];
     programs.ssh = {
       enable = true;
       enableDefaultConfig = false;
