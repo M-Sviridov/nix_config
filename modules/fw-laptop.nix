@@ -10,8 +10,8 @@
     };
 
     # host provides default home environment for its users
-    homeManager = {pkgs, ...}: {
-      # home.packages = [pkgs.vim];
-    };
+    # homeManager = {pkgs, ...}: {
+    #   home.packages = [pkgs.bitwarden-desktop];
+    # };
   };
 }

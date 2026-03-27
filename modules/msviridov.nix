@@ -10,6 +10,10 @@
         catppuccin
         fonts
         ghostty
+        git
+        gtk
+        keyd-remapper
+        ssh
         wezterm
       ]
       ++ [
@@ -20,7 +24,9 @@
       ];
 
     homeManager = {pkgs, ...}: {
-      home.packages = [];
+      home.packages = [
+        pkgs.bitwarden-desktop
+      ];
     };
 
     # user can provide NixOS configurations
