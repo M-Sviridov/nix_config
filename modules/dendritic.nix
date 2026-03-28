@@ -4,6 +4,10 @@
     (inputs.den.flakeModules.dendritic or {})
   ];
 
+  perSystem = {pkgs, ...}: {
+    formatter = pkgs.alejandra;
+  };
+
   # other inputs may be defined at a module using them.
   flake-file.inputs = {
     den.url = "github:vic/den";
