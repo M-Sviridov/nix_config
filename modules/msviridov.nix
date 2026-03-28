@@ -13,6 +13,7 @@
         git
         gtk
         keyd-remapper
+        niri
         programs
         ssh
         starship
