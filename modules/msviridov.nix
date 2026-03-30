@@ -14,6 +14,7 @@
         gtk
         keyd-remapper
         niri
+        nix
         programs
         ssh
         starship

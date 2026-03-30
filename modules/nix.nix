@@ -1,10 +1,12 @@
 {
   my.nix.nixos = {
-    optimise.automatic = true;
+    nix = {
+      optimise.automatic = true;
 
-    settings = {
-      auto-optimise-store = true;
-      download-buffer-size = 524288000;
+      settings = {
+        auto-optimise-store = true;
+        download-buffer-size = 524288000;
+      };
     };
   };
 }
