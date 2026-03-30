@@ -17,6 +17,7 @@
         programs
         ssh
         starship
+        zen-browser
         zsh
       ]
       ++ [
