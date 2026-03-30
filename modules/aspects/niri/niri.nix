@@ -15,6 +15,7 @@
     nix.settings.substituters = ["https://niri.cachix.org"];
 
     environment.variables.NIXOS_OZONE_WL = "1";
+    environment.systemPackages = [pkgs.xwayland-satellite];
 
     programs.niri = {
       enable = true;
@@ -31,100 +32,50 @@
       enable = true;
 
       settings = {
-        animations.enable = false;
-        binds = let
-          leaderKey = "Super";
-        in {
-          "${leaderKey}+q".action.spawn = "ghostty";
-          "${leaderKey}+f".action.spawn = "firefox";
-          "${leaderKey}+c".action.close-window = [];
-          "${leaderKey}+h".action.focus-column-or-monitor-left = [];
-          "${leaderKey}+l".action.focus-column-or-monitor-right = [];
-          "${leaderKey}+j".action.focus-window-or-workspace-down = [];
-          "${leaderKey}+k".action.focus-window-or-workspace-up = [];
-          "${leaderKey}+n".action.spawn = [
-            "dms"
-            "ipc"
-            "notifications"
-            "toggle"
-          ];
-          "${leaderKey}+v".action.spawn = [
-            "dms"
-            "ipc"
-            "clipboard"
-            "toggle"
-          ];
-          "Ctrl+Alt+q".action.spawn = [
-            "dms"
-            "ipc"
-            "lock"
-            "lock"
-          ];
-          "Ctrl+Space".action.spawn = [
-            "dms"
-            "ipc"
-            "spotlight"
-            "toggle"
-          ];
-          "XF86AudioRaiseVolume".action.spawn = [
-            "dms"
-            "ipc"
-            "audio"
-            "increment"
-            "5"
-          ];
-          "XF86AudioLowerVolume".action.spawn = [
-            "dms"
-            "ipc"
-            "audio"
-            "decrement"
-            "5"
-          ];
-          "XF86AudioMute".action.spawn = [
-            "dms"
-            "ipc"
-            "audio"
-            "mute"
-          ];
-          "XF86AudioNext".action.spawn = [
-            "dms"
-            "ipc"
-            "mpris"
-            "next"
-          ];
-          "XF86AudioPlay".action.spawn = [
-            "dms"
-            "ipc"
-            "mpris"
-            "playPause"
-          ];
-          "XF86AudioPrev".action.spawn = [
-            "dms"
-            "ipc"
-            "mpris"
-            "previous"
-          ];
-          "XF86MonBrightnessDown".action.spawn = [
-            "dms"
-            "ipc"
-            "brightness"
-            "decrement"
-            "5"
-            ""
-          ];
-          "XF86MonBrightnessUp".action.spawn = [
-            "dms"
-            "ipc"
-            "brightness"
-            "increment"
-            "5"
-            ""
-          ];
+        animations = {
+          enable = true;
+          slowdown = 0.5;
+        };
+        # hotkey-overlay.skip-at-startup = true;
+
+        input = {
+          focus-follows-mouse.enable = true;
+
+          keyboard = {
+            repeat-delay = 200;
+            repeat-rate = 50;
+            track-layout = "global";
+            xkb.layout = "us,th,fr,ru";
+          };
+        };
+
+        layout = {
+          always-center-single-column = true;
+
+          border = {
+            enable = true;
+            width = 4;
+          };
+
+          focus-ring.enable = false;
+          gaps = 6;
+          shadow.enable = true;
+          struts.left = 4;
+          struts.right = 4;
+
+          tab-indicator = {
+            enable = true;
+            position = "top";
+          };
         };
 
         prefer-no-csd = true;
+        screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
+
         window-rules = [
           {
+            clip-to-geometry = true;
+            draw-border-with-background = false;
             geometry-corner-radius = let
               r = 8.0;
             in {
@@ -133,7 +84,14 @@
               bottom-left = r;
               bottom-right = r;
             };
-            clip-to-geometry = true;
+          }
+          {
+            matches = [
+              {
+                app-id = "^zen-twilight$";
+              }
+            ];
+            open-maximized = true;
           }
         ];
       };
