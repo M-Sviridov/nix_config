@@ -103,6 +103,12 @@
             Folder = "Homelab";
           }
           {
+            Title = "qui";
+            URL = "https://qui.lan.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Homelab";
+          }
+          {
             Title = "Radarr";
             URL = "https://radarr.lan.msviridov.com";
             Placement = "toolbar";
@@ -197,14 +203,6 @@
             URL = "https://wiki.nixos.org/wiki/NixOS_Wiki";
             Placement = "toolbar";
             Folder = "Tech";
-          }
-
-          # TRACKERS
-          {
-            Title = "RED";
-            URL = "https://redacted.sh";
-            Placement = "toolbar";
-            Folder = "Trackers";
           }
         ];
       };
