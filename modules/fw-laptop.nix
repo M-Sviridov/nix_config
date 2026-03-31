@@ -6,7 +6,6 @@
       services.upower.enable = true;
 
       environment.systemPackages = with pkgs; [
-        neovim
         tree
       ];
     };

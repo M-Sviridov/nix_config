@@ -14,6 +14,7 @@
         gtk
         keyd-remapper
         niri
+        nixvim
         nix
         programs
         ssh
