@@ -158,7 +158,7 @@
           "ProtonMail" = {
             id = "5c38d6ea-1d11-4790-b9a2-a2befb5a07ae";
             container = containers.Personal.id;
-            url = "https://outlook.live.com/mail/";
+            url = "https://mail.proton.me";
             isEssential = true;
             position = 101;
           };
