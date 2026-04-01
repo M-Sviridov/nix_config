@@ -1,8 +1,4 @@
-{
-  den,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   flake-file.inputs = {
     nur = {
       url = "github:nix-community/NUR";
@@ -156,6 +152,25 @@
           };
         };
 
+        pins = let
+          containers = config.programs.zen-browser.profiles."default".containers;
+        in {
+          "ProtonMail" = {
+            id = "5c38d6ea-1d11-4790-b9a2-a2befb5a07ae";
+            container = containers.Personal.id;
+            url = "https://outlook.live.com/mail/";
+            isEssential = true;
+            position = 101;
+          };
+          "Grafana" = {
+            id = "121ce38d-3a67-445c-8fda-3006bc356902";
+            container = containers.Personal.id;
+            url = "https://grafana.lan.msviridov.com";
+            isEssential = true;
+            position = 102;
+          };
+        };
+
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
           catppuccin-web-file-icons
@@ -168,6 +183,12 @@
           ublock-origin
           vimium
           yomitan
+        ];
+
+        mods = [
+          "e122b5d9-d385-4bf8-9971-e137809097d0" # No Top Sites
+          "f7c71d9a-bce2-420f-ae44-a64bd92975ab" # Better Unloaded Tabs
+          "1e86cf37-a127-4f24-b919-d265b5ce29a0" # Lean
         ];
 
         search = {
