@@ -11,6 +11,7 @@
     imports = [inputs.catppuccin.homeModules.catppuccin];
 
     catppuccin.enable = true;
+    catppuccin.mpv.enable = false;
     catppuccin.wezterm.enable = true;
     catppuccin.wezterm.apply = true;
   };
