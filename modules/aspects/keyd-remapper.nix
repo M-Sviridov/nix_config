@@ -29,7 +29,7 @@
         };
 
         externalKeyboards = {
-          ids = ["04d9:a0d1" "07d7:0000:289c6699"];
+          ids = ["04d9:a0d1" "07d7:0000"];
           settings = {
             main = {
               capslock = "overload(control, esc)";
