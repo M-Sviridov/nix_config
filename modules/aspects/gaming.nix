@@ -1,11 +1,7 @@
 {
   my.gaming.nixos = {
     programs = {
-      corectrl = {
-        enable = true;
-        gpuOverclock.enable = true;
-      };
-
+      corectrl.enable = true;
       gamemode.enable = true;
       gamescope.enable = true;
 
