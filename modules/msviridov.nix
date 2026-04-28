@@ -9,6 +9,7 @@
       [
         catppuccin
         fonts
+        gaming
         ghostty
         git
         gtk
@@ -19,6 +20,7 @@
         programs
         ssh
         starship
+        tmux
         zen-browser
         zsh
       ]
@@ -30,13 +32,37 @@
       ];
 
     homeManager = {pkgs, ...}: {
-      home.packages = [
-        pkgs.bitwarden-desktop
+      home.packages = with pkgs; [
+        ansible
+        bitwarden-desktop
+        ente-auth
+        jq
+        loupe
+        proton-vpn
+        signal-desktop
       ];
+
+      xdg.mimeApps = {
+        enable = true;
+        defaultApplications = {
+          "inode/directory" = "org.gnome.Nautilus.desktop";
+          "x-scheme-handler/file" = "org.gnome.Nautilus.desktop";
+        };
+      };
     };
 
     # user can provide NixOS configurations
     # to any host it is included on
-    # nixos = { pkgs, ... }: { };
+    nixos = {
+      services = {
+        tailscale = {
+          enable = true;
+          extraUpFlags = [
+            "--accept-dns"
+            "--accept-routes"
+          ];
+        };
+      };
+    };
   };
 }
