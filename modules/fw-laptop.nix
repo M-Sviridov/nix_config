@@ -8,6 +8,15 @@
       environment.systemPackages = with pkgs; [
         tree
       ];
+
+      hardware = {
+        amdgpu.opencl.enable = true;
+
+        graphics = {
+          enable = true;
+          enable32Bit = true;
+        };
+      };
     };
 
     # host provides default home environment for its users
