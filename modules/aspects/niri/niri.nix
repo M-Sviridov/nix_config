@@ -1,8 +1,4 @@
-{
-  den,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   flake-file.inputs = {
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -21,12 +17,16 @@
       enable = true;
       package = pkgs.niri-unstable;
     };
+
+    services.udisks2.enable = true;
   };
 
-  my.niri.homeManager = {config, ...}: {
+  my.niri.homeManager = {pkgs, ...}: {
     imports = [
       inputs.niri.homeModules.niri
     ];
+
+    home.packages = [pkgs.nautilus];
 
     programs.niri = {
       enable = true;
@@ -60,8 +60,8 @@
           focus-ring.enable = false;
           gaps = 6;
           shadow.enable = true;
-          struts.left = 4;
-          struts.right = 4;
+          struts.left = 2;
+          struts.right = 2;
 
           tab-indicator = {
             enable = true;
@@ -93,7 +93,40 @@
             ];
             open-maximized = true;
           }
+          {
+            matches = [
+              {app-id = "^org.gnome.Nautilus$";}
+            ];
+            open-floating = true;
+          }
+          {
+            matches = [{app-id = "steam";}];
+            open-floating = true;
+          }
+          {
+            matches = [{app-id = "^steam_app_.*$";}];
+            open-fullscreen = true;
+            focus-ring.enable = false;
+            border.enable = false;
+          }
+          {
+            matches = [{app-id = "gamescope";}];
+            open-fullscreen = true;
+            focus-ring.enable = false;
+            border.enable = false;
+          }
         ];
+      };
+    };
+
+    services = {
+      gnome-keyring.enable = true;
+      udiskie = {
+        enable = true;
+
+        settings = {
+          file_manager = "xdg-open";
+        };
       };
     };
   };
