@@ -29,8 +29,9 @@
           identityFile = "${sshDir}/pve-club_key";
         };
 
-        # Github
+        # Github & Gitlab
         "github.com".identityFile = "${sshDir}/id_github_ed25519.pub";
+        "gitlab.com".identityFile = "${sshDir}/id_github_ed25519.pub";
 
         # Homelab DMZ
         "dmz*".identityFile = "${sshDir}/id_home_dmz_ed25519.pub";
