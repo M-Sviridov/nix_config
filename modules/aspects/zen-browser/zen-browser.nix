@@ -33,6 +33,7 @@
     programs.zen-browser = {
       enable = true;
       nativeMessagingHosts = [pkgs.firefoxpwa];
+      setAsDefaultBrowser = true;
 
       languagePacks = [
         "en-US"
@@ -220,7 +221,7 @@
 
           ## MEDIA & CODECS ##
           "dom.media.webcodecs.h265.enabled" = true;
-          "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled" = true;
+          "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled" = false;
           "media.ffmpeg.vaapi.enabled" = true;
           "media.hardware-video-decoding.force-enabled" = true;
 
