@@ -14,6 +14,7 @@
         git
         gtk
         keyd-remapper
+        logitech
         niri
         nixvim
         nix
@@ -32,12 +33,17 @@
       ];
 
     homeManager = {pkgs, ...}: {
+      nixpkgs.config.allowUnfree = true;
+
       home.packages = with pkgs; [
+        anki
         ansible
         bitwarden-desktop
         ente-auth
         jq
+        logseq
         loupe
+        obsidian
         proton-vpn
         signal-desktop
       ];
@@ -64,5 +70,21 @@
         };
       };
     };
+
+    security.sudo.extraRules = [
+      {
+        users = ["msviridov"];
+        commands = [
+          {
+            command = "/run/current-system/sw/bin/systemctl stop keyd";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "/run/current-system/sw/bin/systemctl start keyd";
+            options = ["NOPASSWD"];
+          }
+        ];
+      }
+    ];
   };
 }
