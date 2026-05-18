@@ -36,6 +36,7 @@
         conceallevel = 1;
         updatetime = 250;
         smartcase = true;
+        smarttab = true;
         showmode = false;
         undofile = true;
         scrolloff = 10;
