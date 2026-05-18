@@ -14,8 +14,11 @@
     };
   };
 
-  my.niri.nixos = {
-    programs.kdeconnect.enable = true;
+  my.niri.nixos = {pkgs, ...}: {
+    programs.kdeconnect = {
+      enable = true;
+      package = pkgs.valent;
+    };
   };
 
   my.niri.homeManager = {pkgs, ...}: {
@@ -71,7 +74,5 @@
 
       dsearch.enable = true;
     };
-
-    services.kdeconnect.enable = true;
   };
 }

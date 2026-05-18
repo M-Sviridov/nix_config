@@ -57,6 +57,8 @@
             width = 4;
           };
 
+          default-column-width = {proportion = 0.5;};
+
           focus-ring.enable = false;
           gaps = 6;
           shadow.enable = true;
@@ -114,6 +116,12 @@
             open-fullscreen = true;
             focus-ring.enable = false;
             border.enable = false;
+          }
+          {
+            matches = [{app-id = "^org\.gnome\.NautilusPreviewer$";}];
+            open-floating = true;
+            default-column-width.fixed = 900;
+            default-window-height.fixed = 700;
           }
         ];
       };
