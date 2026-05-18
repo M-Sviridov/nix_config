@@ -44,6 +44,7 @@
         logseq
         loupe
         obsidian
+        plezy
         proton-vpn
         signal-desktop
       ];
