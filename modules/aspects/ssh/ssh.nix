@@ -9,7 +9,7 @@
       enable = true;
       enableDefaultConfig = false;
 
-      matchBlocks = {
+      settings = {
         "*" = {
           user = "msviridov";
           identitiesOnly = true;
