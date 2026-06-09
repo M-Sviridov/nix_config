@@ -65,7 +65,6 @@
         opentofu
         plezy
         proton-vpn
-        qbittorrent
         signal-desktop
         traceroute
         usbutils
