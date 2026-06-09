@@ -16,7 +16,7 @@
 
   my.niri.nixos = {pkgs, ...}: {
     programs.kdeconnect = {
-      enable = true;
+      enable = false;
       package = pkgs.valent;
     };
   };
@@ -36,7 +36,7 @@
 
     programs = {
       dank-material-shell = {
-        enable = true;
+        enable = false;
         enableSystemMonitoring = true;
         enableVPN = true;
         enableAudioWavelength = true;
