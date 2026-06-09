@@ -29,82 +29,71 @@
         "Ctrl+Alt+2".action.screenshot-screen = [];
         "Ctrl+Alt+3".action.screenshot-window = [];
         "${leaderKey}+n".action.spawn = [
-          "dms"
-          "ipc"
+          "noctalia"
+          "msg"
+          "panel-toggle"
           "notifications"
-          "toggle"
         ];
         "${leaderKey}+v".action.spawn = [
-          "dms"
-          "ipc"
+          "noctalia"
+          "msg"
+          "panel-toggle"
           "clipboard"
-          "toggle"
         ];
         "Ctrl+Alt+q".action.spawn = [
-          "dms"
-          "ipc"
-          "lock"
+          "noctalia"
+          "msg"
+          "session"
           "lock"
         ];
         "Ctrl+Space".action.spawn = [
-          "dms"
-          "ipc"
-          "spotlight"
-          "toggle"
+          "noctalia"
+          "msg"
+          "panel-toggle"
+          "launcher"
         ];
         "XF86AudioRaiseVolume".action.spawn = [
-          "dms"
-          "ipc"
-          "audio"
-          "increment"
-          "5"
+          "noctalia"
+          "msg"
+          "volume-up"
         ];
         "XF86AudioLowerVolume".action.spawn = [
-          "dms"
-          "ipc"
-          "audio"
-          "decrement"
-          "5"
+          "noctalia"
+          "msg"
+          "volume-down"
         ];
         "XF86AudioMute".action.spawn = [
-          "dms"
-          "ipc"
-          "audio"
-          "mute"
+          "noctalia"
+          "msg"
+          "volume-mute"
         ];
         "XF86AudioNext".action.spawn = [
-          "dms"
-          "ipc"
-          "mpris"
+          "noctalia"
+          "msg"
+          "media"
           "next"
         ];
         "XF86AudioPlay".action.spawn = [
-          "dms"
-          "ipc"
-          "mpris"
-          "playPause"
+          "noctalia"
+          "msg"
+          "media"
+          "toggle"
         ];
         "XF86AudioPrev".action.spawn = [
-          "dms"
-          "ipc"
-          "mpris"
+          "noctalia"
+          "msg"
+          "media"
           "previous"
         ];
         "XF86MonBrightnessDown".action.spawn = [
-          "dms"
-          "ipc"
-          "brightness"
-          "decrement"
-          "5"
-          ""
+          "noctalia"
+          "msg"
+          "brightness-down"
         ];
         "XF86MonBrightnessUp".action.spawn = [
-          "dms"
-          "ipc"
-          "brightness"
-          "increment"
-          "5"
-          ""
+          "noctalia"
+          "msg"
+          "brightness-up"
         ];
       };
     };
