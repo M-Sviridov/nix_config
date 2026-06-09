@@ -4,15 +4,24 @@
   my.catppuccin.nixos = {
     imports = [inputs.catppuccin.nixosModules.catppuccin];
 
-    catppuccin.enable = true;
+    catppuccin = {
+      autoEnable = true;
+      enable = true;
+    };
   };
 
   my.catppuccin.homeManager = {
     imports = [inputs.catppuccin.homeModules.catppuccin];
 
-    catppuccin.enable = true;
-    catppuccin.mpv.enable = false;
-    catppuccin.wezterm.enable = true;
-    catppuccin.wezterm.apply = true;
+    catppuccin = {
+      autoEnable = true;
+      enable = true;
+      mpv.enable = false;
+
+      wezterm = {
+        enable = true;
+        apply = true;
+      };
+    };
   };
 }
