@@ -10,6 +10,8 @@
         ];
       };
 
+      chromium.enable = true;
+
       eza = {
         enable = true;
         enableZshIntegration = true;
@@ -40,6 +42,8 @@
           mpris
         ];
       };
+
+      onlyoffice.enable = true;
 
       rbw = {
         enable = true;
