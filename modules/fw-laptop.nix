@@ -9,6 +9,7 @@
         };
         gnome.sushi.enable = true;
         gvfs.enable = true;
+        power-profiles-daemon.enable = true;
         upower.enable = true;
 
         pipewire = {
@@ -36,6 +37,7 @@
 
       environment.systemPackages = with pkgs; [
         tree
+        framework-tool-tui
       ];
 
       hardware = {
