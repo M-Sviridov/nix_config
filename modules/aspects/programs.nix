@@ -23,6 +23,8 @@
         enableZshIntegration = true;
       };
 
+      imv.enable = true;
+
       mpv = {
         enable = true;
 
@@ -56,6 +58,7 @@
       };
 
       ripgrep.enable = true;
+      zathura.enable = true;
 
       zoxide = {
         enable = true;
@@ -68,9 +71,11 @@
   };
 
   my.programs.nixos = {
-    programs.localsend = {
-      enable = true;
-      openFirewall = true;
+    programs = {
+      localsend = {
+        enable = true;
+        openFirewall = true;
+      };
     };
   };
 }
