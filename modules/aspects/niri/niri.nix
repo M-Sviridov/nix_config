@@ -36,6 +36,15 @@
           enable = true;
           slowdown = 0.5;
         };
+
+        cursor = {
+          size = 24;
+          theme = "BreezeX-RosePine-Linux";
+        };
+
+        debug = {
+          honor-xdg-activation-with-invalid-serial = [];
+        };
         # hotkey-overlay.skip-at-startup = true;
 
         input = {
@@ -54,7 +63,9 @@
 
           border = {
             enable = true;
-            width = 4;
+            active.color = "#cba6f7";
+            urgent.color = "#f38ba8";
+            width = 2;
           };
 
           default-column-width = {proportion = 0.5;};
@@ -74,6 +85,13 @@
         prefer-no-csd = true;
         screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
 
+        outputs = {
+          "DP-2".position.x = -2560;
+          "DP-2".position.y = 0;
+          "eDP-1".position.x = 0;
+          "eDP-1".position.y = 240;
+        };
+
         window-rules = [
           {
             clip-to-geometry = true;
@@ -88,17 +106,17 @@
             };
           }
           {
-            matches = [
-              {
-                app-id = "^zen-twilight$";
-              }
-            ];
+            matches = [{app-id = "^zen-twilight$";}];
             open-maximized = true;
           }
           {
-            matches = [
-              {app-id = "^org.gnome.Nautilus$";}
-            ];
+            matches = [{app-id = "^org.gnome.Nautilus$";}];
+            open-floating = true;
+            default-column-width.fixed = 1080;
+            default-window-height.fixed = 920;
+          }
+          {
+            matches = [{app-id = "^org.gnome.Nautilus$";}];
             open-floating = true;
           }
           {
