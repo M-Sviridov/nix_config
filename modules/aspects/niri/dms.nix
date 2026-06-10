@@ -1,13 +1,5 @@
 {inputs, ...}: {
   flake-file.inputs = {
-    danksearch = {
-      url = "github:AvengeMedia/danksearch";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     dms-plugin-registry = {
       url = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,64 +7,154 @@
   };
 
   my.niri.nixos = {pkgs, ...}: {
-    programs.kdeconnect = {
-      enable = false;
-      package = pkgs.valent;
+    imports = [
+      inputs.dms-plugin-registry.modules.default
+    ];
+
+    programs = {
+      dms-shell = {
+        enable = true;
+
+        plugins = {
+          calculator.enable = true;
+          dankBatteryAlerts.enable = true;
+        };
+
+        systemd = {
+          enable = true;
+          restartIfChanged = true;
+        };
+      };
+
+      dsearch.enable = true;
+
+      kdeconnect = {
+        enable = false;
+        package = pkgs.valent;
+      };
     };
   };
 
   my.niri.homeManager = {pkgs, ...}: {
-    imports = [
-      inputs.danksearch.homeModules.dsearch
-      inputs.dms.homeModules.dank-material-shell
-      inputs.dms.homeModules.niri
-      inputs.dms-plugin-registry.modules.default
-    ];
-
     home.packages = [
       pkgs.libqalculate
       pkgs.sshfs
     ];
 
     programs = {
-      dank-material-shell = {
-        enable = false;
-        enableSystemMonitoring = true;
-        enableVPN = true;
-        enableAudioWavelength = true;
-        enableCalendarEvents = true;
-        enableClipboardPaste = true;
-
-        niri = {
-          enableSpawn = true;
-          includes = {
-            enable = true;
-            override = true;
-            originalFileName = "hm";
-            filesToInclude = [
-              "alttab"
-              "binds"
-              "colors"
-              "cursor"
-              "layout"
-              "outputs"
-              "windowrules"
-              "wpblur"
-            ];
-          };
-        };
-
-        plugins = {
-          calculator.enable = true;
-          dankBatteryAlerts.enable = true;
-          dankBitwarden.enable = true;
-          dankGifSearch.enable = true;
-          dankKDEConnect.enable = true;
-          emojiLauncher.enable = true;
+      niri.settings = let
+        leaderKey = "Super";
+      in {
+        binds = {
+          "Ctrl+Alt+1".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "niri"
+            "screenshot"
+          ];
+          "Ctrl+Alt+2".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "niri"
+            "screenshotWindow"
+          ];
+          "Ctrl+Alt+3".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "niri"
+            "screenshotScreen"
+          ];
+          "${leaderKey}+n".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "notifications"
+            "open"
+          ];
+          "${leaderKey}+v".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "clipboard"
+            "toggle"
+          ];
+          "Ctrl+Alt+q".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "lock"
+            "lock"
+          ];
+          "Ctrl+Space".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "spotlight"
+            "toggle"
+          ];
+          "XF86AudioRaiseVolume".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "audio"
+            "increment"
+          ];
+          "XF86AudioLowerVolume".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "audio"
+            "decrement"
+          ];
+          "XF86AudioMute".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "audio"
+            "mute"
+          ];
+          "XF86AudioNext".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "mpris"
+            "next"
+          ];
+          "XF86AudioPlay".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "mpris"
+            "playPause"
+          ];
+          "XF86AudioPrev".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "mpris"
+            "previous"
+          ];
+          "XF86MonBrightnessDown".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "brightness"
+            "decrement"
+            "5"
+          ];
+          "XF86MonBrightnessUp".action.spawn = [
+            "dms"
+            "ipc"
+            "call"
+            "brightness"
+            "increment"
+            "5"
+          ];
         };
       };
-
-      dsearch.enable = true;
     };
   };
 }
