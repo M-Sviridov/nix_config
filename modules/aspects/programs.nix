@@ -45,8 +45,6 @@
         ];
       };
 
-      onlyoffice.enable = true;
-
       rbw = {
         enable = true;
 
