@@ -1,7 +1,7 @@
 {
   my.nixvim.homeManager = {config, ...}: {
     programs.nixvim.plugins.obsidian = {
-      enable = false;
+      enable = true;
 
       settings = {
         legacy_commands = false;
@@ -9,7 +9,7 @@
         workspaces = [
           {
             name = "my_second_brain";
-            path = "${config.home.homeDirectory}/my_second_brain";
+            path = "${config.xdg.userDirs.documents}/my_second_brain";
           }
         ];
 
