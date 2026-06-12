@@ -8,7 +8,7 @@
 
   my.niri.nixos = {pkgs, ...}: {
     imports = [
-      inputs.dms-plugin-registry.modules.default
+      inputs.dms-plugin-registry.nixosModules.default
     ];
 
     programs = {
@@ -101,6 +101,7 @@
             "call"
             "audio"
             "increment"
+            "5"
           ];
           "XF86AudioLowerVolume".action.spawn = [
             "dms"
@@ -108,6 +109,7 @@
             "call"
             "audio"
             "decrement"
+            "5"
           ];
           "XF86AudioMute".action.spawn = [
             "dms"
@@ -144,6 +146,7 @@
             "brightness"
             "decrement"
             "5"
+            ""
           ];
           "XF86MonBrightnessUp".action.spawn = [
             "dms"
@@ -152,7 +155,27 @@
             "brightness"
             "increment"
             "5"
+            ""
           ];
+        };
+
+        layer-rules = [
+          {
+            matches = [{namespace = "^dms:clipboard$";}];
+            block-out-from = "screencast";
+          }
+          {
+            matches = [{namespace = "^quickshell$";}];
+            place-within-backdrop = true;
+          }
+          {
+            matches = [{namespace = "^dms:blurwallpaper$";}];
+            place-within-backdrop = true;
+          }
+        ];
+
+        layout = {
+          background-color = "transparent";
         };
       };
     };

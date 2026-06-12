@@ -25,9 +25,6 @@
         "Ctrl+3".action.focus-workspace = 3;
         "Ctrl+4".action.focus-workspace = 4;
         "Ctrl+5".action.focus-workspace = 5;
-        "Ctrl+Alt+1".action.screenshot = [];
-        "Ctrl+Alt+2".action.screenshot-screen = [];
-        "Ctrl+Alt+3".action.screenshot-window = [];
       };
     };
   };

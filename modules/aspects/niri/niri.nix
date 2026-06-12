@@ -54,7 +54,10 @@
             repeat-delay = 200;
             repeat-rate = 50;
             track-layout = "global";
-            xkb.layout = "us,th,fr,ru";
+            xkb = {
+              layout = "us,th,fr,ru";
+              options = "grp:win_space_toggle";
+            };
           };
         };
 
@@ -112,7 +115,7 @@
           {
             matches = [{app-id = "^org.gnome.Nautilus$";}];
             open-floating = true;
-            default-column-width.fixed = 1080;
+            default-column-width.fixed = 1380;
             default-window-height.fixed = 920;
           }
           {
