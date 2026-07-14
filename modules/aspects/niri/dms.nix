@@ -93,7 +93,7 @@
             "dms"
             "ipc"
             "call"
-            "spotlight"
+            "spotlight-bar"
             "toggle"
           ];
           "XF86AudioRaiseVolume".action.spawn = [
