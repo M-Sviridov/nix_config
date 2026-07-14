@@ -3,6 +3,13 @@
   my,
   ...
 }: {
+  flake-file.inputs = {
+    herdr = {
+      url = "github:ogulcancelik/herdr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
   # user aspect
   den.aspects.msviridov = {
     includes = with my;
@@ -59,6 +66,7 @@
         fragments
         gimp
         gnome-calendar
+        herdr
         jq
         libreoffice
         loupe
