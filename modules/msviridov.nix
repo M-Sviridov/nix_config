@@ -48,6 +48,7 @@
         ansible
         awscli2
         bitwarden-desktop
+        cisco-packet-tracer_9
         czkawka
         dnsutils
         doggo
@@ -56,6 +57,7 @@
         feishin
         ffmpeg-full
         fragments
+        gimp
         gnome-calendar
         jq
         libreoffice
@@ -63,6 +65,7 @@
         nmap
         obsidian
         opentofu
+        plexamp
         plezy
         proton-vpn
         signal-desktop
