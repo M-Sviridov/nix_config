@@ -48,21 +48,26 @@
 
         Cookies = {
           Allow = [
+            "https://actual.lan.msviridov.com/"
             "https://auth.msviridov.com/"
-            "https://chatgpt.com/"
+            "https://bandcamp.com/"
+            "https://books.msviridov.com/"
             "https://claude.ai/"
+            "https://t.coros.com/"
             "https://github.com/"
-            "https://google.com/"
+            "https://intervals.icu/"
             "https://jellyfin.lan.msviridov.com/"
             "https://jellyseerr.msviridov.com/"
-            "https://qui.lan.msviridov.com/"
             "https://mistral.ai/"
             "https://ntfy.lan.msviridov.com/"
+            "https://plex.lan.msviridov.com/"
             "https://proton.me/"
+            "https://qui.lan.msviridov.com/"
             "https://reddit.com/"
+            "https://seerr.lan.msviridov.com/"
             "https://soundcloud.com/"
-            "https://t.coros.com/admin/views/dash-board"
-            "https://trakt.tv"
+            "https://squash.tv/"
+            "https://trakt.tv/"
             "https://ui.com/"
             "https://web.whatsapp.com/"
             "https://youtube.com/"
@@ -157,26 +162,42 @@
         pins = let
           containers = config.programs.zen-browser.profiles."default".containers;
         in {
-          "ProtonMail" = {
-            id = "5c38d6ea-1d11-4790-b9a2-a2befb5a07ae";
+          "Dockge" = {
+            id = "f4ad963a-09ca-4a61-8b0b-03803db8c934";
             container = containers.Personal.id;
-            url = "https://mail.proton.me";
+            url = "https://dockge.lan.msviridov.com";
             isEssential = true;
-            position = 101;
+            position = 100;
           };
           "Grafana" = {
             id = "121ce38d-3a67-445c-8fda-3006bc356902";
             container = containers.Personal.id;
             url = "https://grafana.lan.msviridov.com";
             isEssential = true;
+            position = 101;
+          };
+          "ProtonDrive" = {
+            id = "0822516b-9bb1-4164-8ad8-a219643d2d38";
+            container = containers.Personal.id;
+            url = "https://drive.proton.me";
+            isEssential = true;
             position = 102;
+          };
+          "ProtonMail" = {
+            id = "5c38d6ea-1d11-4790-b9a2-a2befb5a07ae";
+            container = containers.Personal.id;
+            url = "https://mail.proton.me";
+            isEssential = true;
+            position = 103;
           };
         };
 
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
           catppuccin-web-file-icons
+          cliget
           karakeep
+          link-gopher
           multi-account-containers
           proton-pass
           skip-redirect
@@ -184,6 +205,7 @@
           stylus
           ublock-origin
           vimium
+          violentmonkey
           yomitan
         ];
 

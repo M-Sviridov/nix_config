@@ -5,6 +5,18 @@
         Bookmarks = [
           # ENTERTAINMENT
           {
+            Title = "Bandcamp";
+            URL = "https://bandcamp.com";
+            Placement = "toolbar";
+            Folder = "Entertainment";
+          }
+          {
+            Title = "BookOrbit";
+            URL = "https://books.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Entertainment";
+          }
+          {
             Title = "Jellyfin";
             URL = "https://jellyfin.lan.msviridov.com";
             Placement = "toolbar";
@@ -17,8 +29,32 @@
             Folder = "Entertainment";
           }
           {
+            Title = "Plex";
+            URL = "https://plex.lan.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Entertainment";
+          }
+          {
             Title = "Reddit";
             URL = "https://reddit.com";
+            Placement = "toolbar";
+            Folder = "Entertainment";
+          }
+          {
+            Title = "Seerr";
+            URL = "https://seerr.lan.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Entertainment";
+          }
+          {
+            Title = "SoundCloud";
+            URL = "https://soundcloud.com";
+            Placement = "toolbar";
+            Folder = "Entertainment";
+          }
+          {
+            Title = "SquashTV";
+            URL = "https://squash.tv";
             Placement = "toolbar";
             Folder = "Entertainment";
           }
@@ -30,6 +66,12 @@
           }
 
           # HOMELAB
+          {
+            Title = "Actual Budget";
+            URL = "https://actual.lan.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Perso";
+          }
           {
             Title = "AdGuard Home";
             URL = "https://adguard.lan.msviridov.com";
@@ -43,8 +85,20 @@
             Folder = "Homelab";
           }
           {
+            Title = "Dockge";
+            URL = "https://dockge.lan.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Homelab";
+          }
+          {
             Title = "Dozzle";
             URL = "https://dozzle.lan.msviridov.com";
+            Placement = "toolbar";
+            Folder = "Homelab";
+          }
+          {
+            Title = "Filebrowser";
+            URL = "https://filebrowser.lan.msviridov.com";
             Placement = "toolbar";
             Folder = "Homelab";
           }
@@ -97,8 +151,8 @@
             Folder = "Homelab";
           }
           {
-            Title = "qBittorrent";
-            URL = "https://qbit.lan.msviridov.com";
+            Title = "Prowlarr";
+            URL = "https://prowlarr.lan.msviridov.com";
             Placement = "toolbar";
             Folder = "Homelab";
           }
@@ -149,6 +203,12 @@
           {
             Title = "Coros Training Hub";
             URL = "https://t.coros.com/admin/views/dash-board";
+            Placement = "toolbar";
+            Folder = "Perso";
+          }
+          {
+            Title = "Intervals";
+            URL = "https://intervals.icu";
             Placement = "toolbar";
             Folder = "Perso";
           }
