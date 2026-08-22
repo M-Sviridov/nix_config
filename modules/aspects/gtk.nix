@@ -1,9 +1,5 @@
 {
-  my.gtk.homeManager = {
-    config,
-    pkgs,
-    ...
-  }: {
+  my.gtk.homeManager = {pkgs, ...}: {
     gtk = {
       enable = true;
 
@@ -29,10 +25,10 @@
       # };
 
       theme = {
-        name = "Catppuccin-GTK-Mauve-Dark";
+        name = "Catppuccin-GTK-Mauve-Dark-MB";
         package = pkgs.magnetic-catppuccin-gtk.override {
           accent = ["mauve"];
-          tweaks = ["macos" "float"];
+          tweaks = ["macos"];
         };
       };
     };
