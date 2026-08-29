@@ -59,6 +59,7 @@
         czkawka
         dnsutils
         doggo
+        easyeffects
         ente-auth
         evince
         feishin
