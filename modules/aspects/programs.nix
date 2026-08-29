@@ -18,6 +18,8 @@
         colors = "always";
       };
 
+      fd.enable = true;
+
       fzf = {
         enable = true;
         enableZshIntegration = true;
@@ -56,6 +58,22 @@
       };
 
       ripgrep.enable = true;
+
+      vesktop = {
+        enable = true;
+
+        vencord.settings = {
+          autoUpdate = false;
+          autoUpdateNotification = false;
+          notifyAboutUpdates = true;
+
+          # plugins = {
+          #   ClearURLs.enabled = true;
+          #   FixYoutubeEmbeds.enabled = true;
+          # };
+        };
+      };
+
       zathura.enable = true;
 
       zoxide = {
