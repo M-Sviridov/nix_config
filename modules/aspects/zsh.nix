@@ -10,7 +10,10 @@
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
+      syntaxHighlighting = {
+        enable = true;
+        highlighters = ["brackets" "pattern" "cursor"];
+      };
 
       completionInit = ''
         autoload -Uz compinit
