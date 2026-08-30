@@ -39,10 +39,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    solaar = {
-      url = "github:Svenum/Solaar-Flake/main";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.home-manager.follows = "home-manager";
