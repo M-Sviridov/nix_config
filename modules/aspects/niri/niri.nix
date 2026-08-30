@@ -1,7 +1,7 @@
 {inputs, ...}: {
   flake-file.inputs = {
     niri = {
-      url = "github:epireyn/niri-flake";
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
