@@ -75,6 +75,7 @@
         nmap
         obsidian
         opentofu
+        ouch
         plexamp
         plezy
         proton-vpn
