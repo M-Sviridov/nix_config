@@ -10,6 +10,7 @@
         ];
       };
 
+      btop.enable = true;
       chromium.enable = true;
 
       eza = {
