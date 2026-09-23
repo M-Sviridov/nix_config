@@ -71,7 +71,7 @@
           time_format = "%H:%M";
         };
 
-        picker.name = "snacks.pick";
+        picker.name = "snacks.picker";
 
         backlinks.parse_headers = false;
 
