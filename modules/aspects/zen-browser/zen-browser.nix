@@ -59,6 +59,7 @@
             "https://jellyfin.lan.msviridov.com/"
             "https://jellyseerr.msviridov.com/"
             "https://mistral.ai/"
+            "https://navidrome.lan.msviridov.com/"
             "https://ntfy.lan.msviridov.com/"
             "https://plex.lan.msviridov.com/"
             "https://proton.me/"
