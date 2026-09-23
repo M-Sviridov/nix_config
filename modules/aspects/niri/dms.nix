@@ -17,7 +17,6 @@
 
         plugins = {
           calculator.enable = true;
-          dankBatteryAlerts.enable = true;
           emojiLauncher.enable = true;
         };
 

@@ -115,8 +115,8 @@
           {
             matches = [{app-id = "^org.gnome.Nautilus$";}];
             open-floating = true;
-            default-column-width.fixed = 1380;
-            default-window-height.fixed = 920;
+            default-column-width.proportion = 0.75;
+            default-window-height.proportion = 0.65;
           }
           {
             matches = [{app-id = "^org.gnome.Nautilus$";}];
